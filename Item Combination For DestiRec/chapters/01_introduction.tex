@@ -4,119 +4,20 @@
 %The introduction shall provide the reader with an entryway to your topic. Commonly, the introduction is not too technical and provides the reader with a very general introduction why the topic of the thesis is relevant. Empirical examples are particular popular in introductions (make sure to provide citations)The introduction should also provide at least one research question that you try to answer. Last but not least, the introduction should also introduce the structure of the thesis (i.e., which chapters the reader should expect) in one paragraph.
 
 \chapter{Introduction}\label{chapter:introduction}
-Use with pdfLaTeX and Biber.
+\Glspl{rs} can be described as systems that produce individualized recommendations
+as output or has the effect of guiding the user in a personalized way to interesting
+or useful items in a large space of possible options \parencite{Burke2002HybridInteraction}. Given an input of users preferences, recommendation algorithms generates one or more recommended item(s). A \gls{rs} typically focus on a specific item type. Amazon.com \parencite{} uses recommendation algorithms to personalize the online store for each customer, for example showing programming titles to a software engineer and baby toys to a new mother.  Netflix \parencite{Amatriain2013BigRecommendations} also use sophisticated recommendation algorithms to suggest movies to users based on user profile and behavior. These real world examples intuitively suggests that recommendation algorithms can find valuable use cases in tourism. Tourist destination recommendation and tour planning system is a heavily researched area with different proposed systems \parencite{wolfgang_umap_recsystem, cbrecsys2014, Thiengburanathum2018AnTourists, Arif2020Blockchain-BasedSystem, Alrasheed2020ASystem} and commercial destination recommendation tools \parencite{triparoti, Www.tripzard.com, Www.besttripchoices.com}.
 
+Designing tourist destination recommender systems is a difficult task because of the amount of possible destinations as well as the complex
+and multi-layered nature of the preferences and needs of tourists. Recommending a combination of destinations is an even more complex task. Consider the scenario where a person wants to travel for a 3 weeks in March, and she has a budget of 1500€; her preferred activities include going to the beach, shopping and visiting museums. The recommender system has to recommend a combination of destinations from a large space of possible destinations while respecting her time and budget limitations. Furthermore, the recommender system should ideally recommend how long she has to stay in each destination, and her preferences should be fully taken into account and covered, to obtain her full satisfaction. Additionally, the recommender system might take factors like destination proximity, weather and security into account for optimal results. This example illustrates the complexity of designing a system that should recommend composite destinations.
 
-Citation test (with Biber)~\parencite{Survey_TTDP_Guavalas}.
+We can distinguish \Glspl{rs}  based on the issues they focus on and the techniques they use.
+\textit{Content-based} recommendation systems try to recommend items similar to those a given user has liked in the past, whereas systems
+designed according to the \textit{collaborative} recommendation approach identify users
+whose preferences are similar to those of the given user and recommend items they
+have liked \parencite{Balabanovic1997Content-BasedRecommendation}. \textit{Hybrid approaches} \parencite{Adomavicius2005TowardExtensions} combine collaborative and content-based methods. \textit{Knowledge-based} systems \parencite{Burke2000Knowledge-basedSystems} depend on knowledge models of the object domain for effective item recommendation. They are based on the needs and preferences that the user provides. Depending on the recommendation technique employed, destination recommendation systems can be classified as content-based, collaborative or knowledge based. 
 
-See~\autoref{tab:sample}, \autoref{fig:sample-drawing}, \autoref{fig:sample-plot}, \autoref{fig:sample-listing}, \autoref{fig:tum}, \autoref{fig:tumslide}.
+\todo{Write about destination RS is an algorithmic optimization problem, and discuss how it relates to TTDP (not in detail)}
 
-\begin{table}[htpb]
-  \caption[Example table]{An example for a simple table.}\label{tab:sample}
-  \centering
-  \begin{tabular}{l l l l}
-    \toprule
-      A & B & C & D \\
-    \midrule
-      1 & 2 & 1 & 2 \\
-      2 & 3 & 2 & 3 \\
-    \bottomrule
-  \end{tabular}
-\end{table}
+\todo{Discuss what will be done in subsequent sections. The paper 18-MCKP is a good inspiration poin}
 
-\begin{figure}[htpb]
-  \centering
-  % This should probably go into a file in figures/
-  \begin{tikzpicture}[node distance=3cm]
-    \node (R0) {$R_1$};
-    \node (R1) [right of=R0] {$R_2$};
-    \node (R2) [below of=R1] {$R_4$};
-    \node (R3) [below of=R0] {$R_3$};
-    \node (R4) [right of=R1] {$R_5$};
-
-    \path[every node]
-      (R0) edge (R1)
-      (R0) edge (R3)
-      (R3) edge (R2)
-      (R2) edge (R1)
-      (R1) edge (R4);
-  \end{tikzpicture}
-  \caption[Example drawing]{An example for a simple drawing.}\label{fig:sample-drawing}
-\end{figure}
-
-\begin{figure}[htpb]
-  \centering
-
-  \pgfplotstableset{col sep=&, row sep=\\}
-  % This should probably go into a file in data/
-  \pgfplotstableread{
-    a & b    \\
-    1 & 1000 \\
-    2 & 1500 \\
-    3 & 1600 \\
-  }\exampleA
-  \pgfplotstableread{
-    a & b    \\
-    1 & 1200 \\
-    2 & 800 \\
-    3 & 1400 \\
-  }\exampleB
-  % This should probably go into a file in figures/
-  \begin{tikzpicture}
-    \begin{axis}[
-        ymin=0,
-        legend style={legend pos=south east},
-        grid,
-        thick,
-        ylabel=Y,
-        xlabel=X
-      ]
-      \addplot table[x=a, y=b]{\exampleA};
-      \addlegendentry{Example A};
-      \addplot table[x=a, y=b]{\exampleB};
-      \addlegendentry{Example B};
-    \end{axis}
-  \end{tikzpicture}
-  \caption[Example plot]{An example for a simple plot.}\label{fig:sample-plot}
-\end{figure}
-
-\begin{figure}[htpb]
-  \centering
-  \begin{tabular}{c}
-  \begin{lstlisting}[language=SQL]
-    SELECT * FROM tbl WHERE tbl.str = "str"
-  \end{lstlisting}
-  \end{tabular}
-  \caption[Example listing]{An example for a source code listing.}\label{fig:sample-listing}
-\end{figure}
-
-\begin{figure}[htpb]
-  \centering
-  \includegraphics[width=0.8\textwidth]{tum}
-  \caption[Something else can be written here for listing this, otherwise the caption will be written!]{Includegraphics searches for the filename without extension first in logos, then in figures.} \label{fig:tum}
-\end{figure}
-
-\begin{figure}[htpb]
-  \centering
-  \includegraphics[width=0.8\textwidth]{figures/tum}
-  \caption{For pictures with the same name, the direct folder needs to be chosen.} \label{fig:tumslide}
-\end{figure}
-
-\begin{figure}[!tbp]
-  \centering
-  \subfloat[TUM Logo][The logo.]{\includegraphics[height=0.2\textheight]{tum}\label{fig:tum1}}
-  \hfill
-  \subfloat[TUM Slide][The famous slide.]{\includegraphics[height=0.2\textheight]{figures/tum}\label{fig:tum2}}
-  \caption{Two TUM pictures side by side.}
-  \label{fig:sidebyside}
-\end{figure}
-
-This is how the glossary will be used.
-
-\Glspl{ddye}, \gls{r0}, \gls{R0}, and \gls{kdeac}. Also, the \glspl{tum} has many \glspl{computer}, not only one \Gls{computer}. Subsequent acronym usage will only print the short version of \glspl{tuma} (take care of plural, if needed!), like here with \gls{tuma}, too. It can also be --> \glsdisp{tum}{hidden}\footnote{Example for a hidden TUM glossary entry.} <--.
-
-\todo{Now it is your turn to write your thesis.
-
-This will be a few tough weeks.}
-
-\done{Nevertheless, celebrate it when it is done!}

@@ -22,6 +22,7 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
+\usepackage[parfill]{parskip}
 \usepackage{booktabs} % for better looking table creations, but bad with vertical lines by design (package creator despises vertical lines)
 \usepackage[final]{microtype}
 \usepackage{caption}
@@ -138,6 +139,7 @@ ex-am-ple
 % and
 \newcommand{\todo}[1]{{\bfseries{\scshape{\color{TUMAccentOrange}[(TODO: #1)]}}}} % for multiple paragraphs
 \newcommand{\done}[1]{{\itshape{\scshape{\color{TUMAccentBlue}[(Done: #1)]}}}} % for multiple paragraphs
+\newcommand{\note}[1]{{\bfseries{\scshape{\color{TUMAccentGreen}[(NOTE: #1)]}}}}
 % for error handling of intended behavior in your latex documents.
 
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
