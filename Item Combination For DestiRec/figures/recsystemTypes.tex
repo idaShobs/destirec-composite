@@ -1,0 +1,25 @@
+\documentclass{standalone}
+\begin{document}
+\tikzset{
+  basic/.style  = {draw, text width=2cm, drop shadow, font=\sffamily, rectangle},
+  root/.style   = {basic, rounded corners=2pt, thin, align=center, fill=TUMAccentBlue, inner sep=6pt},
+  level 2/.style = {basic, rounded corners=6pt, thin,align=center, fill=TUMAccentBlue, text width=8em, align=center,  inner sep=6pt},
+  level 3/.style = {basic, thin, align=left,  text width=6.5em, align=center,  inner sep=4pt}
+}
+ \begin{tikzpicture}[
+    level 1/.style={sibling distance=5cm},
+    level 2/.append style={sibling distance=35mm},
+   level distance = 2cm,  edge from parent fork down]
+    
+    \node [root]{Recommender Systems}
+        child {node [level 2]{Collaborative \\ filtering}
+        child {node [level 3] {Model-based}}
+        child {node [level 3] {Memory-based}}
+        }
+        child {node [level 2] {Content-based \\ filtering}}
+        child {node [level 2] [sibling distance =2cm] {Knowledge-based\\ filtering}
+        child {node [level 3] {Constraint-based}}
+        child {node [level 3] {Case \\based}}
+        };
+    \end{tikzpicture}
+\end{document}

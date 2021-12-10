@@ -1,21 +1,51 @@
 %Obviously, here you describe in great detail the actual analysis you conducted. The level of detail should be sufficient to allow a very smart fellow student in your field to reproduce more or less your research.
-\chapter{Analysis}\label{chapter:analysis}
+\chapter{Solution Development}\label{chapter:analysis}
+The framework for our recommender system comprises a knapsack problem, a data model, and an algorithmic approach. In this section, we shall be analysing these three parts in great detail. Thereafter we shall formally define our knapsack problem.
 
-\section{Orienteering Problems}
+\section{The Knapsack Model}
+A standard knapsack problem is an 0-1 integer programming model and is generally formally defined as follows.
+\begin{gather}
+    maximize \qquad \sum_{i=1}^n p_ix_i\label{eq:1a}
+    \intertext{subject to}
+    \sum_{i=1}^n w_ix_i \leq W\label{eq:1b} \\
+    x_i \in \{0,1\}, \qquad \forall 1 \leq i \leq n\label{eq:1c}
+\end{gather}
+where each item $i$ is associated with a profit $p_i$. The decision variable $x_i = 1$ if an item is placed inside the knapsack, otherwise $x_i=0$. The objective function \ref{eq:1a} is to maximize the total profit from collected items. Constraint \ref{eq:1b} limits the weight $w_i$ of items placed inside knapsack by the total capacity of the knapsack $W$.
 
-\section{Knapsack Problems}
-\todo{Write mathematical formulation of general knapsack problem her to buff it up}
+There are several variations of the knapsack problem. If the set of item is partitioned into classes, then the problem becomes multiple choice knapsack problem \gls{mckp} which is a generalization of the knapsack model. The binary choice of taking an item is replaced by the selection of exactly one item out of each class of items\parencite{Kellerer2004TheProblem}. Thus, given a partition of $n$ items, defined by $\{N_1, N_2,.., N_n\}$, where $N_i$ is represents an item class, the objective function in the \gls{mckp} is formally defined by
+\begin{align}
+    maximize \qquad \sum_{i=1}^n \sum_{j \in N_i} p_{ij}x_{ij}\label{eq:1d}
+\end{align}
+where $x_{ij}$ denotes the binary selection of an item from a class. The constraint \ref{eq:1b} is replaced and extended by 
+\begin{gather}
+    \sum_{i=1}^n \sum_{j \in N_i} w_{ij}x_{ij} \leq W,\label{eq:1e} \\
+    \sum_{j \in N_i} x_{ij} = 1, \qquad \forall 1 \leq i \leq n\label{eq:1f}
+\end{gather}
+Constraint \ref{eq:1f} denotes that only one item of the class $j$ can be added into the knapsack. When identical copies of an item exists a class can be placed inside the knapsack, then it becomes a \textit{bounded knapsack problem}, where each item $x_i$ is bounded by $b_i$\parencite{Kellerer2004TheProblem}. Therefore, $x_i \in \{0,1\}$ in \ref{eq:1c} becomes $0\leq x_i \leq b_i$. The variable $b_i$ represents the number of identical copies. An \textit{unbounded knapsack problems} is defined when there are infinite identical copies (i.e., $b_i = +\infty$. However, unbounded knapsacks are not relevant for formulating our knapsack model.
+
 \subsection{Types of Knapsack problem}
+
+\section{Algorithmic approaches and Heuristics}
+\subsection{Dynamic Programming}
+\subsection{Constraint Programming}
+\subsection{Branch and Bound}
+\subsection{Column Generation}
+\subsection{Genetic Algorithms}
+\subsection{Ant Colony Optimization}
+
+
+\subsection{Meta-Heuristics}
+\subsubsection{Tabu Search}
+\subsubsection{Simulated Annealing}
+\subsubsection{Iterated Local Search}
+\subsubsection{Variable Neighborhood Search}
+
+\section{Data Model}
 
 \section{Problem Formulation}
 \todo{Mathematical formulation of problem as a Multiple Choice Knapsack Problem}
+\todo{Oregon Trail Knapsack problem formulation}
 
-\section{Algorithmic Approaches}
-\subsection{Greedy Heuristics}
-\subsection{Dynamic Programming}
-\subsection{Branch and Bound}
-\subsection{Constraint Programming}
-\subsection{Genetic Algorithms}
-\subsection{Simulated Annealing}
-\subsection{Ant Colony Optimization}
+
+
 
