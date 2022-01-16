@@ -40,7 +40,9 @@
 \usepackage{pdfpages} % for including multiple pages of pdfs
 \usepackage{adjustbox} % can center content wider than the \textwidth
 \usepackage{tablefootnote} % for footnotes in tables as \tablefootnote
-\usepackage{threeparttable} % another way to add footnotes as \tablenotes with \item [x] <your footnote> after setting \tnote{x} 
+\usepackage{threeparttable} % another way to add footnotes as \tablenotes with \item [x] <your footnote> after setting \tnote{x}
+\usepackage [ruled]{algorithm2e}
+\SetKwComment{Comment}{/* }{ */}
 
 
 % https://tex.stackexchange.com/questions/42619/x-mark-to-match-checkmark
@@ -52,7 +54,7 @@
 
 \usepackage[acronym,xindy,toc]{glossaries} % TODO: include "acronym" if glossary and acronym should be separated
 \makeglossaries
-\loadglsentries{pages/glossary.tex} % important update for glossaries, before document
+\loadglsentries{Item Combination For DestiRec/pages/glossary.tex} % important update for glossaries, before document
 
 
 \bibliography{bibliography}
@@ -125,8 +127,8 @@
 
 % Settings for search order of pictures
 \graphicspath{
-    {logos/}
-    {figures/}
+    {Item Combination For DestiRec/logos/}
+    {Item Combination For DestiRec/figures/}
 }
 
 % Set up hyphenation rules for the language package when mistakes happen

@@ -3,7 +3,7 @@
 \documentclass[headsepline,footsepline,footinclude=false,oneside,fontsize=11pt,paper=a4,listof=totoc,bibliography=totoc,DIV=12]{scrbook} % one-sided
 
 % TODO: change citation style in settings
-\input{settings}
+\input{Item Combination For DestiRec/settings}
 
 \newcommand*{\getUniversity}{Technische Universität München}
 \newcommand*{\getFaculty}{Department of Informatics}
@@ -25,36 +25,37 @@
 % Set page numbering to avoid "destination with the same identifier has been already used" warning for cover page.
 % (see https://en.wikibooks.org/wiki/LaTeX/Hyperlinks#Problems_with_Links_and_Pages).
 \pagenumbering{alph}
-\input{pages/cover}
+\input{Item Combination For DestiRec/pages/cover}
 
 \frontmatter{}
 
-\input{pages/title}
-\input{pages/disclaimer}
-\input{pages/acknowledgements} % TODO: if you don't have anyone to thank for or don't wish to publish it, comment this line out.
-\input{pages/abstract}
+\input{Item Combination For DestiRec/pages/title}
+\input{Item Combination For DestiRec/pages/disclaimer}
+\input{Item Combination For DestiRec/pages/acknowledgements} % TODO: if you don't have anyone to thank for or don't wish to publish it, comment this line out.
+\input{Item Combination For DestiRec/pages/abstract}
 \microtypesetup{protrusion=false}
 \tableofcontents{}
 \microtypesetup{protrusion=true}
 
 \mainmatter{}
 
-\input{chapters/01_introduction}
-\input{chapters/02_literature_review}
-\input{chapters/03_solution_development}
-\input{chapters/04_protype_implementation}
-\input{chapters/05_evaluation}
-\input{chapters/06_conclusion}
+\input{Item Combination For DestiRec/chapters/01_introduction}
+\input{Item Combination For DestiRec/chapters/02_literature_review}
+\input{Item Combination For DestiRec/chapters/03_solution_development}
+\input{Item Combination For DestiRec/chapters/04_protype_implementation}
+\input{Item Combination For DestiRec/chapters/05_evaluation}
+\input{Item Combination For DestiRec/chapters/06_conclusion}
 
 \appendix{}
 
 % appendix chapter
-\input{pages/appendix}
+\input{Item Combination For DestiRec/pages/appendix}
 
 \microtypesetup{protrusion=false}
 \listoffigures{}
 \listoftables{}
 \microtypesetup{protrusion=true}
+\glsaddall
 \printglossaries
 \printbibliography{}
 

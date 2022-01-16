@@ -1,27 +1,5 @@
 % refer to https://en.wikibooks.org/wiki/LaTeX/Glossary for acronyms and glossary entries
 
-\newacronym[shortplural={D$_{\text{dye}}$}, longplural={donor dye, ex. Alexa 488}]{ddye}{D$_{\text{dye}}$}{donor dye, ex. Alexa 488}
-
-\newacronym[description={\glslink{r0}{F\"{o}rster distance}}]{R0}{$R_{0}$}{F\"{o}rster distance}
-
-\newglossaryentry{r0}
-{
-  name=\glslink{R0}{\ensuremath{R_{0}}},
-  text=F\"{o}rster distance,
-  description={F\"{o}rster distance, where 50\% ...}, 
-  sort=R
-}
-
-\newglossaryentry{kdeac}
-{
-  name=\glslink{R0}{\ensuremath{k_{DEAC}}},
-  text=$k_{DEAC}$, 
-  description={is the rate of deactivation from ... and emission)}, 
-  sort=k
-}
-
-\newacronym[shortplural={TUM}, longplural={Technical University of Munich}]{tuma}{TUM}
-{Technical University of Munich}
 
 \newglossaryentry{tum}
 {
@@ -29,14 +7,20 @@
   description = {A university in Germany, Bavaria, in the city of Munich},
   plural = TUM
 }
+\newglossaryentry{candidate solution}{
+ name=candidate solution,
+ description = {are potential solutions that may possibly be encountered during an attempt to solve the given problem instance; but unlike solutions, they may not satisfy all the conditions from the problem definition},
+ plural = candidate solutions
+ }
 
-\newglossaryentry{computer}
+\newglossaryentry{tensor}
 {
-  name=computer,
-  description={is a programmable machine that receives input,
-               stores and manipulates data, and provides
-               output in a useful format}
+  name=Tensor,
+  description={can be seen as a generalization of matrices and are often used inter-changeably with matrices in literature},
+  plural = tensors
 }
+\newacronym{iot}{IOT}{Internet-Of-Things}
+\newacronym{cps}{CPS}{Cyber-Physical Systems}
 \newacronym[shortplural={RSs}, longplural={Recommender Systems}]{rs}{RS}{Recommender System}
 \newacronym{ttdp}{TTDP}{Tourist Trip Design Problem}
 \newacronym{op}{OP}{Orienteering Problem}
@@ -46,15 +30,26 @@
 \newacronym{optw}{OPTW}{Orienteering Problem with Time Windows}
 \newacronym{tdop}{TDOP}{Time Dependent Orienteering Problem}
 \newacronym{toptw}{TOPTW}{Team Orienteering Problem with Time Windows}
+\newacronym{moop}{MOOP}{Multi-Objective Orienteering Problem}
 \newacronym{or}{OR}{Operations Research}
 \newacronym{lda}{LDA}{Latent Dirichlet Allocation}
 \newacronym{hosvd}{HOSVD}{Higher-Order Singular Value Decomposition}
 \newacronym{ai}{AI}{Artifical Intelligence}
 \newacronym{aoc}{ACO}{Ant Colony Optimization}
 \newacronym{pso}{PSO}{Particle Swarm Optimization}
+\newacronym{ga}{GA}{Genetic Algorithm}
+\newacronym{bco}{BCO}{Bee Colony Optimzation}
+\newacronym{ilp}{ILP}{Integer Linear Program}
+\newacronym{lp}{LP}{Linear Program}
 \newacronym[shortplural={POIs}, longplural={Point of Interests}]{poi}{POI}{Point of Interest}
 \newacronym{tsp}{TSP}{Traveling Salesman Problem}
-\newacronym[shortplural={MCKPs}, longplural={Multiple Choice Knapsack Problems}]{mckp}{MCKP}{Multiple Choice Knapsack Problem}
+\newacronym{sls}{SLS}{Stochastic Local Search}
+\newacronym{vnd}{VND}{Variable Neighborhood Descent}
+\newacronym{ts}{TS}{Tabu Search}
+\newacronym{sa}{SA}{Simulated Annealing}
+\newacronym[shortplural={EAs}, longplural={Evolutionary Algorithms}]{ea}{EA}{Evolutionary Algorithm}
+\newacronym[shortplural={MCKPs}, longplural={Multiple-Choice Knapsack Problems}]{mckp}{MCKP}{Multiple-Choice Knapsack Problem}
+
 \newacronym[shortplural={LBSNs}, longplural={Location-Based Social Networks}]{lbn}{LBSN}{Location-Based Social Network}
 \newacronym[shortplural={MTGs}, longplural={Mobile Tourist Guides}]{mtg}{MTG}{Mobile Tourist Guide}
 
