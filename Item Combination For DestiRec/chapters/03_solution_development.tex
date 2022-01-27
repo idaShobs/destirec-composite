@@ -249,15 +249,15 @@ The \gls{aoc} algorithm is based on the nest site search behavior. It consists o
 start the backward pass, where all artificial
 bees share information about their solutions \parencite{Teodorovic2009BeeBCO}. The bee with the highest fitness is selected to form the next bee population.
 
-\subsection{Designing Algorithms for Multi-Objective Problems}
+\section{Designing Algorithms for Multi-Objective Problems}
 In this chapter, we have defined our optimization problem as a combinatorial multi-objective problem. Solving \gls{moop} implies obtaining an approximation set of Pareto optimal solutions in such a way that the corresponding set fulfills the requirements of convergence to the Pareto front and
 uniform diversity \parencite{Talbi2009Metaheuristics:Implementation}. Exact methods such as branch and bound algorithms, constraint programming, and dynamic programming have been used for bicriteria optimization problems. However, such methods are better suited for minor-sized problems. Heuristics methods are needed for problems with more than two criteria. Designing heuristics for \gls{moop} requires additional concepts. This section summarizes frequently needed common concepts for designing algorithms for \gls{moop}
 
 
-\subsubsection{Fitness Assignments}
+\subsection{Fitness Assignments}
 The fitness assignment procedure measures the quality of a solution by assigning a scalar-valued fitness to a vector objective function. They can be classified into scalar approaches, criterion-based approaches, dominance-based approaches, and indicator-based approaches.
 
-\textbf{Scalar approaches: }
+\subsubsection{Scalar approaches}
 They typically transform the \gls{moop} to single-objective problems. A scalar approach frequently used in designing solutions to multi-objective optimization problems is aggregating the objective functions into a single function using either addition, multiplication, or any other combination of arithmetic operations. This approach has the advantage of simplifying the objective space, such that only a single objective has to be optimized. However, in order to avoid a function dominating the other, aggregating the functions requires behavioral knowledge of each objective function \parencite{CoelloCoello1999ATechniquesc}. The most common aggregation approach is the weighted sum approach, which is defined as follows:
 
 \begin{gather*}
@@ -267,14 +267,14 @@ They typically transform the \gls{moop} to single-objective problems. A scalar a
 $w_i$ are coefficients representing the objectives' relative importance, which is usually unknown. The algorithm designer must solve the problem for different values of $w_i$ and decide on the appropriate value for $w_i$ to choose based on their intuition. Constant multipliers $c_i$ are also often introduced to further closely reflect the importance of each objective. It helps normalize the vector function in approximately the exact numerical values.
 Other popular scalar approaches as found in the survey by Carlos et al. \parencite{CoelloCoello1999ATechniquesc} use goal programming (minimize or maximize the absolute deviation from target to objectives) and $\varepsilon$-constraint method (considering the objectives bound by some allowable levels $\epsilon_i$). However, transforming a \gls{moop} to a mono-objective problem is not always feasible. Ascribing a hierarchy of importance to the objectives by the algorithm designer is a crucial step in aggregating the function. In our problem domain, the objective function already represents a user preference (i.e., each objective function is mapped to a particular user preference). Ultimately, assigning a level of importance to each objective function defeats the optimization problem's purpose because the objectives are incomparable.
 
-\textbf{Criterion-based methods: }
+\subsubsection{Criterion-based methods}
 Criterion-based methods are commonly used in Population-based meta-heuristics (e.g., evolutionary algorithms and ant colony optimization). They conduct the search process by treating the various objectives separately and then assigning a fitness value. This procedure usually occurs in parallel or sequentially. For example, parallel approaches have been used in \gls{aoc} (P-ACO \parencite{Doerner2004ParetoSelection}), where one ant colony tackles an objective. Sequential approaches search sequentially in defined preference order. The order signifies the importance of each objective function \parencite{Fishburn1974ExceptionalSurvey}.
 
-\textbf{Dominance-based approaches: }
+\subsubsection{Dominance-based approaches}
 Dominance-based (or Pareto-based) approaches use dominance and Pareto optimality to guide the search process. In a single run, such approaches can generate a diverse set of Pareto optimal solutions and Pareto solutions in the concave portions of the convex hull of feasible objective space \parencite{Talbi2009Metaheuristics:Implementation}. Most Pareto approaches use evolutionary algorithms. Compared to scalar methods, Pareto-based fitness assignment evaluate the quality of a solution in relation to the whole population by applying \textit{ Ranking methods}. Ranks are scalar values obtained using dominance relation techniques. The rank assigned to a solution is considered its fitness value.
 
 
-\subsubsection{Diversity Preservation}
+\subsection{Diversity Preservation}
 The initial population selection and the biased sampling during a search in population-based meta-heuristics are crucial for maintaining diversity. Diversity preserving methods must be considered when designing meta-heuristics for \gls{moop}. They generally penalize solutions that have high density in their neighborhoods. According to \parencite{Emmerich2018AMethods}, diversity preservation strategies may be classified into Kernel methods, Nearest neighbor methods, and the Histogram method.
 
 \textit{Kernel methods} define the neighborhood of a solution according to a Kernel function, which takes the distance between solutions as an argument. The Kernel function is applied to all distances. For example, Fitness sharing is popularly used in evolutionary algorithms. It degrades the fitness of an individual using a sharing function $sh$. The sharing function depends on a constant $\sigma$ and the sum of the distance between individuals in the population.  $\sigma$ represents the non-similarity threshold. \textit{Nearest-Neighbor methods} estimate the density of a solution while taking into account the distance between a solution and its kth nearest neighbor. For example, a crowding distance defined as the circumference between a solution and its left and right neighbor is used to rank solutions within a rank in NGA-II evolutionary algorithm. More diversity is obtained using solutions with a high crowding distance. \textit{Histogram-based} diversity preserving approaches partition the search space into several hyper-grids defining the neighborhood. The density around a solution is estimated by the number of solutions in the same box of gird \parencite{Talbi2009Metaheuristics:Implementation}.
