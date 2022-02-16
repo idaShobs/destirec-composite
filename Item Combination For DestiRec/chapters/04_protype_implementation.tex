@@ -1,5 +1,36 @@
 %focus on sub-goal
-\chapter{Prototype Implementation}\label{chapter:prototype_implementation}
+\chapter{Design and Implementation}\label{chapter:prototype_implementation}
+Implementing an evolutionary algorithm requires a number of considerations. A robust fitness assignment method needs to be determined. A mechanism for uniform diversity preservation must be conceptualized. Also, a well-thought-out solution to handle constraints from the problem definition must be designed. Luckily, there are successful evolutionary algorithms that can be used in practice. Such algorithms have been well researched, and their domain applicability is well-defined. \Gls{nsga}-II \parencite{Jain2013AnOptimization} is an evolutionary algorithm that uses an elitist non-dominated sorting mechanism. It is an improved version of an initial \gls{nsga} algorithm, developed by  Srinivas et al. \parencite{Srinivas1994MuiltiobjectiveAlgorithms} in 1996. 
+\Gls{nsga}-II uses concept like crowding function for diversity preservation and ranking of the Pareto fronts. However, it is better suited for bi-objective problems and does not perform well for multiple objective problems. \Gls{nsga}-III \parencite{Mkaouer2015Many-objectiveNSGA-III} was introduced to solve the inability of \gls{nsga}-II to solve many objective problems (i.e., three or more objectives). Other to our problem domain applicable successful evolutionary algorithms can also be found in practice. However, we must decide on one algorithmic direction for this work. Thus, we shall be designing and implementing a \gls{nsga}-III algorithm that is adapted to our problem definition.
+
+\section{Algorithm Design}
+
+\subsection{Pareto Optimal Front}
+
+\subsection{Constraint Handling}
+** possible to relax the objective function and remove the penalty function and use constrained domination principle
+
+\subsection{Population Sorting}
+Population sorting = niche preservation operation
+\-Crowding Distance sorting
+\-Non-dominated sorting 
+\-Euklidean distance sorting
+\-TChebyshev distance sorting
+
+\subsection{Reference Point On Hyper Plane}
+
+\subsection{Initial Population}
+
+\subsection{Offspring Production}
+\- Tournament Selection
+\- Cross Over
+\- Mutation
+\-fitness assignment?
+
+\subsection{Population Update}
+\subsection{Stopping Criteria}
+
+
 \section{Data Model}
 %Describe in detail which data you use and how you collect these data. This may include qualitative data ("I analyze these in-depth travel behavior surveys."), or statistics you use, or data you collect yourself. The description should be as detailed that a very good fellow student in your field would be able to more or less reproduce your work. If you conduct a case study, the study area needs to be introduced here.
 \note{Current thinking: child regions with same parents are within the same proximity}
