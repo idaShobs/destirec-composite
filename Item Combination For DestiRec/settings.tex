@@ -7,14 +7,10 @@
 \usepackage[autostyle]{csquotes}
 \usepackage[%
   backend=biber,
-  url=true,
-  style=numeric, % alphabetic, numeric
-  sorting=none, % default == nty, https://tex.stackexchange.com/questions/51434/biblatex-citation-order
-  maxnames=4,
-  minnames=3,
-  maxbibnames=99,
-  giveninits,
-  uniquename=init]{biblatex} % TODO: adapt citation style
+  url=false,
+  style=ieee, % alphabetic, numeric
+  sorting=none, % default == nty,
+  ]{biblatex} 
 \usepackage{graphicx}
 \usepackage{scrhack} % necessary for listings package
 \usepackage{listings}
@@ -56,8 +52,11 @@
 \makeglossaries
 \loadglsentries{Item Combination For DestiRec/pages/glossary.tex} % important update for glossaries, before document
 
+%\bibliographystyle{ieeetran}
+
 
 \bibliography{bibliography}
+
 
 \setkomafont{disposition}{\normalfont\bfseries} % use serif font for headings
 \linespread{1.05} % adjust line spread for mathpazo font
