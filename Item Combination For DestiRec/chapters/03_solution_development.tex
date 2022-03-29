@@ -3,93 +3,54 @@
 %euclidean distance between a and b
 
 \chapter{Solution Development}\label{chapter:analysis}
-The framework for our recommender system comprises a knapsack model for the multi-objective orienteering problem, a data model, and a meta-heuristic solution. In this section, we shall be analyzing these three parts in great detail. After that, we shall formally define our orienteering problem.
+In a previous work on this topic, Wörndl \& Herzog  \parencite{cbrecsys2014} drew inspiration for their formal model from the Oregon Trail Knapsack (see \ref{sec:oregon}). They formulated a model that extends the value function of the Oregon Trail Knapsack problem by a penalty function.
 
-\section{The Knapsack Model}
-A standard knapsack problem is an 0-1 integer programming model and is generally formally defined as follows:
-%\intertext{subject to}
-\begin{align}\tag{1}
-    maximize \qquad &\sum_{i=1}^n p_ix_i\label{eq:1a}\\
-   \tag{2} subject \hspace{0.1cm} to \qquad &\sum_{i=1}^n w_ix_i \leq W\label{eq:1b} \\
-    \tag{3}x_i \in \{0,1\}, \qquad &\forall \hspace{0.1cm} 1 \leq i \leq n\label{eq:1c}
-\end{align}
-where each item $i$ is associated with a profit $p_i$. The decision variable, $x_i = 1$, if an item is placed inside the knapsack, otherwise $x_i=0$. The objective function \ref{eq:1a}is to maximize the total profit from collected items. Constraint \ref{eq:1b}limits the weight $w_i$ of items placed inside the knapsack by the total capacity of the knapsack $W$.
+For clarity, we shall adjust the notation used in their paper to fit the notations used in previous function values. They formally defined their value function as:
 
-\subsection{Types of the Knapsack Model}
-There are several variations of the knapsack problem. If the model partitions the set of items into classes, then the problem becomes a multiple-choice knapsack problem, \gls{mckp} which is a generalization of the knapsack model. The binary choice of picking an item is replaced by picking exactly one item from each item class \parencite{Kellerer2004TheProblem}. Thus, given a partition of $n$ items, defined by $\{N_1, N_2,.., N_n\}$, where $N_i$ represents an item class, the objective function in the \gls{mckp} is formally defined by:
+\begin{gather}
+ \tag{1} f_j(x_j, x_{d_j}) = x_j \cdot v_j - \sum_{e \in x_{d_j}} ( t(j, e) \cdot x_j \cdot v_j \cdot [x_e > 0])\label{eq:3d}
+\end{gather}
+
+where $v_j$ is the value of region $j$ (i.e, item) for the specified user query and $t(j, e)$ is the penalty function for two regions $j$ and $e$. Their value function is similar to the function \ref{eq:2g} specified by the original Oregon Trail Knapsack model. However, the previously defined value reducing constant factor $t$, was a function of the two regions $j$ and $e$. 
+
+Their formal model was defined as follows:
 \begin{align}
-    \tag{1}maximize \qquad &\sum_{i=1}^n \sum_{j \in N_i} p_{i,j}x_{i,j}\label{eq:1d}\\
-\intertext{where $x_{i,j}$ denotes the binary selection of an item from a class. The constraint \ref{eq:1b} is replaced and extended by }
-\tag{2}subject\hspace{0.1cm}  to\qquad &\sum_{i=1}^n \sum_{j \in N_i} w_{i,j}x_{i,j} \leq W,\label{eq:1e} \\
-   \tag{3} &\sum_{j \in N_i} x_{i,j} = 1, \qquad \forall \hspace{0.1cm}1 \leq i \leq n\label{eq:1f}
+    \tag{1}maximize \qquad  &\sum_{i=1}^n  f_j(x_j, x_{d_j}) \label{eq:3a}\\
+    \tag{2}subject \ to \qquad &\sum_{i=1}^n x_i d_i  \leq D \label{eq:3b}\\
+    \tag{3}&\sum_{i=1}^n x_i\ b_i \leq B \label{eq:3c}\\
+    \tag{4} &x_i \in \{0,1\}
 \end{align}
-Constraint \ref{eq:1f} denotes that only one item of the class $j$ can be added to the knapsack. When a number of identical copies of every item exist, and can be placed inside the knapsack, then it becomes a \textit{bounded knapsack problem}, where $b_i$ bounds each item $x_i$ \parencite{Kellerer2004TheProblem}. Therefore, $x_i \in \{0,1\}$ in \ref{eq:1c} becomes $0\leq x_i \leq b_i$. The variable $b_i$ represents the number of identical copies. An \textit{unbounded knapsack problems} is defined when there are infinite identical copies (i.e., $b_i = +\infty$). However, unbounded knapsacks are not relevant for formulating our knapsack model.
 
-\subsection{The Oregon Trail Knapsack}
-Burg \& Lang\parencite{Oregon_Trail_Knapsack} modeled the Oregon Trail Knapsack as a variation of the bounded knapsack problem, where a cost limit extends the knapsack model and functions defined the value. Their formal definition of the problem was as follows:
-%\intertext{subject to}
-\begin{align}\tag{1}
-    maximize \qquad &\sum_{j=1}^n f_j(x_j, x_{d_j})\label{eq:2a}\\
-    \tag{2}subject \hspace{0.1cm} to \qquad &\sum_{j=1}^n w_j x_j \leq W\label{eq:2b} \\
-  \tag{3} &\sum_{j=1}^n c_j x_j \leq C\label{eq:2c} \\
-   \tag{4}  0\leq x_j \leq b_j, \qquad &\forall \hspace{0.1cm} 1 \leq j \leq n\label{eq:2d}
-\end{align}
-where $W$ in \ref{eq:2b} is the weight limit, and $C$ in \ref{eq:2c} is the cost limit. The function in \ref{eq:2a} is the value function for type $j$, in which $d_j$ gives the index of the type upon which the value of $x_j$ depends.  $d_j \in \{d_1, d_2,...,d_n\}$ provides the dependency information among the item type. The value function in this model is of particular interest because it models three possible value types of the items. Burg \& Lang\parencite{Oregon_Trail_Knapsack} defined the value functions as follows:
+where $f_j(x_j, x_{d_j})$ is the penalty function defined in \ref{eq:3d}. $d_i$ is item i's recommended duration of stay and $b_i$ is item i's recommended daily budget. $D$ is the maximum possible duration of stay and $B$ is the maximum budget the user can spend on her trip. 
 
-\noindent
-\begin{flalign}
-\tag{type 1 }\qquad f_j(x_j, x_{d_j}) &= x_j \cdot v_j \cdot [x_{d_j} > 0] \label{eq:2e}&&\\
-\tag{type 2} \qquad f_j(x_j, x_{d_j}) &= [x_{d_j} > 0] \cdot \sum_{i=0}^{x_j - 1 } r^i \cdot v_j \label{eq:2f}&&\\&= [x_{d_j} > 0] \cdot v_j \cdot \frac{1-r^{x_j}}{1 - r}, \hspace{2.1cm} \hfill\forall \hspace{0.1cm} 0 < r < 1\notag &&\\
-\tag{type 3} \qquad f_j(x_j, x_{d_j}) &= x_j \cdot v_j - [x_{d_j} > 0] \cdot t \cdot x_j \cdot v_j, \qquad  \hfill \forall \hspace{0.1cm} 0 < t \leq 1  \wedge d_j \neq j\label{eq:2g}
-\end{flalign}
+Already, Wörndl \& Herzog had concluded that the penalty function defined in their work could be improved to ensure better results. Penalty-based function require careful considerations of the function parameters and the function itself. Thus, to gain freedom from the influence of the penalty function, we shall be reformulating and extending the problem definition to a non-penalty based approach. It is to note that, if from further analysis, a penalty-based approach proves to be a better fit for our selected algorithm, then we shall redefine a penalty function as needed. 
 
-Each function has a value constant given by $v_j$. The Iverson notation $[x_{d_j} > 0]$ denotes the boolean value $x_{d_j} \in \{0,1\}$, which is when  $x_{d_j} > 0 $. Value function  \ref{eq:2e} represents the case, where items of type $j$ only have a value if  at least one item of type $d_j$ is present in the solution. The value function  \ref{eq:2f} covers the value type, where with each added item of type $j$, the item value $v_j$ diminish at a rate of $r$. Once more, the function adds the value of items of type $j$ if at least one item of type $d_j$ is in the knapsack. Lastly, the function \ref{eq:2g} represents the case where a factor of $t$ reduces the value associated with $x_j$ of type $j$ items, when type $x_{d_j}$ items are in the solution. 
+The framework for our recommender system comprises a knapsack model for the multi-objective orienteering problem, a data model, and a meta-heuristic solution. In this section, we shall be analyzing these three parts in great detail. 
 
-Wörndl \& Herzogl\parencite{cbrecsys2014} in their previous work on this topic, drew inspiration for their formal model from the Oregon Trail Knapsack. They formulated a model that extends the value function of the Oregon Trail Knapsack problem by a penalty function. For clarity, we shall adjust the notation used in their paper to fit the notations used in previous function values. They formally defined their value function as:
 
-\begin{gather*}
- f_j(x_j, x_{d_j}) = x_j \cdot v_j - \sum_{e \in x_{d_j}} ( t(j, e) \cdot x_j \cdot v_j \cdot [x_e > 0])
-\end{gather*}
+\section{Problem Reformulation} \label{sec:problem_definition}
 
-where $v_j$ is the value of region $j$ (i.e, item) for the specified user query and $t(j, e)$ is the penalty function for two regions $j$ and $e$. Their value function is similar to the function \ref{eq:2g} specified by the original Oregon Trail Knapsack model. However, the previously defined value reducing constant factor $t$, is now a function of the two regions  $j$ and $e$. 
+Let us consider $n$ regions, $(i = 1, ..., n)$. Each region $i$ will have $k$ profits $s_{ik}\ (p = 1, ...,k)$. Given a set $N$ of $m$ traveling preferences $N = \{N_1, N_2,...,N_m\}$, $s_{ik}$ is dependent on $i$'s score on $N$. For example, a region can have a different score for shopping and another for hiking.
+The recommendation problem can be modeled as a multi-objective orienteering problem. Given a user query, some regions must be selected to maximize the $p$ total profits while not exceeding a budget limit $B$ and a total stay duration $D$. Each user preference must be fulfilled by at least one of the selected regions. Assuming the system recommends a trip $T$ which comprises $n$ regions ($T = {x_1, x_2, ..., x_n}$, the physical distance between a region $x_i$ and its neighbor $x_2$ should not exceed a defined constant $\sigma$. In the case where no location coordinates on the regions are possible, the regions in the recommended trip should be within reasonable distance from each other. Also, the duration of stay in a particular region ${x_i}$ should ensure a minimum utility value. The utility value is to be defined in the algorithm.
 
-\section{Problem Definition} \label{sec:problem_definition}
-The recommendation problem can be modeled as a multi-objective orienteering problem. Let's consider a user query, $Q$ defined by a set of $n$ traveling preferences $\{N_1, N_2,...,N_n\}$, a user budget $B$ and a traveling duration $D$. The system must return a set of \glspl{candidate solution} $S$, where each \gls{candidate solution} $T \in S$ is specified by $\{T_1, T_2,...,T_n\}$. Assuming a trip $T_i$ consist of $m$ regions, $\{x_1, x_2,...,x_m\}$. Each region $x_i$ will have a profit $s_{ik}$ which is dependent on its score for each specified user preference. For example, a region can have a different score for shopping and another for hiking. $s_{ik}$ also depends on some penalty function $\rho$ to be defined by the system.
-The goal of the \gls{moop} is to find the best item combinations which maximize the benefits in all the objectives while respecting the budget and time constraints. 
-
-Therefore, the mathematical model of the \gls{moop} can be defined as follows:
+The mathematical model of the \gls{moop} can be defined as follows:
 
 \begin{align}
-    \tag{1}maximize \qquad  &f_k = \sum_{i=1}^n g_{ik}(x_i, \chi_{i}), \hspace{1cm} k = 1,...,m,\label{eq:3a}\\
-    \tag{2}subject\hspace{0.1cm} to \qquad &\sum_{d_i} x_i \leq D \label{eq:3b}\\
-    \tag{3} &\sum_{b_i} x_i \leq B \label{eq:3c}\\
-    \tag{4} x_i \in \{0,1\}, \qquad &\forall \hspace{0.1cm} 1 \leq i \leq n
+    \tag{1}maximize \qquad  &z_n(x) = \sum_{k=1}^p x_i\ s_{ik}, \hspace{1cm} i = 1,...,n \label{eq:3_1a}\\
+    \tag{2}subject \ to \qquad &\sum_{i=1}^n x_i\ d_i  \leq D \label{eq:3_1b}\\
+    \tag{3}&\sum_{i=1}^n x_i\ b_i \leq B \label{eq:3_1c}\\
+    \tag{4}&\sum_{j \in N} x_{ij} \geq 1 \label{eq:3_1e}\\ 
+    \tag{5}&\sum_{i=1}^n x_{i} \ g(p_i) \leq \sigma,  \hspace{1cm}  \label{eq:3_1f} \\
+    \tag{7} x_i \in \{0,1\}, \qquad &\forall \ 1 \leq i \leq n
 \end{align}
+where $x_i = 1$ when an item $i$ is chosen, else $x_i = 0$. 
+The constraint \ref{eq:3_1b} and \ref{eq:3_1c} represent the constraint on the total stay duration and the budget, respectively. Equation \ref{eq:3_1e} ensures that each user preference is satisfied at least once. The constraint \ref{eq:3_1f} denotes the constraint on the physical distance between the regions, whereby $g$ is a function of the physical location of the item. It is assumed that all coefficients $s_{ik}, b_{i}, B, d_i,$ and $D$ are positive. 
 
-where $g_{ik}(x_i, \chi_{i})$ is the value function of item $i$ for the objective (pleasure category) $k$ and $\chi_i$ represents the set of items which item $i$ depends on. The decision variable $x_i = 1$ when an item is chosen, else $x_i = 0$. In equation \ref{eq:3a}, $f_k$ represents a single maximization objective for a particular score of a category $k$. Constraint \ref{eq:3b} ensures that the sum of the duration of stay $d_i$ of each collected item is limited to $D$. Constraint \ref{eq:3c} limits the total budget to the budget limit $B$.
+\subsection{Pareto Optimum}
+There are multiple scores to be maximized in the objective function. Therefore, choosing an objective maximizing optimal solution without trade-offs is near infeasible. In multi-objective optimization, a solution $s$ is said to dominate $s'$ if $s$ is at least as good as $s'$ on every criterion, and $s$ is better in at least one criterion. $s \succ s'$ is used to write such case. If no solution dominates the solution $s^*$, then $s^*$ is said to be \textit{Pareto optimal} (i.e., non-dominated). The set of all non-dominated vectors is known as the \textit{Pareto front}.
 
-The value function $g_{ik}$ for an objective $k$ is defined as:
-\begin{gather*}
-    g_{ik}(x_i, \chi_i) = x_i \cdot s_{ik} -  [x_j > 0] \cdot x_i \cdot s_{ik} \cdot \rho_{ij}
-\end{gather*}
-
-where $\rho_{ij}$ is the penalty on the score $s_{ik}$ for choosing the items $i$ and $j$. The variable $s_{ik}$ represents the score vector of item $i$ for category $k$, while $[x_j > 0]$ represents the Boolean value 0 or 1 of choosing the item $j$. The penalty $\rho_{ij}$ is to be defined in the algorithm. 
-
-\subsection{Notions of Optimality}
-There are multiple scores to be maximized in the objective function. Therefore, choosing an objective maximizing optimal solution without trade-offs is not easy. In multi-objective optimization, a solution $s$ is said to dominate $s'$ if $s$ is at least as good as $s'$ on every criterion, and $s$ is better in at least one criterion. This case is usually written as $s \succ s'$. If no solution dominates the solution $s^*$, then $s^*$ is said to be \textit{Pareto optimal} (i.e., non-dominated). The set of all non-dominated vectors is known as the \textit{Pareto front}.
-
-We can extend the concept of Pareto optimality from the solution space to the objective space. Hence, given a vector $\Vec{f} = (f_1,...,f_m)$ of $m$ objective functions, we define the concept of Pareto optimality as follows. A solution $s$ dominates a solution $s'$, denoted by $s \succ s'$, if
-\begin{itemize}
-    \item $f_k(s) \geq f_k(s')$ for each component $f_k$ of $\Vec{f}$; and
-    \item there exists one objective function $f_k^*$ of $\Vec{f}$ such that $f_k^*(s) > f_k^*(s')$.
-\end{itemize}
-
-Pareto optimality here implies that there is no feasible solution $f_k(s')$ that will improve $\Vec{f}$ in one criterion $k$ without making it worse off in at least one other criterion.  
-
-\textit{Hierarchical optimality} is used when there is a ranking between all objective functions. A solution $s$ is preferred to $s'$ ($s>_{hier} s'$), iff $f_m(s) > f_m(s')$, where $m$ is the highest index in the ranking such that $f_k(s) \neq f_k(s')$
-
-\subsection{Solution Illustration}
-Figure \ref{fig:moopsample} illustrates an example of an instance of the \gls{moop} problem, where there are 12 items. An item can be any \gls{poi} (for example, attraction sites, region, or route). The user input is displayed in the gray box. For simplicity, we assume two given preferences. When mapped to our problem definition, $\Vec{f} = (f_1, f_2)$ where index 1 and 2 are the preference $M$ \& $S$ respectively. We compute an objective function $f_k$ for each preference in the preference list. The budget and other constraints are considered when computing each objective $f_k$. The parameter $x$ in the illustration is a boolean array to show if an item is selected or not. The selected items are chosen subject to the notion of Pareto optimality we have defined earlier. For example, $f(7) \succ f(1)$ because it is at least as better in one of its scores as $f(1)$ and it is strictly better in another score. The Pareto front belongs to the items $\{1,5,7,9,10\}$, and we achieve a total score of (24, 23). An algorithm that can efficiently compute the Pareto front from a set of given items is what we aim to develop in subsequent sections.
+\textbf{Example}:
+Figure \ref{fig:moopsample} illustrates a bi-objective sample instance of the \gls{moop} problem. For simplicity, we assume two given preferences. The gray box display the user input. When mapped to our problem definition, there are two objectives to be maximized, where an objective represents a single item. An item can be any \gls{poi} (for example, attraction sites, region, or route). $f = (\Vec{f_1}, \Vec{f_2}, ... ,\Vec{f_k})$ represents all feasible solutions. We compute a solution in the objective space $\Vec{f_i} = (z_1, z_2)$. The objective values are computed on preferences $M$ \& $S$, while respecting the necessary constraints. The parameter $x$ in the illustration is a boolean array to encode the selection of an item combination. The selected item combinations are subject to the notion of Pareto optimality we have defined earlier. For example, $f_7 \succ f_2$ because it is at least as better in one of its objective value as $f_2$ and it is strictly better in another value. The Pareto front consists of the selections $\{f_1,f_5,f_7,f_9,f_{10}\}$, and we achieve a total score of (24, 23). 
 
 
 \begin{figure}[ht!]
@@ -99,7 +60,23 @@ Figure \ref{fig:moopsample} illustrates an example of an instance of the \gls{mo
     \label{fig:moopsample}
 \end{figure}
 
-\section{Algorithmic approaches}\label{sec:alg_approaches}
+Pareto's optimality here implies that there is no item combination $f_k$ that will improve the score achievable in one item without diminishing the achievable score in at least another item. 
+
+We can also extend the concept of Pareto optimality from the solution space to the objective space. Given $n$ objective functions $z = (z_1,...,z_n)$, with each objective having a score $\Vec{v} = (v_1,...,v_j)$ on $j$ criteria, we define the concept of Pareto optimality in the objective space as follows. An objective $z$ dominates an objective $z'$, denoted by $z \succ z'$, if
+\begin{itemize}
+    \item $z_i(v) \geq z_i'(v)$ on each score of $\Vec{v_j}$; and
+    \item there exists one score $v^*$ such that $z_i'(v^*) > z_i'(v)$.
+\end{itemize}
+
+Again, Pareto optimality here implies that there is no feasible objective $z_i$ that $v'$ without making it worse off in at least one other criterion. \newline Having gained a better understanding of what is deemed optimal, an algorithm that can efficiently compute the Pareto front from a set of given items is what we aim to develop in subsequent sections.
+
+
+\section{Data Model}
+%Describe in detail which data you use and how you collect these data. This may include qualitative data ("I analyze these in-depth travel behavior surveys."), or statistics you use, or data you collect yourself. The description should be as detailed that a very good fellow student in your field would be able to more or less reproduce your work. If you conduct a case study, the study area needs to be introduced here.
+\note{Current thinking: child regions with same parents are within the same proximity}
+\todo{Research traveller type and categorize preferences under classes for the multiple choice knapsack classes}
+
+\section{Analysis of Algorithmic Methodologies}\label{sec:alg_approaches}
 According to Golden et al. \parencite{Golden1987TheProblem}, \gls{op} is an NP-Hard problem. Hence, no known or expected algorithm can solve the problem optimally in polynomial time (i.e., an exact solution cannot be found within a reasonable amount of time). Computing an optimal solution with multiple objectives is even more intractable. Hence, there is usually a trade-off between time and accuracy. In multi-objective optimization, one is often interested in the Pareto front. However, it is usually infeasible to generate the exact set of Pareto front. A reason could be that the number of Pareto optima is too large, or the determination of a single Pareto optimum is computationally hard. Therefore, the goal is usually to identify a satisfactory Pareto set approximation (i.e., a set as close to the optimum as possible \parencite{Fonseca2005AOptimizers}. Approximate algorithms offer near-optimal solutions to computationally intractable problems (mostly) in a moderate amount of time and are the major alternative to solving NP-Hard class of optimization problems.
 
 Approximate algorithms can be classified as heuristics and meta-heuristics. Heuristics are usually problem-dependent and inflexible (i.e., defined for a specific problem). Meta-heuristics are problem-independent and can be applied to a broad range of optimization problems. In section \ref{chapter:literature_review}, we discovered that meta-heuristic solutions were commonly used to solve \glspl{op}. Meta-heuristic solutions are also commonly used in multi-objective optimization for different research areas. 
@@ -260,7 +237,7 @@ bees share information about their solutions \parencite{Teodorovic2009BeeBCO}. T
 
 \section{Designing Algorithms for Multi-Objective Problems}
 In this chapter, we have defined our optimization problem as a combinatorial multi-objective problem. Solving \gls{moop} implies obtaining an approximation set of Pareto optimal solutions in such a way that the corresponding set fulfills the requirements of convergence to the Pareto front and
-uniform diversity \parencite{Talbi2009Metaheuristics:Implementation}. Exact methods such as branch and bound algorithms, constraint programming, and dynamic programming have been used for bicriteria optimization problems. However, such methods are better suited for minor-sized problems. Heuristics methods are needed for problems with more than two criteria. Designing heuristics for \gls{moop} requires additional concepts. This section summarizes frequently needed common concepts for designing algorithms for \gls{moop}
+uniform diversity \parencite{Talbi2009Metaheuristics:Implementation}. Exact methods such as branch and bound algorithms, constraint programming, and dynamic programming have been used for bicriteria optimization problems. However, such methods are better suited for minor-sized problems. In research, optimization problems with more than three objectives are often classified as many-objective problems. This is due to the added difficulty of handling a higher number of objectives. Unlike many objective problems, bi-objective and three objective problems can be comprehensively visualized by graphical means, which makes it easier for decision makers to analyze and make better decisions \parencite{Deb2013AnConstraints}. Heuristics methods are needed for this scale of problems. Designing heuristics for \gls{moop} requires additional concepts. This section summarizes frequently needed common concepts for designing algorithms for \gls{moop}
 
 
 \subsection{Fitness Assignments}
@@ -301,7 +278,7 @@ The initial population selection and the biased sampling during a search in popu
 
 More diversity is obtained using solutions with a high crowding distance. \textit{Histogram-based} diversity preserving approaches partition the search space into several hyper-grids defining the neighborhood. The density around a solution is estimated by the number of solutions in the same box of gird \parencite{Talbi2009Metaheuristics:Implementation}. The technique used to measure the distance between solutions is essential for diversity preservation. Diversity in the decision space may be essential to improve the search for some problems. However, some only require diversity in the objective space.
 
-\section{Comparative Analysis of Algorithms}
+\section{Comparative Analysis of Select Algorithms}
 In this chapter, we have extensively discussed different algorithmic approaches that are commonly used to solving combinatorial optimization problems. We have presented algorithms that are typically suited for multiple objective optimization problem section. Through our analysis, we can conclude that using traditional techniques such as local search, tabu search, e.t.c will be more difficult to implement for our \gls{moop}. This is because such techniques yield a single local optimum. A single objective optimizer needs to be run multiple times, using such techniques. Also, good distribution (uniform diversity) is not guaranteed. Thus, a considerable amount of adaptation will be required to use them for our problem domain. In contrast, modern algorithms such as the evolutionary algorithm, Ant Colony Optimization and Bee Colony algorithms are best suited for multiple objective problems, because they can return the Pareto optimal set in a single run. Also, they can be easily decomposed to find the optimal solution for single objectives. Hence, they do not require extra effort than necessary, to be implemented for our problem domain. 
 
 It is impossible to implement all algorithms considered suitable for our problem domain during the duration of this thesis. Thus, we shall be comparing Evolutionary algorithms and Ant Colony optimization. These two choices are based on their popularity for solving Orienteering problems, multi-Objective Knapsack problems and multi-objective problems in general. 
