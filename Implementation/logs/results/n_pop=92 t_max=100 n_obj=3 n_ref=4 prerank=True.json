@@ -1,0 +1,24 @@
+{"Query": 
+    {"Duration": 3, "Budget": 6000, "Exclude": ["Afghanistan", "Pacific"], 
+        "Preferences": ["hiking", "beach", "watersports", "Jun", "Aug", "Safety from crime"], 
+        "Year": 2023, "AdditionalPreferences": ["Safety from crime"]
+    }, 
+"Experiment": "n_pop=92 t_max=100 n_obj=3 n_ref=4 prerank=True", 
+"0": {"regions": ["Central Africa"], "duration": {"Central Africa": 2.0}, "budget_weekly": {"Central Africa": 500.0}}, 
+"46": {"regions": ["Central Africa"], "duration": {"Central Africa": 2.0}, "budget_weekly": {"Central Africa": 500.0}}, 
+"69": {"regions": ["Lesser Antilles"], "duration": {"Lesser Antilles": 1.0}, "budget_weekly": {"Lesser Antilles": 575.0}}}
+
+{"Query": {"Duration": 3, "Budget": 6000, "Exclude": ["Afghanistan", "Pacific"], 
+    "Preferences": ["hiking", "beach", "watersports", "Jun", "Aug", "Safety from crime"], 
+    "Year": 2023, "AdditionalPreferences": ["Safety from crime"]}, 
+"Experiment": "n_pop=92 t_max=100 n_obj=3 n_ref=4 prerank=True", 
+"0": {"regions": ["Central Africa"], "duration": {"Central Africa": 2.0}, "budget_weekly": {"Central Africa": 500.0}}, 
+"62": {"regions": ["Central Africa"], "duration": {"Central Africa": 2.0}, "budget_weekly": {"Central Africa": 500.0}}}
+
+{"Query": {"Duration": 3, "Budget": 6000, "Exclude": ["Afghanistan", "Pacific"], 
+    "Preferences": ["hiking", "beach", "watersports", "Jun", "Aug", "Safety from crime"], 
+    "Year": 2023, "AdditionalPreferences": ["Safety from crime"]}, 
+"Experiment": "n_pop=92 t_max=100 n_obj=3 n_ref=4 prerank=True", 
+"0": {"regions": ["Bhutan"], "duration": {"Bhutan": 1.0}, "budget_weekly": {"Bhutan": 250.0}}, 
+"46": {"regions": ["Central Africa"], "duration": {"Central Africa": 2.0}, "budget_weekly": {"Central Africa": 500.0}}, 
+"69": {"regions": ["Paraguay"], "duration": {"Paraguay": 1.0}, "budget_weekly": {"Paraguay": 400.0}}}

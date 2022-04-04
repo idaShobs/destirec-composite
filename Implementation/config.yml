@@ -1,6 +1,7 @@
 input: 
-  Duration: 5
-  Budget: 4000
+  Duration: 3
+  Budget: 6000
   Exclude: [Afghanistan, Pacific]
-  Preferences: [hiking, beach, watersports, culinary, entertainment, apr, may, jun]
+  Preferences: [hiking, beach, watersports, Jun, Aug]
+  Year: 2023
   AdditionalPreferences: ["Safety from crime"]

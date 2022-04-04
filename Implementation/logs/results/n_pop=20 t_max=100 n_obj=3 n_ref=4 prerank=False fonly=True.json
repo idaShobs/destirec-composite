@@ -1,0 +1,7 @@
+{"Query": {"Duration": 3, "Budget": 6000, "Exclude": ["Afghanistan", "Pacific"], 
+    "Preferences": ["hiking", "beach", "watersports", "Jun", "Aug", "Safety from crime"], 
+    "Year": 2023, "AdditionalPreferences": ["Safety from crime"]}, 
+    "Experiment": "n_pop=20 t_max=100 n_obj=3 n_ref=4 prerank=False fonly=True", 
+    "0": {"regions": ["Honduras and El Salvador", "Bolivia", "Poland"], 
+        "total_score": 5.75, "duration": {"Honduras and El Salvador": 1.0, "Poland": 1.0}, 
+        "budget_weekly": {"Honduras and El Salvador": 250.0, "Poland": 0.0}}}

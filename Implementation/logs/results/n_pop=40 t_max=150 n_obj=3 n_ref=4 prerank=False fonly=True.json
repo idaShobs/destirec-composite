@@ -1,0 +1,7 @@
+{"Query": {"Duration": 3, "Budget": 6000, "Exclude": ["Afghanistan", "Pacific"], 
+    "Preferences": ["hiking", "beach", "watersports", "Jun", "Aug", "Safety from crime"], 
+    "Year": 2023, "AdditionalPreferences": ["Safety from crime"]}, 
+    "Experiment": "n_pop=40 t_max=150 n_obj=3 n_ref=4 prerank=False fonly=True", 
+    "0": {"regions": ["England and Wales", "Taiwan", "Bahamas  Turks and Caicos Islands"], 
+        "total_score": 6.5, "duration": {"England and Wales": 1.0, "Bahamas  Turks and Caicos Islands": 1.0}, 
+        "budget_weekly": {"England and Wales": 0.0, "Bahamas  Turks and Caicos Islands": 725.0}}}
