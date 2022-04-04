@@ -10,19 +10,18 @@ import calendar
 df = pd.DataFrame()
 filtered_df = pd.DataFrame()
 
-def get_dataset(min_start_rank = 0.7, rank=True):
+def get_dataset(input, min_start_rank = 0.7, rank=True):
     '''
-    Return: input, considered, othercategories, needed_months, months_weeks_dict, filtered_df
+    Return: considered, othercategories, needed_months, months_weeks_dict, filtered_df
     '''
     
     global filtered_df
     global df
-    input = get_user_input()
+    #input = get_user_input()
     query = parse_query(input)
-    if(df.empty):
-        df = get_df(query)
-        df['cat_score'] = df['cat_score'].astype(dtype=float)
-        df['cat_score'] = normalize(df['cat_score'])
+    df = get_df(query)
+    df['cat_score'] = df['cat_score'].astype(dtype=float)
+    df['cat_score'] = normalize(df['cat_score'])
     considered = get_considered(input)
     all_months = weeks_in_month(input['Year'])
     needed_months = [pref for pref in considered if pref in calendar.month_abbr]
@@ -36,7 +35,7 @@ def get_dataset(min_start_rank = 0.7, rank=True):
         new_df = df.copy()
     filtered_df = get_new_df(new_df)
     othercategories = other_categories(filtered_df, considered)
-    return input, considered, othercategories, needed_months, month_weeks_dict, filtered_df 
+    return considered, othercategories, needed_months, month_weeks_dict, filtered_df 
 
 def get_user_input():
     user_input = get_config("config.yml")
@@ -80,6 +79,8 @@ def get_df(query):
     __
 def parse_query(user_input):
     
+    unneeded = ['World', 'None']
+    user_input['Exclude'].extend(unneeded)
     queryParam = ', '.join(f'"{x}"' for x in user_input['Exclude'])
     query = ('Select r.Region, r.weeks_to_upperQuantile_utility, r.weeks_to_lowerQuantile_utility, ' 
         'r.average_cost_per_week, t.category, t.score as cat_score, p.childRegions '
@@ -162,7 +163,7 @@ def get_region_groups(start_df):
     for region in set(start_df.Region):
         if region not in region_groups.keys():
             region_groups[region] = set()
-        region_groups[region].update(set(start_df.loc[(start_df['childRegions'].str.contains(f'(?:{region})', case=False)), 'childRegions']))
+        region_groups[region].update(set(start_df.loc[(start_df['childRegions'].str.contains(f'(?:{region})', case=False)), 'Region']))
     return region_groups
 
 def get_region_index_info(start_df):

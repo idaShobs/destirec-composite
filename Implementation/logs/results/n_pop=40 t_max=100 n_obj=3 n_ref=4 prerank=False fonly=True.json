@@ -1,8 +1,0 @@
-[{"Query": 
-    {"Duration": 3, "Budget": 6000, "Exclude": ["Afghanistan", "Pacific"], 
-        "Preferences": ["hiking", "beach", "watersports", "Jun", "Aug", "Safety from crime"], 
-        "Year": 2023, "AdditionalPreferences": ["Safety from crime"]}, "Experiment": "n_pop=40 t_max=100 n_obj=3 n_ref=4 prerank=False fonly=True",
-             "0": {"regions": ["Caucasus", "British Islands"], 
-                "total_score": 6.5, "duration": {"Caucasus": 1.0, "British Islands": 1.0}, 
-                "budget_weekly": {"Caucasus": 0.0, "British Islands": 420.0}}}
-]

@@ -1,7 +1,69 @@
-input: 
-  Duration: 3
-  Budget: 6000
-  Exclude: [Afghanistan, Pacific]
-  Preferences: [hiking, beach, watersports, Jun, Aug]
-  Year: 2023
-  AdditionalPreferences: ["Safety from crime"]
+input:
+  input1:
+    Duration: 3
+    Budget: 3000
+    Exclude: [Afghanistan]
+    Preferences: [beach, watersports, entertainment, culinary, Jun, Aug]
+    Year: 2023
+    AdditionalPreferences: [Safety from crime]
+  input2:
+    Duration: 6
+    Budget: 6000
+    Exclude: []
+    Preferences: [nature & wildlife, hiking, culture, Dec, Jan, Feb]
+    Year: 2023
+    AdditionalPreferences: []
+  input3:
+    Duration: 4
+    Budget: 4000
+    Exclude: []
+    Preferences: [cities & architecture, culture, culinary, shopping, Sep, Oct]
+    Year: 2023
+    AdditionalPreferences: [Safety from crime]
+
+
+tests:
+  test1:
+    parameters:
+      pop: 92
+      max: 100
+      objs: 4
+      refs: 8
+      prerank: False
+      FeasibleOnly: False
+      PenaltyBased: False
+    nruns: 10
+  test2:
+    parameters:
+      pop: 92
+      max: 100
+      objs: 4
+      refs: 8
+      prerank: True
+      FeasibleOnly: False
+      PenaltyBased: False
+    nruns: 10 
+  test3:
+    parameters:
+      pop: 40
+      max: 100
+      objs: 4
+      refs: 4
+      prerank: True
+      FeasibleOnly: True
+      PenaltyBased: False
+    nruns: 10
+  test4:
+    parameters:
+      pop: 92
+      max: 100
+      objs: 4
+      refs: 4
+      prerank: True
+      FeasibleOnly: False
+      PenaltyBased: True
+    nruns: 10 
+ 
+
+
+
