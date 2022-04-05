@@ -1,0 +1,215 @@
+[{
+    "TotalRegions": 7,
+    "Evaluated_Regions": 7,
+    "Evaluated_Combinations": 110,
+    "Time_Taken": 34.85,
+    "Experiment": "test2-input3",
+    "Best_Score": 12.5,
+    "0": {
+        "regions": [
+            "Canada North",
+            "Cuba"
+        ],
+        "total_score": 12.5,
+        "duration": {
+            "Canada North": 1.0,
+            "Cuba": 1.0
+        },
+        "budget_weekly": {
+            "Canada North": 0.0,
+            "Cuba": 350.0
+        }
+    }
+},
+{
+    "TotalRegions": 7,
+    "Evaluated_Regions": 7,
+    "Evaluated_Combinations": 117,
+    "Time_Taken": 123.73,
+    "Experiment": "test2-input3",
+    "Best_Score": 0
+},
+{
+    "TotalRegions": 7,
+    "Evaluated_Regions": 7,
+    "Evaluated_Combinations": 96,
+    "Time_Taken": 26.08,
+    "Experiment": "test2-input3",
+    "Best_Score": 12.75,
+    "0": {
+        "regions": [
+            "Cuba",
+            "Russia East"
+        ],
+        "total_score": 12.75,
+        "duration": {
+            "Cuba": 1.0,
+            "Russia East": 1.0
+        },
+        "budget_weekly": {
+            "Cuba": 350.0,
+            "Russia East": 0.0
+        }
+    }
+},
+{
+    "TotalRegions": 7,
+    "Evaluated_Regions": 7,
+    "Evaluated_Combinations": 119,
+    "Time_Taken": 29.85,
+    "Experiment": "test2-input3",
+    "Best_Score": 12.75,
+    "0": {
+        "regions": [
+            "Cuba",
+            "Russia East"
+        ],
+        "total_score": 12.75,
+        "duration": {
+            "Cuba": 1.0,
+            "Russia East": 1.0
+        },
+        "budget_weekly": {
+            "Cuba": 350.0,
+            "Russia East": 0.0
+        }
+    }
+},
+{
+    "TotalRegions": 7,
+    "Evaluated_Regions": 7,
+    "Evaluated_Combinations": 107,
+    "Time_Taken": 29.05,
+    "Experiment": "test2-input3",
+    "Best_Score": 12.5,
+    "0": {
+        "regions": [
+            "Guianas",
+            "Canada North"
+        ],
+        "total_score": 12.5,
+        "duration": {
+            "Guianas": 1.0,
+            "Canada North": 1.0
+        },
+        "budget_weekly": {
+            "Guianas": 525.0,
+            "Canada North": 0.0
+        }
+    }
+},
+{
+    "TotalRegions": 7,
+    "Evaluated_Regions": 7,
+    "Evaluated_Combinations": 105,
+    "Time_Taken": 26.51,
+    "Experiment": "test2-input3",
+    "Best_Score": 12.75,
+    "0": {
+        "regions": [
+            "Canada North",
+            "Guianas"
+        ],
+        "total_score": 12.75,
+        "duration": {
+            "Canada North": 1.0,
+            "Guianas": 1.0
+        },
+        "budget_weekly": {
+            "Canada North": 0.0,
+            "Guianas": 525.0
+        }
+    }
+},
+{
+    "TotalRegions": 7,
+    "Evaluated_Regions": 7,
+    "Evaluated_Combinations": 100,
+    "Time_Taken": 28.09,
+    "Experiment": "test2-input3",
+    "Best_Score": 13.25,
+    "0": {
+        "regions": [
+            "Cuba",
+            "Canada North"
+        ],
+        "total_score": 13.25,
+        "duration": {
+            "Cuba": 1.0,
+            "Canada North": 1.0
+        },
+        "budget_weekly": {
+            "Cuba": 350.0,
+            "Canada North": 0.0
+        }
+    }
+},
+{
+    "TotalRegions": 7,
+    "Evaluated_Regions": 7,
+    "Evaluated_Combinations": 129,
+    "Time_Taken": 29.38,
+    "Experiment": "test2-input3",
+    "Best_Score": 12.75,
+    "0": {
+        "regions": [
+            "Guianas",
+            "Cuba"
+        ],
+        "total_score": 12.75,
+        "duration": {
+            "Guianas": 1.0,
+            "Cuba": 1.0
+        },
+        "budget_weekly": {
+            "Guianas": 525.0,
+            "Cuba": 350.0
+        }
+    }
+},
+{
+    "TotalRegions": 7,
+    "Evaluated_Regions": 7,
+    "Evaluated_Combinations": 109,
+    "Time_Taken": 29.09,
+    "Experiment": "test2-input3",
+    "Best_Score": 13.0,
+    "0": {
+        "regions": [
+            "Cuba",
+            "Somalia"
+        ],
+        "total_score": 13.0,
+        "duration": {
+            "Cuba": 1.0,
+            "Somalia": 1.0
+        },
+        "budget_weekly": {
+            "Cuba": 350.0,
+            "Somalia": 0.0
+        }
+    }
+},
+{
+    "TotalRegions": 7,
+    "Evaluated_Regions": 7,
+    "Evaluated_Combinations": 109,
+    "Time_Taken": 30.67,
+    "Experiment": "test2-input3",
+    "Best_Score": 12.75,
+    "0": {
+        "regions": [
+            "Greenland",
+            "Russia East"
+        ],
+        "total_score": 12.75,
+        "duration": {
+            "Greenland": 1.0,
+            "Russia East": 1.0
+        },
+        "budget_weekly": {
+            "Greenland": 975.0,
+            "Russia East": 0.0
+        }
+    }
+}]

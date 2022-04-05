@@ -7,7 +7,6 @@ import pandas as pd
 from operator import add, sub
 import random
 import PreEmo
-import pickle
 from deap import algorithms, base, benchmarks, tools, creator
 from collections import Sequence
 import json
@@ -305,15 +304,11 @@ class DestiRec:
         # Evaluate the individuals with an invalid fitness
         invalid_ind = [ind for ind in population if not ind.fitness.valid]
         fitnesses = toolbox.map(toolbox.evaluate, invalid_ind)
-        print('Starting evaluating fitnesses', end='\r')
         for ind, fit in zip(invalid_ind, fitnesses):
             ind.fitness.values = fit
         # Compile statistics about the population
-        print('Done evaluating fitnesses', end='\r')
         #record = stats.compile(population)
-        print('Done compiling record', end='\r')
         logbook.record(gen=0, evals=len(invalid_ind))
-        print('Done parsing record',end='\r')
         print(logbook.stream, end='\r')
         # Begin the generational process
         gen_fitnesses = []
@@ -340,8 +335,6 @@ class DestiRec:
             logbook.record(gen=gen, evals=len(invalid_ind), **record)
             print(logbook.stream,end='\r')
         end = time.time()
-        with open(f'logs/Test_Instance{toolbox.experiment_name}.pickle', 'wb') as f:
-            pickle.dump(stats, f, protocol=pickle.HIGHEST_PROTOCOL)
         result = dict()
         result["TotalRegions"] = len(toolbox.region_indexInfo) 
         result["Evaluated_Regions"] = len(evaluated_regions)
@@ -366,8 +359,8 @@ class DestiRec:
                 recommended_duration = {region_index_info[pos]: ind.feasibleDuration[pos] for pos in selectedPos if pos in ind.feasibleDuration.keys()}
                 recommended_weekly_budget = {region_index_info[pos]: ind.feasibleBudget[pos] for pos in selectedPos if pos in ind.feasibleBudget.keys()}
                 result[indx] = {"regions":recommend_regions, "total_score":np.sum(toolbox.evaluate(ind)),  "duration":recommended_duration, "budget_weekly":recommended_weekly_budget}
-                if(result[ind]["total_score"]> result["Best_Score"]):
-                    result["Best_Score"] = result[ind]["total_score"]
+                if(result[indx]["total_score"]> result["Best_Score"]):
+                    result["Best_Score"] = result[indx]["total_score"]
         filename = f'logs/results/{toolbox.experiment_name}.json'
         if os.path.exists(filename):
             append_write = 'a'

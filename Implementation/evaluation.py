@@ -7,6 +7,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set(style='whitegrid')
+import pickle
 import warnings
 warnings.filterwarnings("ignore", 'This pattern has match groups')
 warnings.filterwarnings("ignore", 'invalid value encountered in true_divide')
@@ -45,11 +46,13 @@ def run():
                 logging.info(f'Ended run {run}/{nruns} of {experiment_name}')
             del toolbox
             del emo
-            draw_statistics(parameters['objs'], experiment_name, bestRun)
+            with open(f'logs/Test_Instance{experiment_name}.pickle', 'wb') as f:
+                pickle.dump(bestRun, f, protocol=pickle.HIGHEST_PROTOCOL)
+            draw_statistics(parameters['objs'], parameters['max'], experiment_name, bestRun)
             draw_feasibility_stats(parameters['objs'], experiment_name, bestRun)
 
 
-def draw_statistics(obj, experiment_name, result):
+def draw_statistics(obj, ngen, experiment_name, result):
     fig = plt.figure(figsize=(10,10))
     ax = fig.add_subplot(111)
     mins = []
@@ -70,8 +73,8 @@ def draw_statistics(obj, experiment_name, result):
     maxes = np.array(maxes)
     means = np.array(means)
     std = np.array(std)
-    ax.errorbar(np.arange(max-1), means, std, fmt='ok', lw=3, ecolor='black', color='red')
-    ax.errorbar(np.arange(max-1), means, [means - mins, maxes- means],
+    ax.errorbar(np.arange(ngen-1), means, std, fmt='ok', lw=3, ecolor='black', color='red')
+    ax.errorbar(np.arange(ngen-1), means, [means - mins, maxes- means],
                 fmt='.k', ecolor='gray', lw=1, color='red')
     plt.xlim(0, len(result['Process']))
     plt.ylim(-40, 15)
@@ -107,7 +110,7 @@ def draw_feasibility_stats(obj, experiment_name, result):
         item.set_fontsize(14)
     xlabels = ax.get_xticks().tolist()
     ax.set_xticklabels([int(x) for x in xlabels])
-    ax.set_ylim(-40, 15)
+    ax.set_ylim(-40, 20)
     plt.autoscale(tight=True) 
     plt.savefig(f'logs/results/feasibility {experiment_name}.png')
 

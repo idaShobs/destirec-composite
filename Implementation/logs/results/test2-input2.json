@@ -1,0 +1,200 @@
+[{
+    "TotalRegions": 11,
+    "Evaluated_Regions": 11,
+    "Evaluated_Combinations": 118,
+    "Time_Taken": 31.17,
+    "Experiment": "test2-input2",
+    "Best_Score": 7.25,
+    "0": {
+        "regions": [
+            "USA Alaska",
+            "Canada Prairies",
+            "Canada Ontario"
+        ],
+        "total_score": 7.25,
+        "duration": {
+            "USA Alaska": 1.0,
+            "Canada Prairies": 1.0,
+            "Canada Ontario": 1.0
+        },
+        "budget_weekly": {
+            "USA Alaska": 975.0,
+            "Canada Prairies": 0.0,
+            "Canada Ontario": 0.0
+        }
+    }
+},
+{
+    "TotalRegions": 11,
+    "Evaluated_Regions": 11,
+    "Evaluated_Combinations": 137,
+    "Time_Taken": 39.31,
+    "Experiment": "test2-input2",
+    "Best_Score": 7.5,
+    "0": {
+        "regions": [
+            "Peru",
+            "Canada Ontario"
+        ],
+        "total_score": 7.5,
+        "duration": {
+            "Peru": 2.0,
+            "Canada Ontario": 1.0
+        },
+        "budget_weekly": {
+            "Peru": 350.0,
+            "Canada Ontario": 0.0
+        }
+    }
+},
+{
+    "TotalRegions": 11,
+    "Evaluated_Regions": 11,
+    "Evaluated_Combinations": 135,
+    "Time_Taken": 33.49,
+    "Experiment": "test2-input2",
+    "Best_Score": 7.25,
+    "0": {
+        "regions": [
+            "Peru",
+            "USA Rocky Mountains",
+            "USA Southwest"
+        ],
+        "total_score": 7.25,
+        "duration": {
+            "Peru": 2.0,
+            "USA Rocky Mountains": 1.0,
+            "USA Southwest": 1.0
+        },
+        "budget_weekly": {
+            "Peru": 350.0,
+            "USA Rocky Mountains": 0.0,
+            "USA Southwest": 0.0
+        }
+    }
+},
+{
+    "TotalRegions": 11,
+    "Evaluated_Regions": 11,
+    "Evaluated_Combinations": 129,
+    "Time_Taken": 32.38,
+    "Experiment": "test2-input2",
+    "Best_Score": 7.25,
+    "0": {
+        "regions": [
+            "Botswana",
+            "USA Rocky Mountains"
+        ],
+        "total_score": 7.25,
+        "duration": {
+            "Botswana": 1.0,
+            "USA Rocky Mountains": 1.0
+        },
+        "budget_weekly": {
+            "Botswana": 560.0,
+            "USA Rocky Mountains": 0.0
+        }
+    }
+},
+{
+    "TotalRegions": 11,
+    "Evaluated_Regions": 11,
+    "Evaluated_Combinations": 101,
+    "Time_Taken": 130.63,
+    "Experiment": "test2-input2",
+    "Best_Score": 0
+},
+{
+    "TotalRegions": 11,
+    "Evaluated_Regions": 11,
+    "Evaluated_Combinations": 124,
+    "Time_Taken": 32.85,
+    "Experiment": "test2-input2",
+    "Best_Score": 7.25,
+    "0": {
+        "regions": [
+            "USA Alaska",
+            "Canada Prairies",
+            "USA Rocky Mountains"
+        ],
+        "total_score": 7.25,
+        "duration": {
+            "USA Alaska": 1.0,
+            "Canada Prairies": 1.0,
+            "USA Rocky Mountains": 1.0
+        },
+        "budget_weekly": {
+            "USA Alaska": 975.0,
+            "Canada Prairies": 0.0,
+            "USA Rocky Mountains": 0.0
+        }
+    }
+},
+{
+    "TotalRegions": 11,
+    "Evaluated_Regions": 11,
+    "Evaluated_Combinations": 133,
+    "Time_Taken": 31.62,
+    "Experiment": "test2-input2",
+    "Best_Score": 7.0,
+    "0": {
+        "regions": [
+            "USA Alaska",
+            "USA Rocky Mountains",
+            "USA Southwest"
+        ],
+        "total_score": 7.0,
+        "duration": {
+            "USA Alaska": 1.0,
+            "USA Rocky Mountains": 1.0,
+            "USA Southwest": 1.0
+        },
+        "budget_weekly": {
+            "USA Alaska": 975.0,
+            "USA Rocky Mountains": 0.0,
+            "USA Southwest": 0.0
+        }
+    }
+},
+{
+    "TotalRegions": 11,
+    "Evaluated_Regions": 11,
+    "Evaluated_Combinations": 132,
+    "Time_Taken": 128.47,
+    "Experiment": "test2-input2",
+    "Best_Score": 0
+},
+{
+    "TotalRegions": 11,
+    "Evaluated_Regions": 11,
+    "Evaluated_Combinations": 134,
+    "Time_Taken": 32.04,
+    "Experiment": "test2-input2",
+    "Best_Score": 7.25,
+    "0": {
+        "regions": [
+            "Canada Prairies",
+            "USA Rocky Mountains",
+            "USA Alaska"
+        ],
+        "total_score": 7.25,
+        "duration": {
+            "Canada Prairies": 1.0,
+            "USA Rocky Mountains": 1.0,
+            "USA Alaska": 1.0
+        },
+        "budget_weekly": {
+            "Canada Prairies": 0.0,
+            "USA Rocky Mountains": 0.0,
+            "USA Alaska": 975.0
+        }
+    }
+},
+{
+    "TotalRegions": 11,
+    "Evaluated_Regions": 11,
+    "Evaluated_Combinations": 124,
+    "Time_Taken": 124.06,
+    "Experiment": "test2-input2",
+    "Best_Score": 0
+}]
