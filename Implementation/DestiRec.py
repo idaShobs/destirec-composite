@@ -11,6 +11,7 @@ from deap import algorithms, base, benchmarks, tools, creator
 from collections import Sequence
 import json
 import os
+from csv import DictWriter
 
 class DestiRec:
     
@@ -67,20 +68,41 @@ class DestiRec:
         creator.create("ViolationDegree", int, typecode='i')
         creator.create("Feasible", int, typecode='i')
         creator.create("DistanceToFeasible", list)
-        toolbox.register("mate", tools.cxUniform, indpb=CROSSPB)
+        toolbox.register("mate", tools.cxESTwoPoint)
         toolbox.register("mutate", tools.mutFlipBit, indpb=MUTPB)
-        toolbox.register("select", tools.selNSGA3, ref_points=self.ref_points)
-
+        toolbox.register("select", tools.selNSGA3WithMemory(self.ref_points))
+        
         def evaluate(individual):
-            scores = start_df.loc[(start_df['RId'].isin(individual.strategy)) & (start_df['category'].isin(considered))].groupby('RId')['cat_score'].sum()*individual
-            result = scores.values
+            scores = start_df.loc[(start_df['RId'].isin(individual.strategy)) & (start_df['category'].isin(considered))].groupby('RId')['cat_score'].sum()
+            result = [scores.at[pos]*individual[i] for (i, pos) in enumerate(individual.strategy)]
             if(penalizeInObj):
-                result = np.subtract(result, individual.count(0)*NOBJ/2 + individual.violation_degree)
-            else:
-                result = np.subtract(result, individual.count(0)*NOBJ/2)
-            return result.tolist()
+                res = feasible(individual)
+                result = np.subtract(result, individual.violation_degree).tolist()
+            return result
 
         toolbox.register("evaluate", evaluate)
+
+        def checkduplicates():
+            def decorator(func):
+                def wrapper(*args, **kargs):
+                    offspring = func(*args, **kargs)
+                    for child in offspring:
+                        if not child.fitness.valid:
+                            child.feasible = 0
+                        
+                        if(len(child.strategy)==len(set(child.strategy))):
+                            continue
+                        dupIndx = [idx for idx, item in enumerate(child.strategy) if item in child.strategy[:idx]]
+                        for i in dupIndx:
+                            child[i] = child[i]*0
+                    return offspring
+                return wrapper
+            return decorator
+
+
+        toolbox.decorate("mate", checkduplicates())
+        toolbox.decorate("mutate", checkduplicates())
+
 
         def generateES(bcls, scls, dcls, bdcls, vcls, fcls, fdcls):
             '''
@@ -99,8 +121,6 @@ class DestiRec:
             ind.violation_degree = vcls(0)
             ind.feasible = fcls(0)
             ind.distance = fdcls([0.0]*NOBJ)
-            if(penalizeInObj):
-                res = feasible(ind)
             return ind
 
         def generateFeasible(bcls, scls, dcls, bdcls, vcls, fcls, fdcls):
@@ -133,28 +153,6 @@ class DestiRec:
         
         toolbox.register("population", tools.initRepeat, list, toolbox.booleanIndividuals)
 
-        def max_possible_mixed_utility(weekstoupper, weekstolower):
-            sumlist = []
-            curr_max = 0
-            for i, group in weekstoupper.groupby('RId'):
-                score = group['cat_score'].values
-                if(score[0] >0 and weekstolower.loc[(weekstolower['RId'] != i & (weekstolower['cat_score'] > 0)), 'cat_score'].count()>0):
-                    result = score + weekstolower.loc[(weekstolower['RId'] != i ), 'cat_score'].sum()
-                    result = result[0] if hasattr(result, "__len__") else result
-                    if result > curr_max:
-                        indx = {'u':[i], 'l':weekstolower.loc[((weekstolower['RId'] != i) & (weekstolower['cat_score'] > 0)), 'RId'].values.tolist()}
-                        sumlist = [result, indx]
-                        curr_max = result
-            for i, group in weekstolower.groupby('RId'):
-                if(score[0] >0 and weekstoupper.loc[(weekstoupper['RId'] != i & (weekstoupper['cat_score'] > 0)), 'cat_score'].count()>0):
-                    score = group['cat_score'].values
-                    result = score + weekstoupper.loc[weekstoupper['RId'] != i, 'cat_score'].sum()
-                    result = result[0] if hasattr(result, "__len__") else result
-                    if result > curr_max:
-                        indx = {'l':[i], 'u':weekstoupper.loc[((weekstoupper['RId'] != i) & (weekstoupper['cat_score'] > 0)), 'RId'].values.tolist()}
-                        sumlist = [result, indx]
-                        curr_max = result
-            return sumlist
             
         def c1_feasible(individual):
                 feasible = True
@@ -176,18 +174,22 @@ class DestiRec:
             sum_upper = weeks_to_upper.loc[weeks_to_upper['RId'].isin(selectedPos)].groupby('category')['cat_score'].sum().values[0]
                 
             if (scores_per_reg_upper.count(0.0) == 0 and sum_upper <= DURATION):
-                temp = weeks_to_upper.loc[(weeks_to_upper['RId'].isin(selectedPos)), ['RId','cat_score']]
-                info_region_duration = dict(zip(temp['RId'], temp['cat_score']))
+                temp_df = weeks_to_upper.loc[(weeks_to_upper['RId'].isin(selectedPos)), ['RId','cat_score']]
+                info_region_duration = dict(zip(temp_df['RId'], temp_df['cat_score']))
                 individual.feasibleDuration = info_region_duration
+            
             elif (scores_per_reg_lower.count(0.0)  == 0 and sum_lower <= DURATION):
-                temp = weeks_to_lower.loc[(weeks_to_lower['RId'].isin(selectedPos)), ['RId','cat_score']]
-                info_region_duration = dict(zip(temp['RId'], temp['cat_score']))
+                temp_df = weeks_to_lower.loc[(weeks_to_lower['RId'].isin(selectedPos)), ['RId','cat_score']]
+                info_region_duration = dict(zip(temp_df['RId'], temp_df['cat_score']))
+                
                 individual.feasibleDuration = info_region_duration
+                
             else:
                 norm = (sum_lower / DURATION) - 1
                 individual.violation_degree += norm **2 if norm > 0 else (-1*norm)**2
-                per_region_sum = weeks_to_lower.groupby('RId')['cat_score'].sum().values
-                div = np.divide(per_region_sum ,np.abs(norm)*DURATION) 
+                per_region_sum = weeks_to_lower.groupby('RId')['cat_score'].sum()
+                result = [per_region_sum.at[pos] for pos in individual.strategy]
+                div = np.divide(result,np.abs(norm)*DURATION) 
                 individual.distance = list(map(add, individual.distance, div))
                 feasible = False
             return feasible
@@ -204,15 +206,16 @@ class DestiRec:
             #if (scores_per_reg.count(0.0) == 0 and total_budget > 0 and total_budget <= BUDGET):
             if (total_budget > 0 and total_budget <= BUDGET):
 
-                temp = average_cost_pair.loc[((average_cost_pair['RId'].isin(selectedPos))), ['RId','cat_score']]
-                info_region_budget = dict(zip(temp['RId'], temp['cat_score']))
+                temp_df = average_cost_pair.loc[((average_cost_pair['RId'].isin(selectedPos))), ['RId','cat_score']]
+                info_region_budget = dict(zip(temp_df['RId'], temp_df['cat_score']))
                 individual.feasibleBudget = info_region_budget
             else:
                 feasible = False
                 norm = (total_budget / BUDGET) - 1  
                 individual.violation_degree += norm**2 if norm > 0 else (-1*norm)**2 
-                per_region_sum = average_cost_pair.groupby('RId')['cat_score'].sum().map(lambda x: x*DURATION).values
-                div = np.divide(per_region_sum, np.abs(norm)*BUDGET) 
+                per_region_sum = average_cost_pair.groupby('RId')['cat_score'].sum().map(lambda x: x*DURATION)
+                result = [per_region_sum.at[pos] for pos in individual.strategy]
+                div = np.divide(result, np.abs(norm)*BUDGET) 
                 individual.distance = list(map(add, individual.distance, div))
             return feasible
         
@@ -225,43 +228,42 @@ class DestiRec:
             if norm > 0:
                 feasible = False
                 individual.violation_degree += norm**2
-                per_region_sum = scores.loc[((scores['category'].isin(categories)) & (scores['RId'].isin(selectedPos)))].groupby(['RId','category'])['cat_score'].sum().unstack().values.tolist()
-                per_region_count = [regsum.count(0.0) for regsum in per_region_sum]
+                per_region_sum = scores.loc[((scores['category'].isin(categories)) & (scores['RId'].isin(selectedPos)))].groupby(['RId','category'])['cat_score'].sum()
+                per_region_count = [per_region_sum.at[pos].values.tolist().count(0.0) for pos in individual.strategy]
                 div = np.divide(per_region_count, len(categories)) 
                 individual.distance = list(map(add, individual.distance, div))
             return  feasible
 
         def c5_feasible(individual, selectedPos):
             feasible = True
-            region_combo_string = [region_index_info[pos] for i, pos in enumerate(selectedPos) if individual[i] == 1]
+            region_combo_string = [region_index_info[pos] for _, pos in enumerate(selectedPos)]
             unfulfilledCat = []
             for region in region_combo_string:
                 unfulfilledCat.append([True for x in region_combo_string if (x != region) and (region not in region_groups[x])])
             norm = sum([len(listElem) for listElem in unfulfilledCat])
             if norm > 0:
                 individual.violation_degree += norm ** 2
-                individual.distance = list(map(add, individual.distance, [1]*NOBJ))
+                individual.distance = list(map(add, individual.distance, [2]*NOBJ))
                 feasible = False
             return feasible
 
         def feasible(individual):
-            feasible = bool(individual.feasible)
-            if(feasible == False):
-                individual.violation_degree = 0
-                individual.distance = [0.0]*NOBJ
-                selectedPos = [pos for i, pos in enumerate(individual.strategy) if individual[i]==1 ]
-                neededRegions = start_df.loc[(start_df['RId'].isin(individual.strategy))]
-                scores_1 = neededRegions.loc[neededRegions['category'].isin(othercategories)]
-                c1 = scores_1.loc[:, ['RId','category', 'cat_score']]
-                scores_2 = neededRegions.loc[neededRegions['category'].isin(considered)]
-                feasible1 = c1_feasible(individual)
-                if(feasible1):
-                    feasible2 = c2_feasible(individual, c1, selectedPos)
-                    feasible3 = c3_feasible(individual, c1, selectedPos)
-                    feasible4 = c4_feasible(individual, scores_2, selectedPos)
-                    feasible5 = c5_feasible(individual, selectedPos)
-                feasible = feasible1 and feasible2 and feasible3 and feasible4 and feasible5
-                individual.feasible = int(feasible)
+            feasible = False
+            individual.violation_degree = 0
+            individual.distance = [0.0]*NOBJ
+            selectedPos = [pos for i, pos in enumerate(individual.strategy) if individual[i]==1 ]
+            neededRegions = start_df.loc[(start_df['RId'].isin(individual.strategy))]
+            scores_1 = neededRegions.loc[neededRegions['category'].isin(othercategories)]
+            c1 = scores_1.loc[:, ['RId','category', 'cat_score']]
+            scores_2 = neededRegions.loc[neededRegions['category'].isin(considered)]
+            feasible1 = c1_feasible(individual)
+            if(feasible1):
+                feasible2 = c2_feasible(individual, c1, selectedPos)
+                feasible3 = c3_feasible(individual, c1, selectedPos)
+                feasible4 = c4_feasible(individual, scores_2, selectedPos)
+                feasible5 = c5_feasible(individual, selectedPos)
+            feasible = feasible1 and feasible2 and feasible3 and feasible4 and feasible5
+            individual.feasible = int(feasible)
             return feasible
 
         if not penalizeInObj:
@@ -289,7 +291,7 @@ class DestiRec:
         
         
 
-    def main(self, toolbox, seed=None):
+    def main(self, toolbox, algopt=1, seed=None, run=0, input=0, variant=0):
         random.seed(seed)
         stats = tools.Statistics()
         #stats.register('population', copy.deepcopy)
@@ -314,6 +316,7 @@ class DestiRec:
         gen_fitnesses = []
         evaluated_regions = set()
         evaluated_combinations = set()
+        best_point = worst_point = extreme_points = None
         for gen in range(1, toolbox.max_gen):
             offspring = algorithms.varAnd(population, toolbox, toolbox.cross_prob, toolbox.mut_prob)
             it = {'gen': gen, 'fitnesses':list(), 'feasibility':list()}
@@ -322,8 +325,8 @@ class DestiRec:
             fitnesses = toolbox.map(toolbox.evaluate, invalid_ind)
             for ind, fit in zip(invalid_ind, fitnesses):
                 ind.fitness.values = fit
-                it['fitnesses'].append(fit)
-                it['feasibility'].append([np.sum(fit), 'Feasible' if ind.feasible else 'Infeasible'])
+                it['fitnesses'].append(ind.fitness.values)
+                it['feasibility'].append([np.sum(ind.fitness.values), 'Feasible' if ind.feasible else 'Infeasible'])
                 eval_str = [str(pos) for i, pos in enumerate(ind.strategy) if ind[i]==1 ]
                 evaluated_regions.update(eval_str)
                 evaluated_combinations.add(', '.join(eval_str))
@@ -336,10 +339,12 @@ class DestiRec:
             print(logbook.stream,end='\r')
         end = time.time()
         result = dict()
-        result["TotalRegions"] = len(toolbox.region_indexInfo) 
-        result["Evaluated_Regions"] = len(evaluated_regions)
-        result["Evaluated_Combinations"] = len(evaluated_combinations)
-        result["Time_Taken"] = round(end - start, 2)
+        result["EvaluatedRegions"] = len(evaluated_regions)
+        result["EvaluatedCombinations"] = len(evaluated_combinations)
+        result["Totaltime"] = round(end - start, 2)
+        result["Input"] = input
+        result["Variant"] = variant
+        result["Nrun"] = run
         result = self.save_results(result, population, toolbox)
         result["Process"] = gen_fitnesses
         
@@ -349,27 +354,34 @@ class DestiRec:
         first_front = tools.emo.sortLogNondominated(population, len(population), first_front_only=True)
         handled = list()
         region_index_info = toolbox.region_indexInfo
+        header = ['Nrun','Variant','Input','Score','Nregions','EvaluatedRegions','EvaluatedCombinations','Totaltime','SuggestedRegions','SuggestedDuration','SuggestedBudget']
+        filename = f'logs/results/evaluation.csv'
+
+        temp_result = result.copy()
+        result['Best_Score'] = 0
         result["Experiment"] = toolbox.experiment_name
-        result["Best_Score"] = 0
         for indx, ind in enumerate(first_front):
             if (ind not in handled and ind.feasible):
                 handled.append(ind)
-                selectedPos = [pos for i, pos in enumerate(ind.strategy) if ind[i]==1 ]
+                selectedPos = list(set([pos for i, pos in enumerate(ind.strategy) if ind[i]==1]))
                 recommend_regions = [region_index_info[pos] for pos in selectedPos if pos in ind.feasibleDuration.keys()]
                 recommended_duration = {region_index_info[pos]: ind.feasibleDuration[pos] for pos in selectedPos if pos in ind.feasibleDuration.keys()}
                 recommended_weekly_budget = {region_index_info[pos]: ind.feasibleBudget[pos] for pos in selectedPos if pos in ind.feasibleBudget.keys()}
-                result[indx] = {"regions":recommend_regions, "total_score":np.sum(toolbox.evaluate(ind)),  "duration":recommended_duration, "budget_weekly":recommended_weekly_budget}
-                if(result[indx]["total_score"]> result["Best_Score"]):
-                    result["Best_Score"] = result[indx]["total_score"]
-        filename = f'logs/results/{toolbox.experiment_name}.json'
-        if os.path.exists(filename):
-            append_write = 'a'
-        else:
-            append_write = 'w'
-            with open(filename, append_write) as convert_file:
-                json.dumps([])
-        with open(filename, append_write) as convert_file:
-            convert_file.write(json.dumps(result, indent=4))
+                
+                temp_result['Score'] = np.sum(toolbox.evaluate(ind))
+                temp_result['Nregions'] = len(recommend_regions)
+                temp_result['SuggestedRegions'] = '; '.join(recommend_regions)
+                temp_result['SuggestedDuration'] = '; '.join(recommended_duration.keys())+'-'+'; '.join([str(x) for x in recommended_duration.values()])
+                temp_result['SuggestedBudget'] = '; '.join(recommended_weekly_budget.keys())+'-'+'; '.join([str(x) for x in recommended_weekly_budget.values()])
+                with open(filename, 'a+', newline='') as convert_file:
+                    dictwriter_object = DictWriter(convert_file, delimiter=',', fieldnames=header)
+                    dictwriter_object.writerow(temp_result)
+                if indx not in result.keys():
+                    result[indx] = list()
+                result[indx].append(temp_result)
+                if temp_result['Score'] > result['Best_Score']:
+                    result['Best_Score'] = temp_result['Score']
+        
         return result
 
 

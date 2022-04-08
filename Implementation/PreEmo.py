@@ -21,7 +21,7 @@ def get_dataset(input, min_start_rank = 0.7, rank=True):
     query = parse_query(input)
     df = get_df(query)
     df['cat_score'] = df['cat_score'].astype(dtype=float)
-    df['cat_score'] = normalize(df['cat_score'])
+    #df['cat_score'] = normalize(df['cat_score'])
     considered = get_considered(input)
     all_months = weeks_in_month(input['Year'])
     needed_months = [pref for pref in considered if pref in calendar.month_abbr]

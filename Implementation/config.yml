@@ -3,7 +3,7 @@ input:
     Duration: 3
     Budget: 3000
     Exclude: [Afghanistan]
-    Preferences: [beach, watersports, entertainment, culinary, Jun, Aug]
+    Preferences: [beach, watersports, entertainment, culinary, Jul, Aug]
     Year: 2023
     AdditionalPreferences: [Safety from crime]
   input2:
@@ -26,43 +26,43 @@ tests:
   test1:
     parameters:
       pop: 92
-      max: 100
+      max: 120
       objs: 4
-      refs: 8
+      refs: 12
       prerank: False
       FeasibleOnly: False
       PenaltyBased: False
-    nruns: 10
+    nruns: 5
   test2:
     parameters:
       pop: 92
-      max: 100
+      max: 120
       objs: 4
-      refs: 8
+      refs: 12
       prerank: True
       FeasibleOnly: False
       PenaltyBased: False
-    nruns: 10 
+    nruns: 5 
   test3:
     parameters:
       pop: 40
-      max: 100
+      max: 120
       objs: 4
-      refs: 4
+      refs: 12
       prerank: True
       FeasibleOnly: True
       PenaltyBased: False
-    nruns: 10
+    nruns: 5
   test4:
     parameters:
       pop: 92
-      max: 100
+      max: 120
       objs: 4
-      refs: 4
+      refs: 12
       prerank: True
       FeasibleOnly: False
       PenaltyBased: True
-    nruns: 10 
+    nruns: 5 
  
 
 
