@@ -1,0 +1,44 @@
+{
+    "TotalRegions": 184,
+    "Evaluated_Regions": 104,
+    "Evaluated_Combinations": 120,
+    "Time_Taken": 38.94,
+    "Query": {
+        "Duration": 3,
+        "Budget": 6000,
+        "Exclude": [
+            "Afghanistan",
+            "Pacific",
+            "World",
+            "None"
+        ],
+        "Preferences": [
+            "hiking",
+            "beach",
+            "watersports",
+            "Jun",
+            "Aug",
+            "Safety from crime"
+        ],
+        "Year": 2023,
+        "AdditionalPreferences": [
+            "Safety from crime"
+        ]
+    },
+    "Experiment": "n_pop=120 t_max=150 n_obj=3 n_ref=4 prerank=False fonly=False pen=True",
+    "0": {
+        "regions": [
+            "Bolivia",
+            "Greece  mainland"
+        ],
+        "total_score": 6.5,
+        "duration": {
+            "Bolivia": 1.0,
+            "Greece  mainland": 1.0
+        },
+        "budget_weekly": {
+            "Bolivia": 310.0,
+            "Greece  mainland": 0.0
+        }
+    }
+}

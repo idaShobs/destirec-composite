@@ -1,0 +1,188 @@
+[{
+    "TotalRegions": 28,
+    "Evaluated_Regions": 28,
+    "Evaluated_Combinations": 111,
+    "Time_Taken": 19.23,
+    "Experiment": "test4-input1",
+    "Best_Score": 12.0,
+    "0": {
+        "regions": [
+            "Greenland",
+            "Russia Central"
+        ],
+        "total_score": 12.0,
+        "duration": {
+            "Greenland": 1.0,
+            "Russia Central": 1.0
+        },
+        "budget_weekly": {
+            "Greenland": 975.0,
+            "Russia Central": 0.0
+        }
+    }
+},
+{
+    "TotalRegions": 28,
+    "Evaluated_Regions": 28,
+    "Evaluated_Combinations": 112,
+    "Time_Taken": 18.9,
+    "Experiment": "test4-input1",
+    "Best_Score": 0
+},
+{
+    "TotalRegions": 28,
+    "Evaluated_Regions": 28,
+    "Evaluated_Combinations": 112,
+    "Time_Taken": 18.99,
+    "Experiment": "test4-input1",
+    "Best_Score": 11.75,
+    "0": {
+        "regions": [
+            "Botswana",
+            "Bhutan",
+            "Nepal"
+        ],
+        "total_score": 11.75,
+        "duration": {
+            "Botswana": 1.0,
+            "Bhutan": 1.0,
+            "Nepal": 1.0
+        },
+        "budget_weekly": {
+            "Botswana": 560.0,
+            "Bhutan": 250.0,
+            "Nepal": 0.0
+        }
+    }
+},
+{
+    "TotalRegions": 28,
+    "Evaluated_Regions": 28,
+    "Evaluated_Combinations": 89,
+    "Time_Taken": 19.21,
+    "Experiment": "test4-input1",
+    "Best_Score": 0
+},
+{
+    "TotalRegions": 28,
+    "Evaluated_Regions": 28,
+    "Evaluated_Combinations": 103,
+    "Time_Taken": 19.08,
+    "Experiment": "test4-input1",
+    "Best_Score": 11.5,
+    "0": {
+        "regions": [
+            "Botswana",
+            "USA Great Plains"
+        ],
+        "total_score": 11.5,
+        "duration": {
+            "Botswana": 1.0,
+            "USA Great Plains": 1.0
+        },
+        "budget_weekly": {
+            "Botswana": 560.0,
+            "USA Great Plains": 0.0
+        }
+    }
+},
+{
+    "TotalRegions": 28,
+    "Evaluated_Regions": 28,
+    "Evaluated_Combinations": 108,
+    "Time_Taken": 18.96,
+    "Experiment": "test4-input1",
+    "Best_Score": 11.5,
+    "0": {
+        "regions": [
+            "Paraguay",
+            "Sahel East"
+        ],
+        "total_score": 11.5,
+        "duration": {
+            "Paraguay": 1.0,
+            "Sahel East": 1.0
+        },
+        "budget_weekly": {
+            "Paraguay": 400.0,
+            "Sahel East": 0.0
+        }
+    }
+},
+{
+    "TotalRegions": 28,
+    "Evaluated_Regions": 28,
+    "Evaluated_Combinations": 100,
+    "Time_Taken": 19.24,
+    "Experiment": "test4-input1",
+    "Best_Score": 11.5,
+    "0": {
+        "regions": [
+            "Mongolia",
+            "USA Florida"
+        ],
+        "total_score": 11.5,
+        "duration": {
+            "Mongolia": 2.0,
+            "USA Florida": 1.0
+        },
+        "budget_weekly": {
+            "Mongolia": 350.0,
+            "USA Florida": 0.0
+        }
+    }
+},
+{
+    "TotalRegions": 28,
+    "Evaluated_Regions": 28,
+    "Evaluated_Combinations": 108,
+    "Time_Taken": 19.05,
+    "Experiment": "test4-input1",
+    "Best_Score": 12.0,
+    "0": {
+        "regions": [
+            "Nepal",
+            "Bhutan"
+        ],
+        "total_score": 12.0,
+        "duration": {
+            "Nepal": 1.0,
+            "Bhutan": 1.0
+        },
+        "budget_weekly": {
+            "Nepal": 0.0,
+            "Bhutan": 250.0
+        }
+    }
+},
+{
+    "TotalRegions": 28,
+    "Evaluated_Regions": 28,
+    "Evaluated_Combinations": 95,
+    "Time_Taken": 19.99,
+    "Experiment": "test4-input1",
+    "Best_Score": 12.25,
+    "0": {
+        "regions": [
+            "Canada North",
+            "Botswana"
+        ],
+        "total_score": 12.25,
+        "duration": {
+            "Canada North": 1.0,
+            "Botswana": 1.0
+        },
+        "budget_weekly": {
+            "Canada North": 0.0,
+            "Botswana": 560.0
+        }
+    }
+},
+{
+    "TotalRegions": 28,
+    "Evaluated_Regions": 28,
+    "Evaluated_Combinations": 98,
+    "Time_Taken": 25.4,
+    "Experiment": "test4-input1",
+    "Best_Score": 0
+}]

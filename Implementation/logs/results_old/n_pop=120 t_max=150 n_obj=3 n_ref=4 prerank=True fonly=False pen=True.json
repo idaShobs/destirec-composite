@@ -1,0 +1,91 @@
+{
+    "TotalRegions": 15,
+    "Evaluated_Regions": 15,
+    "Evaluated_Combinations": 96,
+    "Time_Taken": 35.33,
+    "Query": {
+        "Duration": 3,
+        "Budget": 6000,
+        "Exclude": [
+            "Afghanistan",
+            "Pacific",
+            "World",
+            "None"
+        ],
+        "Preferences": [
+            "hiking",
+            "beach",
+            "watersports",
+            "Jun",
+            "Aug",
+            "Safety from crime"
+        ],
+        "Year": 2023,
+        "AdditionalPreferences": [
+            "Safety from crime"
+        ]
+    },
+    "Experiment": "n_pop=120 t_max=150 n_obj=3 n_ref=4 prerank=True fonly=False pen=True",
+    "0": {
+        "regions": [
+            "Bhutan",
+            "Maldives",
+            "Nepal"
+        ],
+        "total_score": 8.5,
+        "duration": {
+            "Bhutan": 1.0,
+            "Maldives": 1.0,
+            "Nepal": 1.0
+        },
+        "budget_weekly": {
+            "Bhutan": 250.0,
+            "Maldives": 0.0,
+            "Nepal": 0.0
+        }
+    }
+},
+{
+    "TotalRegions": 15,
+    "Evaluated_Regions": 15,
+    "Evaluated_Combinations": 128,
+    "Time_Taken": 40.35,
+    "Query": {
+        "Duration": 3,
+        "Budget": 6000,
+        "Exclude": [
+            "Afghanistan",
+            "Pacific",
+            "World",
+            "None"
+        ],
+        "Preferences": [
+            "hiking",
+            "beach",
+            "watersports",
+            "Jun",
+            "Aug",
+            "Safety from crime"
+        ],
+        "Year": 2023,
+        "AdditionalPreferences": [
+            "Safety from crime"
+        ]
+    },
+    "Experiment": "n_pop=120 t_max=150 n_obj=3 n_ref=4 prerank=True fonly=False pen=True",
+    "0": {
+        "regions": [
+            "Bhutan",
+            "Somalia"
+        ],
+        "total_score": 8.0,
+        "duration": {
+            "Bhutan": 1.0,
+            "Somalia": 1.0
+        },
+        "budget_weekly": {
+            "Bhutan": 250.0,
+            "Somalia": 0.0
+        }
+    }
+}

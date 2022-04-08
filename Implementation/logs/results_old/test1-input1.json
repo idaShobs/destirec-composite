@@ -1,0 +1,194 @@
+[{
+    "TotalRegions": 188,
+    "Evaluated_Regions": 126,
+    "Evaluated_Combinations": 128,
+    "Time_Taken": 112.91,
+    "Experiment": "test1-input1",
+    "Best_Score": 0
+},
+{
+    "TotalRegions": 188,
+    "Evaluated_Regions": 118,
+    "Evaluated_Combinations": 130,
+    "Time_Taken": 26.69,
+    "Experiment": "test1-input1",
+    "Best_Score": 10.25,
+    "0": {
+        "regions": [
+            "Sahel West",
+            "Greenland"
+        ],
+        "total_score": 10.25,
+        "duration": {
+            "Sahel West": 1.0,
+            "Greenland": 1.0
+        },
+        "budget_weekly": {
+            "Sahel West": 0.0,
+            "Greenland": 975.0
+        }
+    }
+},
+{
+    "TotalRegions": 188,
+    "Evaluated_Regions": 117,
+    "Evaluated_Combinations": 125,
+    "Time_Taken": 28.22,
+    "Experiment": "test1-input1",
+    "Best_Score": 10.75,
+    "0": {
+        "regions": [
+            "Lesser Antilles",
+            "Argentina North"
+        ],
+        "total_score": 10.75,
+        "duration": {
+            "Lesser Antilles": 1.0,
+            "Argentina North": 1.0
+        },
+        "budget_weekly": {
+            "Lesser Antilles": 575.0,
+            "Argentina North": 0.0
+        }
+    }
+},
+{
+    "TotalRegions": 188,
+    "Evaluated_Regions": 122,
+    "Evaluated_Combinations": 141,
+    "Time_Taken": 123.3,
+    "Experiment": "test1-input1",
+    "Best_Score": 0
+},
+{
+    "TotalRegions": 188,
+    "Evaluated_Regions": 115,
+    "Evaluated_Combinations": 125,
+    "Time_Taken": 29.84,
+    "Experiment": "test1-input1",
+    "Best_Score": 7.5,
+    "0": {
+        "regions": [
+            "Jordan and Palestina",
+            "Mexico Pacific Coast",
+            "Mexico"
+        ],
+        "total_score": 7.5,
+        "duration": {
+            "Jordan and Palestina": 1.0,
+            "Mexico Pacific Coast": 1.0,
+            "Mexico": 1.0
+        },
+        "budget_weekly": {
+            "Jordan and Palestina": 350.0,
+            "Mexico Pacific Coast": 0.0,
+            "Mexico": 375.0
+        }
+    }
+},
+{
+    "TotalRegions": 188,
+    "Evaluated_Regions": 125,
+    "Evaluated_Combinations": 122,
+    "Time_Taken": 28.84,
+    "Experiment": "test1-input1",
+    "Best_Score": 8.75,
+    "0": {
+        "regions": [
+            "Somalia",
+            "India",
+            "Maldives"
+        ],
+        "total_score": 8.75,
+        "duration": {
+            "Somalia": 1.0,
+            "India": 1.0,
+            "Maldives": 1.0
+        },
+        "budget_weekly": {
+            "Somalia": 0.0,
+            "India": 350.0,
+            "Maldives": 0.0
+        }
+    }
+},
+{
+    "TotalRegions": 188,
+    "Evaluated_Regions": 115,
+    "Evaluated_Combinations": 122,
+    "Time_Taken": 25.07,
+    "Experiment": "test1-input1",
+    "Best_Score": 8.25,
+    "0": {
+        "regions": [
+            "Czech Republic and Slovakia",
+            "Benelux"
+        ],
+        "total_score": 8.25,
+        "duration": {
+            "Czech Republic and Slovakia": 1.0,
+            "Benelux": 1.0
+        },
+        "budget_weekly": {
+            "Czech Republic and Slovakia": 0.0,
+            "Benelux": 420.0
+        }
+    }
+},
+{
+    "TotalRegions": 188,
+    "Evaluated_Regions": 120,
+    "Evaluated_Combinations": 123,
+    "Time_Taken": 120.44,
+    "Experiment": "test1-input1",
+    "Best_Score": 0
+},
+{
+    "TotalRegions": 188,
+    "Evaluated_Regions": 128,
+    "Evaluated_Combinations": 147,
+    "Time_Taken": 26.92,
+    "Experiment": "test1-input1",
+    "Best_Score": 9.0,
+    "0": {
+        "regions": [
+            "India West",
+            "Panama"
+        ],
+        "total_score": 9.0,
+        "duration": {
+            "India West": 2.0,
+            "Panama": 1.0
+        },
+        "budget_weekly": {
+            "India West": 0.0,
+            "Panama": 400.0
+        }
+    }
+},
+{
+    "TotalRegions": 188,
+    "Evaluated_Regions": 128,
+    "Evaluated_Combinations": 133,
+    "Time_Taken": 25.84,
+    "Experiment": "test1-input1",
+    "Best_Score": 7.75,
+    "0": {
+        "regions": [
+            "Benelux",
+            "Maghreb",
+            "Slovenia and Croatia"
+        ],
+        "total_score": 7.75,
+        "duration": {
+            "Benelux": 1.0,
+            "Maghreb": 1.0,
+            "Slovenia and Croatia": 1.0
+        },
+        "budget_weekly": {
+            "Benelux": 420.0,
+            "Maghreb": 0.0,
+            "Slovenia and Croatia": 350.0
+        }
+    }
+}]
