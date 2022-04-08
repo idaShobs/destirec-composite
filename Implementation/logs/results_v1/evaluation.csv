@@ -1,0 +1,299 @@
+Nrun,Variant,Input,Score,Nregions,EvaluatedRegions,EvaluatedCombinations,Totaltime,SuggestedRegions,SuggestedDuration,SuggestedBudget
+0,1,1,14.0,2,129,317,155.63,East Asia; Near and Middle East,East Asia; Near and Middle East-1.0; 1.0,East Asia; Near and Middle East-450.0; 0.0
+0,1,1,18.0,2,129,317,155.63,Vietnam and Cambodia; Philippines,Vietnam and Cambodia; Philippines-1.0; 2.0,Vietnam and Cambodia; Philippines-375.0; 375.0
+0,1,1,-6.0,1,129,317,155.63,Namibia,Namibia-1.0,Namibia-385.0
+0,1,1,-1.0,1,129,317,155.63,Bhutan,Bhutan-1.0,Bhutan-250.0
+1,1,1,53.0,3,135,191,178.36,USA Great Plains; USA Midwest; USA Alaska,USA Great Plains; USA Midwest; USA Alaska-1.0; 1.0; 1.0,USA Great Plains; USA Midwest; USA Alaska-0.0; 0.0; 975.0
+2,1,1,26.0,2,129,226,221.06,North Korea; Taiwan,North Korea; Taiwan-1.0; 1.0,North Korea; Taiwan-0.0; 510.0
+2,1,1,-6.0,1,129,226,221.06,Oman and Yemen,Oman and Yemen-1.0,Oman and Yemen-490.0
+3,1,1,52.0,3,117,182,242.5,Mexico Bajio and Central Mexico; Northern Mexico; Mexico Yucatan,Mexico Bajio and Central Mexico; Northern Mexico; Mexico Yucatan-1.0; 1.0; 1.0,Mexico Bajio and Central Mexico; Northern Mexico; Mexico Yucatan-0.0; 0.0; 415.0
+3,1,1,52.0,3,117,182,242.5,Northern Mexico; Mexico Bajio and Central Mexico; Mexico Yucatan,Northern Mexico; Mexico Bajio and Central Mexico; Mexico Yucatan-1.0; 1.0; 1.0,Northern Mexico; Mexico Bajio and Central Mexico; Mexico Yucatan-0.0; 0.0; 415.0
+4,1,1,48.0,3,121,294,186.66,Canada Prairies; Canada Quebec; Canada,Canada Prairies; Canada Quebec; Canada-1.0; 1.0; 1.0,Canada Prairies; Canada Quebec; Canada-0.0; 0.0; 725.0
+4,1,1,18.0,2,121,294,186.66,Slovenia and Croatia; Benelux,Slovenia and Croatia; Benelux-1.0; 1.0,Slovenia and Croatia; Benelux-350.0; 420.0
+4,1,1,26.0,2,121,294,186.66,Bhutan; Pakistan,Bhutan; Pakistan-1.0; 1.0,Bhutan; Pakistan-250.0; 400.0
+5,1,1,-6.0,1,121,292,143.72,Tunisia,Tunisia-1.0,Tunisia-375.0
+5,1,1,21.0,2,121,292,143.72,Jordan and Palestina; Qatar and Bahrain,Jordan and Palestina; Qatar and Bahrain-1.0; 1.0,Jordan and Palestina; Qatar and Bahrain-350.0; 525.0
+5,1,1,-6.0,1,121,292,143.72,Madagascar,Madagascar-2.0,Madagascar-350.0
+6,1,1,-1.0,1,131,343,149.92,Central Africa,Central Africa-2.0,Central Africa-500.0
+6,1,1,24.0,2,131,343,149.92,Bolivia; Guianas,Bolivia; Guianas-1.0; 1.0,Bolivia; Guianas-310.0; 525.0
+6,1,1,-4.0,1,131,343,149.92,China Northwest (Shaanxi to Xinjiang),China Northwest (Shaanxi to Xinjiang)-1.0,China Northwest (Shaanxi to Xinjiang)-500.0
+7,1,1,22.0,2,132,394,157.5,Thailand South; West Malaysia and Singapur,Thailand South; West Malaysia and Singapur-1.0; 1.0,Thailand South; West Malaysia and Singapur-375.0; 510.0
+7,1,1,52.0,3,132,394,157.5,USA South; USA Great Plains; USA,USA South; USA Great Plains; USA-1.0; 1.0; 1.0,USA South; USA Great Plains; USA-0.0; 0.0; 600.0
+7,1,1,22.0,2,132,394,157.5,Guianas; Venezuela,Guianas; Venezuela-1.0; 1.0,Guianas; Venezuela-525.0; 390.0
+8,1,1,22.0,2,135,305,156.47,West Africa; Sahel West,West Africa; Sahel West-1.0; 1.0,West Africa; Sahel West-500.0; 0.0
+8,1,1,19.0,2,135,305,156.47,Sahel West; East Africa,Sahel West; East Africa-1.0; 2.0,Sahel West; East Africa-0.0; 350.0
+8,1,1,17.0,2,135,305,156.47,West Africa; East Africa,West Africa; East Africa-1.0; 2.0,West Africa; East Africa-500.0; 350.0
+8,1,1,18.0,2,135,305,156.47,Algeria; Morocco,Algeria; Morocco-1.0; 1.0,Algeria; Morocco-450.0; 390.0
+9,1,1,-6.0,1,125,257,139.05,Iraq and Kuwait,Iraq and Kuwait-2.0,Iraq and Kuwait-420.0
+9,1,1,-5.0,1,125,257,139.05,Cuba,Cuba-1.0,Cuba-350.0
+9,1,1,-1.0,1,125,257,139.05,Bhutan,Bhutan-1.0,Bhutan-250.0
+9,1,1,-5.0,1,125,257,139.05,Cuba,Cuba-1.0,Cuba-350.0
+0,1,2,-12.0,1,136,356,147.09,Mexico Yucatan,Mexico Yucatan-1.0,Mexico Yucatan-415.0
+0,1,2,-13.0,1,136,356,147.09,Namibia,Namibia-1.0,Namibia-385.0
+0,1,2,-15.0,1,136,356,147.09,Mongolia,Mongolia-2.0,Mongolia-350.0
+0,1,2,-12.0,1,136,356,147.09,France,France-1.0,France-420.0
+1,1,2,4.0,2,135,344,158.65,Benelux; Germany,Benelux; Germany-1.0; 1.0,Benelux; Germany-420.0; 420.0
+1,1,2,19.0,3,135,344,158.65,Near and Middle East; East Asia; Central Asia,Near and Middle East; East Asia; Central Asia-1.0; 1.0; 1.0,Near and Middle East; East Asia; Central Asia-0.0; 450.0; 350.0
+2,1,2,6.0,2,130,270,152.7,Honduras and El Salvador; Costa Rica,Honduras and El Salvador; Costa Rica-1.0; 1.0,Honduras and El Salvador; Costa Rica-250.0; 400.0
+2,1,2,-12.0,1,130,270,152.7,Taiwan,Taiwan-1.0,Taiwan-510.0
+3,1,2,6.0,2,133,398,158.96,Colombia; Ecuador,Colombia; Ecuador-2.0; 1.0,Colombia; Ecuador-350.0; 350.0
+3,1,2,7.0,2,133,398,158.96,Venezuela; Colombia,Venezuela; Colombia-1.0; 2.0,Venezuela; Colombia-390.0; 350.0
+3,1,2,7.0,2,133,398,158.96,Venezuela; Ecuador,Venezuela; Ecuador-1.0; 1.0,Venezuela; Ecuador-390.0; 350.0
+3,1,2,-12.0,1,133,398,158.96,Bahamas  Turks and Caicos Islands,Bahamas  Turks and Caicos Islands-1.0,Bahamas  Turks and Caicos Islands-725.0
+4,1,2,5.0,2,132,334,151.06,USA Texas; USA,USA Texas; USA-1.0; 1.0,USA Texas; USA-0.0; 600.0
+4,1,2,-14.0,1,132,334,151.06,Slovenia and Croatia,Slovenia and Croatia-1.0,Slovenia and Croatia-350.0
+4,1,2,-12.0,1,132,334,151.06,China Southwest (Guangxi to Tibet),China Southwest (Guangxi to Tibet)-1.0,China Southwest (Guangxi to Tibet)-500.0
+4,1,2,-15.0,1,132,334,151.06,Central Asia,Central Asia-1.0,Central Asia-350.0
+5,1,2,7.0,2,127,295,164.82,Madagascar; Botswana,Madagascar; Botswana-2.0; 1.0,Madagascar; Botswana-350.0; 560.0
+5,1,2,4.0,2,127,295,164.82,Oman and Yemen; Israel,Oman and Yemen; Israel-1.0; 1.0,Oman and Yemen; Israel-490.0; 420.0
+5,1,2,4.0,2,127,295,164.82,United Arab Emirates; Israel,United Arab Emirates; Israel-1.0; 1.0,United Arab Emirates; Israel-525.0; 420.0
+6,1,2,23.0,3,128,292,150.07,Mexico Yucatan; Mexico; Northern Mexico,Mexico Yucatan; Mexico; Northern Mexico-1.0; 1.0; 1.0,Mexico Yucatan; Mexico; Northern Mexico-415.0; 375.0; 0.0
+6,1,2,-13.0,1,128,292,150.07,Libya,Libya-1.0,Libya-500.0
+7,1,2,8.0,2,134,256,147.59,Uruguay; Peru,Uruguay; Peru-1.0; 2.0,Uruguay; Peru-400.0; 350.0
+7,1,2,-14.0,1,134,256,147.59,Honduras and El Salvador,Honduras and El Salvador-1.0,Honduras and El Salvador-250.0
+8,1,2,-12.0,1,136,357,137.96,Bahamas  Turks and Caicos Islands,Bahamas  Turks and Caicos Islands-1.0,Bahamas  Turks and Caicos Islands-725.0
+8,1,2,-10.0,1,136,357,137.96,Peru,Peru-2.0,Peru-350.0
+8,1,2,-12.0,1,136,357,137.96,Melanesia,Melanesia-1.0,Melanesia-750.0
+9,1,2,-13.0,1,129,264,145.33,West Africa,West Africa-1.0,West Africa-500.0
+9,1,2,-13.0,1,129,264,145.33,Vietnam and Cambodia,Vietnam and Cambodia-1.0,Vietnam and Cambodia-375.0
+0,1,3,-5.0,1,124,317,137.93,Bahamas  Turks and Caicos Islands,Bahamas  Turks and Caicos Islands-1.0,Bahamas  Turks and Caicos Islands-725.0
+0,1,3,-8.0,1,124,317,137.93,Venezuela,Venezuela-1.0,Venezuela-390.0
+0,1,3,-5.0,1,124,317,137.93,Vietnam and Cambodia,Vietnam and Cambodia-1.0,Vietnam and Cambodia-375.0
+0,1,3,-4.0,1,124,317,137.93,Central Africa,Central Africa-2.0,Central Africa-500.0
+1,1,3,41.0,3,133,232,407.31,Brazil Northeast; Brazil; Brazil Central West,Brazil Northeast; Brazil; Brazil Central West-1.0; 1.0; 1.0,Brazil Northeast; Brazil; Brazil Central West-0.0; 625.0; 0.0
+2,1,3,23.0,2,128,377,280.97,North Korea; South Korea,North Korea; South Korea-1.0; 1.0,North Korea; South Korea-0.0; 490.0
+2,1,3,-6.0,1,128,377,280.97,Nicaragua,Nicaragua-1.0,Nicaragua-250.0
+3,1,3,-2.0,1,120,238,254.02,Cuba,Cuba-1.0,Cuba-350.0
+3,1,3,-7.0,1,120,238,254.02,Israel,Israel-1.0,Israel-420.0
+4,1,3,-5.0,1,139,340,251.65,Libya,Libya-1.0,Libya-500.0
+4,1,3,-6.0,1,139,340,251.65,Pakistan,Pakistan-1.0,Pakistan-400.0
+4,1,3,-4.0,1,139,340,251.65,Myanmar,Myanmar-2.0,Myanmar-450.0
+4,1,3,-5.0,1,139,340,251.65,Polynesia,Polynesia-1.0,Polynesia-800.0
+5,1,3,-9.0,1,133,302,159.38,East Africa,East Africa-2.0,East Africa-350.0
+5,1,3,-3.0,1,133,302,159.38,Patagonia,Patagonia-2.0,Patagonia-625.0
+6,1,3,48.0,3,134,241,196.74,Nepal; Pakistan; Maldives,Nepal; Pakistan; Maldives-1.0; 1.0; 1.0,Nepal; Pakistan; Maldives-0.0; 400.0; 0.0
+7,1,3,23.0,2,131,281,129.95,Bhutan; Pakistan,Bhutan; Pakistan-1.0; 1.0,Bhutan; Pakistan-250.0; 400.0
+7,1,3,-4.0,1,131,281,129.95,Myanmar,Myanmar-2.0,Myanmar-450.0
+7,1,3,-4.0,1,131,281,129.95,Central Africa,Central Africa-2.0,Central Africa-500.0
+8,1,3,-5.0,1,121,245,145.8,Greater Antilles without Cuba,Greater Antilles without Cuba-1.0,Greater Antilles without Cuba-575.0
+8,1,3,18.0,2,121,245,145.8,Nepal; India,Nepal; India-1.0; 1.0,Nepal; India-0.0; 350.0
+9,1,3,-2.0,1,123,261,132.99,Cuba,Cuba-1.0,Cuba-350.0
+9,1,3,-5.0,1,123,261,132.99,Lebanon and Syria,Lebanon and Syria-1.0,Lebanon and Syria-350.0
+9,1,3,-3.0,1,123,261,132.99,Borneo,Borneo-2.0,Borneo-460.0
+9,1,3,-8.0,1,123,261,132.99,Eastern Europe,Eastern Europe-1.0,Eastern Europe-350.0
+0,2,1,39.0,3,42,227,155.54,Near and Middle East; Central Asia; Russland and Caucasus,Near and Middle East; Central Asia; Russland and Caucasus-1.0; 1.0; 1.0,Near and Middle East; Central Asia; Russland and Caucasus-0.0; 350.0; 0.0
+0,2,1,16.0,2,42,227,155.54,Australia; Pacific,Australia; Pacific-1.0; 1.0,Australia; Pacific-560.0; 0.0
+1,2,1,16.0,2,42,192,155.23,Central Asia; Russland and Caucasus,Central Asia; Russland and Caucasus-1.0; 1.0,Central Asia; Russland and Caucasus-350.0; 0.0
+2,2,1,15.0,2,42,288,151.12,Mexico; Mexico Pacific Coast,Mexico; Mexico Pacific Coast-1.0; 1.0,Mexico; Mexico Pacific Coast-375.0; 0.0
+2,2,1,15.0,2,42,288,151.12,Mexico; Mexico Pacific Coast,Mexico; Mexico Pacific Coast-1.0; 1.0,Mexico; Mexico Pacific Coast-375.0; 0.0
+2,2,1,16.0,2,42,288,151.12,Indonesia; Indonesian islands west of Lombok,Indonesia; Indonesian islands west of Lombok-2.0; 1.0,Indonesia; Indonesian islands west of Lombok-400.0; 0.0
+2,2,1,15.0,2,42,288,151.12,Mexico; Mexico Pacific Coast,Mexico; Mexico Pacific Coast-1.0; 1.0,Mexico; Mexico Pacific Coast-375.0; 0.0
+3,2,1,17.0,2,40,217,146.6,North Europe; British Islands,North Europe; British Islands-1.0; 1.0,North Europe; British Islands-0.0; 420.0
+3,2,1,-8.0,1,40,217,146.6,USA,USA-1.0,USA-600.0
+4,2,1,39.0,3,42,188,158.94,South Asia; East Asia; Russland and Caucasus,South Asia; East Asia; Russland and Caucasus-1.0; 1.0; 1.0,South Asia; East Asia; Russland and Caucasus-0.0; 450.0; 0.0
+4,2,1,39.0,3,42,188,158.94,Near and Middle East; East Asia; Russland and Caucasus,Near and Middle East; East Asia; Russland and Caucasus-1.0; 1.0; 1.0,Near and Middle East; East Asia; Russland and Caucasus-0.0; 450.0; 0.0
+4,2,1,37.0,3,42,188,158.94,South Asia; Near and Middle East; East Asia,South Asia; Near and Middle East; East Asia-1.0; 1.0; 1.0,South Asia; Near and Middle East; East Asia-0.0; 0.0; 450.0
+5,2,1,15.0,2,42,218,143.65,Southeast Asia; East Asia,Southeast Asia; East Asia-1.0; 1.0,Southeast Asia; East Asia-0.0; 450.0
+5,2,1,17.0,2,42,218,143.65,New Zealand; Pacific,New Zealand; Pacific-2.0; 1.0,New Zealand; Pacific-490.0; 0.0
+6,2,1,16.0,2,42,231,154.06,Indonesia; Sumatra and Java,Indonesia; Sumatra and Java-2.0; 1.0,Indonesia; Sumatra and Java-400.0; 0.0
+6,2,1,16.0,2,42,231,154.06,Indonesia; Indonesian islands west of Lombok,Indonesia; Indonesian islands west of Lombok-2.0; 1.0,Indonesia; Indonesian islands west of Lombok-400.0; 0.0
+6,2,1,17.0,2,42,231,154.06,New Zealand; Pacific,New Zealand; Pacific-2.0; 1.0,New Zealand; Pacific-490.0; 0.0
+6,2,1,17.0,2,42,231,154.06,New Zealand; Pacific,New Zealand; Pacific-2.0; 1.0,New Zealand; Pacific-490.0; 0.0
+7,2,1,-7.0,1,41,212,133.45,New Zealand,New Zealand-2.0,New Zealand-490.0
+7,2,1,-9.0,1,41,212,133.45,Southern Europe,Southern Europe-1.0,Southern Europe-350.0
+7,2,1,-7.0,1,41,212,133.45,New Zealand,New Zealand-2.0,New Zealand-490.0
+8,2,1,41.0,3,42,255,154.04,Central Europe; North Europe; British Islands,Central Europe; North Europe; British Islands-1.0; 1.0; 1.0,Central Europe; North Europe; British Islands-0.0; 0.0; 420.0
+8,2,1,41.0,3,42,255,154.04,Central Europe; North Europe; British Islands,Central Europe; North Europe; British Islands-1.0; 1.0; 1.0,Central Europe; North Europe; British Islands-0.0; 0.0; 420.0
+8,2,1,16.0,2,42,255,154.04,Brazil; Ecuador,Brazil; Ecuador-1.0; 1.0,Brazil; Ecuador-625.0; 350.0
+9,2,1,37.0,3,42,255,147.84,South Asia; Near and Middle East; East Asia,South Asia; Near and Middle East; East Asia-1.0; 1.0; 1.0,South Asia; Near and Middle East; East Asia-0.0; 0.0; 450.0
+9,2,1,-9.0,1,42,255,147.84,Southern Europe,Southern Europe-1.0,Southern Europe-350.0
+0,2,2,-14.0,1,67,289,156.91,Paraguay,Paraguay-1.0,Paraguay-400.0
+0,2,2,2.0,2,67,289,156.91,Eastern Europe; Southern Europe,Eastern Europe; Southern Europe-1.0; 1.0,Eastern Europe; Southern Europe-350.0; 350.0
+0,2,2,2.0,2,67,289,156.91,East Asia; Near and Middle East,East Asia; Near and Middle East-1.0; 1.0,East Asia; Near and Middle East-450.0; 0.0
+1,2,2,-14.0,1,68,270,162.33,Madagascar,Madagascar-2.0,Madagascar-350.0
+1,2,2,4.0,2,68,270,162.33,Benelux; Slovenia and Croatia,Benelux; Slovenia and Croatia-1.0; 1.0,Benelux; Slovenia and Croatia-420.0; 350.0
+1,2,2,-15.0,1,68,270,162.33,Australia,Australia-1.0,Australia-560.0
+2,2,2,3.0,2,65,298,154.49,Paraguay; Argentina,Paraguay; Argentina-1.0; 1.0,Paraguay; Argentina-400.0; 400.0
+2,2,2,2.0,2,65,298,154.49,Southern Europe; North Europe,Southern Europe; North Europe-1.0; 1.0,Southern Europe; North Europe-350.0; 0.0
+2,2,2,-14.0,1,65,298,154.49,Slovenia and Croatia,Slovenia and Croatia-1.0,Slovenia and Croatia-350.0
+3,2,2,19.0,3,69,297,159.3,Eastern Europe; British Islands; North Europe,Eastern Europe; British Islands; North Europe-1.0; 1.0; 1.0,Eastern Europe; British Islands; North Europe-350.0; 420.0; 0.0
+3,2,2,-14.0,1,69,297,159.3,Tunisia,Tunisia-1.0,Tunisia-375.0
+4,2,2,4.0,2,68,252,148.59,Paraguay; Uruguay,Paraguay; Uruguay-1.0; 1.0,Paraguay; Uruguay-400.0; 400.0
+4,2,2,4.0,2,68,252,148.59,Paraguay; Uruguay,Paraguay; Uruguay-1.0; 1.0,Paraguay; Uruguay-400.0; 400.0
+4,2,2,-14.0,1,68,252,148.59,Honduras and El Salvador,Honduras and El Salvador-1.0,Honduras and El Salvador-250.0
+5,2,2,-14.0,1,64,205,169.36,Tunisia,Tunisia-1.0,Tunisia-375.0
+5,2,2,19.0,3,64,205,169.36,Central Europe; Eastern Europe; British Islands,Central Europe; Eastern Europe; British Islands-1.0; 1.0; 1.0,Central Europe; Eastern Europe; British Islands-0.0; 350.0; 420.0
+6,2,2,2.0,2,69,348,162.09,Southeast Asia; Central Asia,Southeast Asia; Central Asia-1.0; 1.0,Southeast Asia; Central Asia-0.0; 350.0
+6,2,2,3.0,2,69,348,162.09,Indonesia; Bali and Lombok,Indonesia; Bali and Lombok-2.0; 1.0,Indonesia; Bali and Lombok-400.0; 0.0
+8,2,2,3.0,2,67,279,160.02,Indonesia; Bali and Lombok,Indonesia; Bali and Lombok-2.0; 1.0,Indonesia; Bali and Lombok-400.0; 0.0
+8,2,2,2.0,2,67,279,160.02,Mongolia; China,Mongolia; China-2.0; 1.0,Mongolia; China-350.0; 0.0
+8,2,2,-14.0,1,67,279,160.02,Greater Antilles without Cuba,Greater Antilles without Cuba-1.0,Greater Antilles without Cuba-575.0
+9,2,2,2.0,2,65,287,155.79,East Asia; Southeast Asia,East Asia; Southeast Asia-1.0; 1.0,East Asia; Southeast Asia-450.0; 0.0
+9,2,2,-14.0,1,65,287,155.79,Madagascar,Madagascar-2.0,Madagascar-350.0
+9,2,2,-14.0,1,65,287,155.79,Madagascar,Madagascar-2.0,Madagascar-350.0
+0,2,3,16.0,2,81,237,154.81,Uruguay; Venezuela,Uruguay; Venezuela-1.0; 1.0,Uruguay; Venezuela-400.0; 390.0
+0,2,3,17.0,2,81,237,154.81,Bolivia; Uruguay,Bolivia; Uruguay-1.0; 1.0,Bolivia; Uruguay-310.0; 400.0
+0,2,3,17.0,2,81,237,154.81,Bolivia; Venezuela,Bolivia; Venezuela-1.0; 1.0,Bolivia; Venezuela-310.0; 390.0
+0,2,3,-9.0,1,81,237,154.81,East Africa,East Africa-2.0,East Africa-350.0
+1,2,3,-7.0,1,84,240,129.64,Israel,Israel-1.0,Israel-420.0
+1,2,3,-7.0,1,84,240,129.64,Algeria,Algeria-1.0,Algeria-450.0
+2,2,3,16.0,2,82,257,137.31,Canada; Canada Ontario,Canada; Canada Ontario-1.0; 1.0,Canada; Canada Ontario-725.0; 0.0
+2,2,3,-7.0,1,82,257,137.31,China Northwest (Shaanxi to Xinjiang),China Northwest (Shaanxi to Xinjiang)-1.0,China Northwest (Shaanxi to Xinjiang)-500.0
+2,2,3,-7.0,1,82,257,137.31,Mozambique and Zimbabwe,Mozambique and Zimbabwe-1.0,Mozambique and Zimbabwe-350.0
+3,2,3,-7.0,1,82,291,138.98,Switzerland and Liechtenstein,Switzerland and Liechtenstein-1.0,Switzerland and Liechtenstein-750.0
+3,2,3,17.0,2,82,291,138.98,Bolivia; Brazil,Bolivia; Brazil-1.0; 1.0,Bolivia; Brazil-310.0; 625.0
+3,2,3,16.0,2,82,291,138.98,Bolivia; Argentina,Bolivia; Argentina-1.0; 1.0,Bolivia; Argentina-310.0; 400.0
+4,2,3,18.0,2,84,239,146.76,Mozambique and Zimbabwe; Namibia,Mozambique and Zimbabwe; Namibia-1.0; 1.0,Mozambique and Zimbabwe; Namibia-350.0; 385.0
+4,2,3,18.0,2,84,239,146.76,Mozambique and Zimbabwe; South Africa,Mozambique and Zimbabwe; South Africa-1.0; 1.0,Mozambique and Zimbabwe; South Africa-350.0; 385.0
+4,2,3,18.0,2,84,239,146.76,Zambia and Malawi; Mozambique and Zimbabwe,Zambia and Malawi; Mozambique and Zimbabwe-1.0; 1.0,Zambia and Malawi; Mozambique and Zimbabwe-450.0; 350.0
+4,2,3,18.0,2,84,239,146.76,Namibia; South Africa,Namibia; South Africa-1.0; 1.0,Namibia; South Africa-385.0; 385.0
+4,2,3,18.0,2,84,239,146.76,Zambia and Malawi; Namibia,Zambia and Malawi; Namibia-1.0; 1.0,Zambia and Malawi; Namibia-450.0; 385.0
+4,2,3,18.0,2,84,239,146.76,Zambia and Malawi; South Africa,Zambia and Malawi; South Africa-1.0; 1.0,Zambia and Malawi; South Africa-450.0; 385.0
+5,2,3,18.0,2,83,366,134.49,Bolivia; Paraguay,Bolivia; Paraguay-1.0; 1.0,Bolivia; Paraguay-310.0; 400.0
+5,2,3,-7.0,1,83,366,134.49,Qatar and Bahrain,Qatar and Bahrain-1.0,Qatar and Bahrain-525.0
+5,2,3,-9.0,1,83,366,134.49,India,India-1.0,India-350.0
+6,2,3,14.0,2,87,240,150.84,Russland and Caucasus; East Asia,Russland and Caucasus; East Asia-1.0; 1.0,Russland and Caucasus; East Asia-0.0; 450.0
+6,2,3,14.0,2,87,240,150.84,Russland and Caucasus; East Asia,Russland and Caucasus; East Asia-1.0; 1.0,Russland and Caucasus; East Asia-0.0; 450.0
+7,2,3,-9.0,1,80,233,155.84,Sweden and Denmark,Sweden and Denmark-1.0,Sweden and Denmark-525.0
+7,2,3,16.0,2,80,233,155.84,Ecuador; Chile North and Central,Ecuador; Chile North and Central-1.0; 2.0,Ecuador; Chile North and Central-350.0; 400.0
+8,2,3,-7.0,1,87,309,138.77,Israel,Israel-1.0,Israel-420.0
+8,2,3,-7.0,1,87,309,138.77,New Zealand,New Zealand-2.0,New Zealand-490.0
+8,2,3,-7.0,1,87,309,138.77,Costa Rica,Costa Rica-1.0,Costa Rica-400.0
+9,2,3,17.0,2,81,282,137.82,Indonesia; Sumatra and Java,Indonesia; Sumatra and Java-2.0; 1.0,Indonesia; Sumatra and Java-400.0; 0.0
+9,2,3,-7.0,1,81,282,137.82,Bolivia,Bolivia-1.0,Bolivia-310.0
+0,3,1,39.0,3,25,96,310.88,Central Asia; East Asia; Russland and Caucasus,Central Asia; East Asia; Russland and Caucasus-1.0; 1.0; 1.0,Central Asia; East Asia; Russland and Caucasus-350.0; 450.0; 0.0
+0,3,1,40.0,3,25,96,310.88,Southeast Asia; East Asia; Russland and Caucasus,Southeast Asia; East Asia; Russland and Caucasus-1.0; 1.0; 1.0,Southeast Asia; East Asia; Russland and Caucasus-0.0; 450.0; 0.0
+0,3,1,40.0,3,25,96,310.88,Southeast Asia; East Asia; Russland and Caucasus,Southeast Asia; East Asia; Russland and Caucasus-1.0; 1.0; 1.0,Southeast Asia; East Asia; Russland and Caucasus-0.0; 450.0; 0.0
+0,3,1,39.0,3,25,96,310.88,Central Asia; East Asia; Russland and Caucasus,Central Asia; East Asia; Russland and Caucasus-1.0; 1.0; 1.0,Central Asia; East Asia; Russland and Caucasus-350.0; 450.0; 0.0
+1,3,1,40.0,3,30,140,349.69,Southeast Asia; East Asia; Russland and Caucasus,Southeast Asia; East Asia; Russland and Caucasus-1.0; 1.0; 1.0,Southeast Asia; East Asia; Russland and Caucasus-0.0; 450.0; 0.0
+1,3,1,39.0,3,30,140,349.69,South Asia; East Asia; Russland and Caucasus,South Asia; East Asia; Russland and Caucasus-1.0; 1.0; 1.0,South Asia; East Asia; Russland and Caucasus-0.0; 450.0; 0.0
+1,3,1,40.0,3,30,140,349.69,Southeast Asia; East Asia; Russland and Caucasus,Southeast Asia; East Asia; Russland and Caucasus-1.0; 1.0; 1.0,Southeast Asia; East Asia; Russland and Caucasus-0.0; 450.0; 0.0
+1,3,1,40.0,3,30,140,349.69,Central Asia; Southeast Asia; Russland and Caucasus,Central Asia; Southeast Asia; Russland and Caucasus-1.0; 1.0; 1.0,Central Asia; Southeast Asia; Russland and Caucasus-350.0; 0.0; 0.0
+2,3,1,39.0,3,26,135,296.83,Central Asia; Near and Middle East; Russland and Caucasus,Central Asia; Near and Middle East; Russland and Caucasus-1.0; 1.0; 1.0,Central Asia; Near and Middle East; Russland and Caucasus-350.0; 0.0; 0.0
+2,3,1,39.0,3,26,135,296.83,USA Texas; USA; USA Pacific Northwest,USA Texas; USA; USA Pacific Northwest-1.0; 1.0; 1.0,USA Texas; USA; USA Pacific Northwest-0.0; 600.0; 0.0
+2,3,1,40.0,3,26,135,296.83,Brazil; Brazil South; Brazil Southeast,Brazil; Brazil South; Brazil Southeast-1.0; 1.0; 1.0,Brazil; Brazil South; Brazil Southeast-625.0; 0.0; 0.0
+3,3,1,40.0,3,29,165,371.45,North Europe; Southern Europe; British Islands,North Europe; Southern Europe; British Islands-1.0; 1.0; 1.0,North Europe; Southern Europe; British Islands-0.0; 350.0; 420.0
+3,3,1,40.0,3,29,165,371.45,Central Europe; North Europe; Southern Europe,Central Europe; North Europe; Southern Europe-1.0; 1.0; 1.0,Central Europe; North Europe; Southern Europe-0.0; 0.0; 350.0
+3,3,1,38.0,3,29,165,371.45,Central Asia; Southeast Asia; Near and Middle East,Central Asia; Southeast Asia; Near and Middle East-1.0; 1.0; 1.0,Central Asia; Southeast Asia; Near and Middle East-350.0; 0.0; 0.0
+4,3,1,39.0,3,27,124,234.5,Central Asia; South Asia; Russland and Caucasus,Central Asia; South Asia; Russland and Caucasus-1.0; 1.0; 1.0,Central Asia; South Asia; Russland and Caucasus-350.0; 0.0; 0.0
+4,3,1,39.0,3,27,124,234.5,Central Asia; Near and Middle East; Russland and Caucasus,Central Asia; Near and Middle East; Russland and Caucasus-1.0; 1.0; 1.0,Central Asia; Near and Middle East; Russland and Caucasus-350.0; 0.0; 0.0
+4,3,1,39.0,3,27,124,234.5,USA Texas; USA; USA Pacific Northwest,USA Texas; USA; USA Pacific Northwest-1.0; 1.0; 1.0,USA Texas; USA; USA Pacific Northwest-0.0; 600.0; 0.0
+5,3,1,40.0,3,24,98,323.65,Southeast Asia; East Asia; Russland and Caucasus,Southeast Asia; East Asia; Russland and Caucasus-1.0; 1.0; 1.0,Southeast Asia; East Asia; Russland and Caucasus-0.0; 450.0; 0.0
+5,3,1,40.0,3,24,98,323.65,Southeast Asia; East Asia; Russland and Caucasus,Southeast Asia; East Asia; Russland and Caucasus-1.0; 1.0; 1.0,Southeast Asia; East Asia; Russland and Caucasus-0.0; 450.0; 0.0
+5,3,1,40.0,3,24,98,323.65,North Europe; Southern Europe; British Islands,North Europe; Southern Europe; British Islands-1.0; 1.0; 1.0,North Europe; Southern Europe; British Islands-0.0; 350.0; 420.0
+5,3,1,40.0,3,24,98,323.65,North Europe; Southern Europe; British Islands,North Europe; Southern Europe; British Islands-1.0; 1.0; 1.0,North Europe; Southern Europe; British Islands-0.0; 350.0; 420.0
+6,3,1,39.0,3,27,189,270.91,USA Texas; USA; USA Pacific Northwest,USA Texas; USA; USA Pacific Northwest-1.0; 1.0; 1.0,USA Texas; USA; USA Pacific Northwest-0.0; 600.0; 0.0
+6,3,1,38.0,3,27,189,270.91,Central Asia; Southeast Asia; East Asia,Central Asia; Southeast Asia; East Asia-1.0; 1.0; 1.0,Central Asia; Southeast Asia; East Asia-350.0; 0.0; 450.0
+6,3,1,38.0,3,27,189,270.91,Central Asia; Southeast Asia; Near and Middle East,Central Asia; Southeast Asia; Near and Middle East-1.0; 1.0; 1.0,Central Asia; Southeast Asia; Near and Middle East-350.0; 0.0; 0.0
+6,3,1,41.0,3,27,189,270.91,Central Europe; North Europe; British Islands,Central Europe; North Europe; British Islands-1.0; 1.0; 1.0,Central Europe; North Europe; British Islands-0.0; 0.0; 420.0
+7,3,1,39.0,3,25,103,390.98,Central Asia; Near and Middle East; Russland and Caucasus,Central Asia; Near and Middle East; Russland and Caucasus-1.0; 1.0; 1.0,Central Asia; Near and Middle East; Russland and Caucasus-350.0; 0.0; 0.0
+7,3,1,39.0,3,25,103,390.98,Central Asia; Near and Middle East; Russland and Caucasus,Central Asia; Near and Middle East; Russland and Caucasus-1.0; 1.0; 1.0,Central Asia; Near and Middle East; Russland and Caucasus-350.0; 0.0; 0.0
+7,3,1,40.0,3,25,103,390.98,Central Asia; Southeast Asia; Russland and Caucasus,Central Asia; Southeast Asia; Russland and Caucasus-1.0; 1.0; 1.0,Central Asia; Southeast Asia; Russland and Caucasus-350.0; 0.0; 0.0
+7,3,1,39.0,3,25,103,390.98,Near and Middle East; Central Asia; Russland and Caucasus,Near and Middle East; Central Asia; Russland and Caucasus-1.0; 1.0; 1.0,Near and Middle East; Central Asia; Russland and Caucasus-0.0; 350.0; 0.0
+8,3,1,40.0,3,27,76,307.58,Southeast Asia; East Asia; Russland and Caucasus,Southeast Asia; East Asia; Russland and Caucasus-1.0; 1.0; 1.0,Southeast Asia; East Asia; Russland and Caucasus-0.0; 450.0; 0.0
+8,3,1,40.0,3,27,76,307.58,Southeast Asia; East Asia; Russland and Caucasus,Southeast Asia; East Asia; Russland and Caucasus-1.0; 1.0; 1.0,Southeast Asia; East Asia; Russland and Caucasus-0.0; 450.0; 0.0
+8,3,1,40.0,3,27,76,307.58,Southeast Asia; East Asia; Russland and Caucasus,Southeast Asia; East Asia; Russland and Caucasus-1.0; 1.0; 1.0,Southeast Asia; East Asia; Russland and Caucasus-0.0; 450.0; 0.0
+9,3,1,41.0,3,24,67,336.57,Central Europe; North Europe; British Islands,Central Europe; North Europe; British Islands-1.0; 1.0; 1.0,Central Europe; North Europe; British Islands-0.0; 0.0; 420.0
+9,3,1,41.0,3,24,67,336.57,Central Europe; North Europe; British Islands,Central Europe; North Europe; British Islands-1.0; 1.0; 1.0,Central Europe; North Europe; British Islands-0.0; 0.0; 420.0
+9,3,1,41.0,3,24,67,336.57,Central Europe; North Europe; British Islands,Central Europe; North Europe; British Islands-1.0; 1.0; 1.0,Central Europe; North Europe; British Islands-0.0; 0.0; 420.0
+9,3,1,41.0,3,24,67,336.57,Central Europe; North Europe; British Islands,Central Europe; North Europe; British Islands-1.0; 1.0; 1.0,Central Europe; North Europe; British Islands-0.0; 0.0; 420.0
+0,3,2,4.0,2,36,157,199.28,Paraguay; Uruguay,Paraguay; Uruguay-1.0; 1.0,Paraguay; Uruguay-400.0; 400.0
+0,3,2,3.0,2,36,157,199.28,Indonesia; Philippines,Indonesia; Philippines-2.0; 2.0,Indonesia; Philippines-400.0; 375.0
+0,3,2,4.0,2,36,157,199.28,Israel; United Arab Emirates,Israel; United Arab Emirates-1.0; 1.0,Israel; United Arab Emirates-420.0; 525.0
+0,3,2,4.0,2,36,157,199.28,Lebanon and Syria; United Arab Emirates,Lebanon and Syria; United Arab Emirates-1.0; 1.0,Lebanon and Syria; United Arab Emirates-350.0; 525.0
+0,3,2,4.0,2,36,157,199.28,Israel; Lebanon and Syria,Israel; Lebanon and Syria-1.0; 1.0,Israel; Lebanon and Syria-420.0; 350.0
+1,3,2,4.0,2,37,220,210.74,Benelux; Germany,Benelux; Germany-1.0; 1.0,Benelux; Germany-420.0; 420.0
+1,3,2,4.0,2,37,220,210.74,Tunisia; Algeria,Tunisia; Algeria-1.0; 1.0,Tunisia; Algeria-375.0; 450.0
+1,3,2,4.0,2,37,220,210.74,Israel; Lebanon and Syria,Israel; Lebanon and Syria-1.0; 1.0,Israel; Lebanon and Syria-420.0; 350.0
+1,3,2,4.0,2,37,220,210.74,Slovenia and Croatia; Benelux,Slovenia and Croatia; Benelux-1.0; 1.0,Slovenia and Croatia; Benelux-350.0; 420.0
+1,3,2,4.0,2,37,220,210.74,Israel; Lebanon and Syria,Israel; Lebanon and Syria-1.0; 1.0,Israel; Lebanon and Syria-420.0; 350.0
+2,3,2,19.0,3,34,118,213.72,Central Europe; Eastern Europe; British Islands,Central Europe; Eastern Europe; British Islands-1.0; 1.0; 1.0,Central Europe; Eastern Europe; British Islands-0.0; 350.0; 420.0
+2,3,2,19.0,3,34,118,213.72,Central Europe; Eastern Europe; British Islands,Central Europe; Eastern Europe; British Islands-1.0; 1.0; 1.0,Central Europe; Eastern Europe; British Islands-0.0; 350.0; 420.0
+3,3,2,4.0,2,29,139,208.7,Philippines; Thailand South,Philippines; Thailand South-2.0; 1.0,Philippines; Thailand South-375.0; 375.0
+3,3,2,3.0,2,29,139,208.7,Mexico; Northern Mexico,Mexico; Northern Mexico-1.0; 1.0,Mexico; Northern Mexico-375.0; 0.0
+3,3,2,4.0,2,29,139,208.7,Slovenia and Croatia; Germany,Slovenia and Croatia; Germany-1.0; 1.0,Slovenia and Croatia; Germany-350.0; 420.0
+3,3,2,2.0,2,29,139,208.7,Eastern Europe; Southern Europe,Eastern Europe; Southern Europe-1.0; 1.0,Eastern Europe; Southern Europe-350.0; 350.0
+4,3,2,19.0,3,35,152,226.47,Central Europe; British Islands; Southern Europe,Central Europe; British Islands; Southern Europe-1.0; 1.0; 1.0,Central Europe; British Islands; Southern Europe-0.0; 420.0; 350.0
+4,3,2,4.0,2,35,152,226.47,Lebanon and Syria; Oman and Yemen,Lebanon and Syria; Oman and Yemen-1.0; 1.0,Lebanon and Syria; Oman and Yemen-350.0; 490.0
+5,3,2,4.0,2,32,154,177.92,Israel; Oman and Yemen,Israel; Oman and Yemen-1.0; 1.0,Israel; Oman and Yemen-420.0; 490.0
+5,3,2,2.0,2,32,154,177.92,Southeast Asia; Central Asia,Southeast Asia; Central Asia-1.0; 1.0,Southeast Asia; Central Asia-0.0; 350.0
+5,3,2,19.0,3,32,154,177.92,Central Europe; Eastern Europe; British Islands,Central Europe; Eastern Europe; British Islands-1.0; 1.0; 1.0,Central Europe; Eastern Europe; British Islands-0.0; 350.0; 420.0
+6,3,2,19.0,3,31,145,188.37,Central Europe; Eastern Europe; North Europe,Central Europe; Eastern Europe; North Europe-1.0; 1.0; 1.0,Central Europe; Eastern Europe; North Europe-0.0; 350.0; 0.0
+6,3,2,4.0,2,31,145,188.37,Paraguay; Uruguay,Paraguay; Uruguay-1.0; 1.0,Paraguay; Uruguay-400.0; 400.0
+6,3,2,19.0,3,31,145,188.37,East Asia; South Asia; Southeast Asia,East Asia; South Asia; Southeast Asia-1.0; 1.0; 1.0,East Asia; South Asia; Southeast Asia-450.0; 0.0; 0.0
+7,3,2,19.0,3,33,124,208.02,East Asia; Near and Middle East; Russland and Caucasus,East Asia; Near and Middle East; Russland and Caucasus-1.0; 1.0; 1.0,East Asia; Near and Middle East; Russland and Caucasus-450.0; 0.0; 0.0
+7,3,2,4.0,2,33,124,208.02,Israel; United Arab Emirates,Israel; United Arab Emirates-1.0; 1.0,Israel; United Arab Emirates-420.0; 525.0
+8,3,2,19.0,3,30,134,208.76,Central Europe; British Islands; Southern Europe,Central Europe; British Islands; Southern Europe-1.0; 1.0; 1.0,Central Europe; British Islands; Southern Europe-0.0; 420.0; 350.0
+8,3,2,4.0,2,30,134,208.76,Algeria; Tunisia,Algeria; Tunisia-1.0; 1.0,Algeria; Tunisia-450.0; 375.0
+8,3,2,2.0,2,30,134,208.76,Russland and Caucasus; Central Asia,Russland and Caucasus; Central Asia-1.0; 1.0,Russland and Caucasus; Central Asia-0.0; 350.0
+9,3,2,19.0,3,42,139,193.5,Central Europe; British Islands; Southern Europe,Central Europe; British Islands; Southern Europe-1.0; 1.0; 1.0,Central Europe; British Islands; Southern Europe-0.0; 420.0; 350.0
+9,3,2,19.0,3,42,139,193.5,Central Europe; British Islands; Southern Europe,Central Europe; British Islands; Southern Europe-1.0; 1.0; 1.0,Central Europe; British Islands; Southern Europe-0.0; 420.0; 350.0
+9,3,2,19.0,3,42,139,193.5,Central Europe; British Islands; Southern Europe,Central Europe; British Islands; Southern Europe-1.0; 1.0; 1.0,Central Europe; British Islands; Southern Europe-0.0; 420.0; 350.0
+0,3,3,18.0,2,33,157,438.67,Mozambique and Zimbabwe; Namibia,Mozambique and Zimbabwe; Namibia-1.0; 1.0,Mozambique and Zimbabwe; Namibia-350.0; 385.0
+0,3,3,17.0,2,33,157,438.67,Uruguay; Chile North and Central,Uruguay; Chile North and Central-1.0; 2.0,Uruguay; Chile North and Central-400.0; 400.0
+0,3,3,18.0,2,33,157,438.67,Paraguay; Chile North and Central,Paraguay; Chile North and Central-1.0; 2.0,Paraguay; Chile North and Central-400.0; 400.0
+0,3,3,38.0,3,33,157,438.67,East Asia; South Asia; Southeast Asia,East Asia; South Asia; Southeast Asia-1.0; 1.0; 1.0,East Asia; South Asia; Southeast Asia-450.0; 0.0; 0.0
+1,3,3,39.0,3,37,147,389.33,Southern Europe; Central Europe; British Islands,Southern Europe; Central Europe; British Islands-1.0; 1.0; 1.0,Southern Europe; Central Europe; British Islands-350.0; 0.0; 420.0
+1,3,3,38.0,3,37,147,389.33,East Asia; South Asia; Southeast Asia,East Asia; South Asia; Southeast Asia-1.0; 1.0; 1.0,East Asia; South Asia; Southeast Asia-450.0; 0.0; 0.0
+1,3,3,16.0,2,37,147,389.33,Bolivia; Ecuador,Bolivia; Ecuador-1.0; 1.0,Bolivia; Ecuador-310.0; 350.0
+2,3,3,41.0,3,34,105,408.84,Canada; Canada Atlantic Provinces; Canada Ontario,Canada; Canada Atlantic Provinces; Canada Ontario-1.0; 1.0; 1.0,Canada; Canada Atlantic Provinces; Canada Ontario-725.0; 0.0; 0.0
+2,3,3,38.0,3,34,105,408.84,Near and Middle East; Central Asia; Southeast Asia,Near and Middle East; Central Asia; Southeast Asia-1.0; 1.0; 1.0,Near and Middle East; Central Asia; Southeast Asia-0.0; 350.0; 0.0
+3,3,3,37.0,3,34,118,464.47,East Asia; Central Asia; South Asia,East Asia; Central Asia; South Asia-1.0; 1.0; 1.0,East Asia; Central Asia; South Asia-450.0; 350.0; 0.0
+3,3,3,18.0,2,34,118,464.47,Panama; Costa Rica,Panama; Costa Rica-1.0; 1.0,Panama; Costa Rica-400.0; 400.0
+3,3,3,41.0,3,34,118,464.47,North Europe; Eastern Europe; Central Europe,North Europe; Eastern Europe; Central Europe-1.0; 1.0; 1.0,North Europe; Eastern Europe; Central Europe-0.0; 350.0; 0.0
+4,3,3,40.0,3,35,155,446.0,Southern Europe; North Europe; British Islands,Southern Europe; North Europe; British Islands-1.0; 1.0; 1.0,Southern Europe; North Europe; British Islands-350.0; 0.0; 420.0
+4,3,3,17.0,2,35,155,446.0,Bolivia; Uruguay,Bolivia; Uruguay-1.0; 1.0,Bolivia; Uruguay-310.0; 400.0
+4,3,3,18.0,2,35,155,446.0,Austria; Germany,Austria; Germany-1.0; 1.0,Austria; Germany-500.0; 420.0
+4,3,3,16.0,2,35,155,446.0,Colombia; Uruguay,Colombia; Uruguay-2.0; 1.0,Colombia; Uruguay-350.0; 400.0
+5,3,3,61.0,4,34,72,441.47,East Asia; Near and Middle East; Central Asia; Southeast Asia,East Asia; Near and Middle East; Central Asia; Southeast Asia-1.0; 1.0; 1.0; 1.0,East Asia; Near and Middle East; Central Asia; Southeast Asia-450.0; 0.0; 350.0; 0.0
+6,3,3,41.0,3,36,136,405.05,Eastern Europe; North Europe; Central Europe,Eastern Europe; North Europe; Central Europe-1.0; 1.0; 1.0,Eastern Europe; North Europe; Central Europe-350.0; 0.0; 0.0
+6,3,3,14.0,2,36,136,405.05,East Asia; Near and Middle East,East Asia; Near and Middle East-1.0; 1.0,East Asia; Near and Middle East-450.0; 0.0
+7,3,3,65.0,4,38,106,369.94,Eastern Europe; Central Europe; North Europe; British Islands,Eastern Europe; Central Europe; North Europe; British Islands-1.0; 1.0; 1.0; 1.0,Eastern Europe; Central Europe; North Europe; British Islands-350.0; 0.0; 0.0; 420.0
+8,3,3,17.0,2,34,118,387.09,Pacific; New Zealand,Pacific; New Zealand-1.0; 2.0,Pacific; New Zealand-0.0; 490.0
+8,3,3,38.0,3,34,118,387.09,Russland and Caucasus; Central Asia; Southeast Asia,Russland and Caucasus; Central Asia; Southeast Asia-1.0; 1.0; 1.0,Russland and Caucasus; Central Asia; Southeast Asia-0.0; 350.0; 0.0
+8,3,3,40.0,3,34,118,387.09,Southern Europe; Eastern Europe; North Europe,Southern Europe; Eastern Europe; North Europe-1.0; 1.0; 1.0,Southern Europe; Eastern Europe; North Europe-350.0; 350.0; 0.0
+9,3,3,42.0,3,34,131,395.72,Brazil; Brazil Central West; Brazil South,Brazil; Brazil Central West; Brazil South-1.0; 1.0; 1.0,Brazil; Brazil Central West; Brazil South-625.0; 0.0; 0.0
+9,3,3,38.0,3,34,131,395.72,Russland and Caucasus; Central Asia; Southeast Asia,Russland and Caucasus; Central Asia; Southeast Asia-1.0; 1.0; 1.0,Russland and Caucasus; Central Asia; Southeast Asia-0.0; 350.0; 0.0
+9,3,3,17.0,2,34,131,395.72,Bolivia; Colombia,Bolivia; Colombia-1.0; 2.0,Bolivia; Colombia-310.0; 350.0
+0,4,1,39.0,3,42,268,158.47,Near and Middle East; Central Asia; Russland and Caucasus,Near and Middle East; Central Asia; Russland and Caucasus-1.0; 1.0; 1.0,Near and Middle East; Central Asia; Russland and Caucasus-0.0; 350.0; 0.0
+0,4,1,39.0,3,42,268,158.47,Near and Middle East; East Asia; Russland and Caucasus,Near and Middle East; East Asia; Russland and Caucasus-1.0; 1.0; 1.0,Near and Middle East; East Asia; Russland and Caucasus-0.0; 450.0; 0.0
+0,4,1,37.0,3,42,268,158.47,Near and Middle East; Central Asia; East Asia,Near and Middle East; Central Asia; East Asia-1.0; 1.0; 1.0,Near and Middle East; Central Asia; East Asia-0.0; 350.0; 450.0
+0,4,1,39.0,3,42,268,158.47,Central Asia; East Asia; Russland and Caucasus,Central Asia; East Asia; Russland and Caucasus-1.0; 1.0; 1.0,Central Asia; East Asia; Russland and Caucasus-350.0; 450.0; 0.0
+1,4,1,17.0,2,41,212,151.83,United Arab Emirates; Israel,United Arab Emirates; Israel-1.0; 1.0,United Arab Emirates; Israel-525.0; 420.0
+1,4,1,17.0,2,41,212,151.83,United Arab Emirates; Israel,United Arab Emirates; Israel-1.0; 1.0,United Arab Emirates; Israel-525.0; 420.0
+2,4,1,39.0,3,42,268,159.51,Central Europe; Southern Europe; British Islands,Central Europe; Southern Europe; British Islands-1.0; 1.0; 1.0,Central Europe; Southern Europe; British Islands-0.0; 350.0; 420.0
+2,4,1,16.0,2,42,268,159.51,USA; USA Pacific Northwest,USA; USA Pacific Northwest-1.0; 1.0,USA; USA Pacific Northwest-600.0; 0.0
+2,4,1,16.0,2,42,268,159.51,Australia; Pacific,Australia; Pacific-1.0; 1.0,Australia; Pacific-560.0; 0.0
+3,4,1,38.0,3,42,297,158.45,Near and Middle East; Southeast Asia; East Asia,Near and Middle East; Southeast Asia; East Asia-1.0; 1.0; 1.0,Near and Middle East; Southeast Asia; East Asia-0.0; 0.0; 450.0
+3,4,1,17.0,2,42,297,158.45,New Zealand; Pacific,New Zealand; Pacific-2.0; 1.0,New Zealand; Pacific-490.0; 0.0
+3,4,1,15.0,2,42,297,158.45,Mexico; Mexico Pacific Coast,Mexico; Mexico Pacific Coast-1.0; 1.0,Mexico; Mexico Pacific Coast-375.0; 0.0
+5,4,1,41.0,3,42,266,154.1,Central Europe; North Europe; British Islands,Central Europe; North Europe; British Islands-1.0; 1.0; 1.0,Central Europe; North Europe; British Islands-0.0; 0.0; 420.0
+6,4,1,39.0,3,42,284,160.91,Central Asia; East Asia; Russland and Caucasus,Central Asia; East Asia; Russland and Caucasus-1.0; 1.0; 1.0,Central Asia; East Asia; Russland and Caucasus-350.0; 450.0; 0.0
+6,4,1,39.0,3,42,284,160.91,Central Europe; Southern Europe; British Islands,Central Europe; Southern Europe; British Islands-1.0; 1.0; 1.0,Central Europe; Southern Europe; British Islands-0.0; 350.0; 420.0
+6,4,1,39.0,3,42,284,160.91,Central Asia; East Asia; Russland and Caucasus,Central Asia; East Asia; Russland and Caucasus-1.0; 1.0; 1.0,Central Asia; East Asia; Russland and Caucasus-350.0; 450.0; 0.0
+7,4,1,40.0,3,41,207,159.91,Southeast Asia; East Asia; Russland and Caucasus,Southeast Asia; East Asia; Russland and Caucasus-1.0; 1.0; 1.0,Southeast Asia; East Asia; Russland and Caucasus-0.0; 450.0; 0.0
+8,4,1,38.0,3,42,159,157.45,South Asia; Southeast Asia; East Asia,South Asia; Southeast Asia; East Asia-1.0; 1.0; 1.0,South Asia; Southeast Asia; East Asia-0.0; 0.0; 450.0
+8,4,1,38.0,3,42,159,157.45,Near and Middle East; Southeast Asia; East Asia,Near and Middle East; Southeast Asia; East Asia-1.0; 1.0; 1.0,Near and Middle East; Southeast Asia; East Asia-0.0; 0.0; 450.0
+8,4,1,37.0,3,42,159,157.45,South Asia; Near and Middle East; East Asia,South Asia; Near and Middle East; East Asia-1.0; 1.0; 1.0,South Asia; Near and Middle East; East Asia-0.0; 0.0; 450.0
+9,4,1,41.0,3,42,170,160.59,Central Europe; North Europe; British Islands,Central Europe; North Europe; British Islands-1.0; 1.0; 1.0,Central Europe; North Europe; British Islands-0.0; 0.0; 420.0
+9,4,1,41.0,3,42,170,160.59,Central Europe; North Europe; British Islands,Central Europe; North Europe; British Islands-1.0; 1.0; 1.0,Central Europe; North Europe; British Islands-0.0; 0.0; 420.0
+9,4,1,41.0,3,42,170,160.59,Central Europe; North Europe; British Islands,Central Europe; North Europe; British Islands-1.0; 1.0; 1.0,Central Europe; North Europe; British Islands-0.0; 0.0; 420.0
+0,4,2,2.0,2,64,376,181.17,Central Europe; Eastern Europe,Central Europe; Eastern Europe-1.0; 1.0,Central Europe; Eastern Europe-0.0; 350.0
+1,4,2,2.0,2,66,261,180.99,Southeast Asia; Central Asia,Southeast Asia; Central Asia-1.0; 1.0,Southeast Asia; Central Asia-0.0; 350.0
+2,4,2,4.0,2,64,338,176.91,Lebanon and Syria; United Arab Emirates,Lebanon and Syria; United Arab Emirates-1.0; 1.0,Lebanon and Syria; United Arab Emirates-350.0; 525.0
+4,4,2,36.0,4,63,193,183.81,Central Europe; Eastern Europe; Southern Europe; North Europe,Central Europe; Eastern Europe; Southern Europe; North Europe-1.0; 1.0; 1.0; 1.0,Central Europe; Eastern Europe; Southern Europe; North Europe-0.0; 350.0; 350.0; 0.0
+5,4,2,2.0,2,64,305,176.97,North Europe; Southern Europe,North Europe; Southern Europe-1.0; 1.0,North Europe; Southern Europe-0.0; 350.0
+7,4,2,2.0,2,62,192,180.87,East Asia; Southeast Asia,East Asia; Southeast Asia-1.0; 1.0,East Asia; Southeast Asia-450.0; 0.0
+8,4,2,19.0,3,63,307,176.94,Central Europe; Eastern Europe; British Islands,Central Europe; Eastern Europe; British Islands-1.0; 1.0; 1.0,Central Europe; Eastern Europe; British Islands-0.0; 350.0; 420.0
+8,4,2,19.0,3,63,307,176.94,East Asia; Southeast Asia; Central Asia,East Asia; Southeast Asia; Central Asia-1.0; 1.0; 1.0,East Asia; Southeast Asia; Central Asia-450.0; 0.0; 350.0
+9,4,2,2.0,2,69,224,175.61,Near and Middle East; Central Asia,Near and Middle East; Central Asia-1.0; 1.0,Near and Middle East; Central Asia-0.0; 350.0
+0,4,3,37.0,3,76,227,162.66,Russland and Caucasus; Near and Middle East; Central Asia,Russland and Caucasus; Near and Middle East; Central Asia-1.0; 1.0; 1.0,Russland and Caucasus; Near and Middle East; Central Asia-0.0; 0.0; 350.0
+1,4,3,16.0,2,80,313,148.68,India; Sri Lanka,India; Sri Lanka-1.0; 1.0,India; Sri Lanka-350.0; 360.0
+1,4,3,18.0,2,80,313,148.68,Bolivia; Chile North and Central,Bolivia; Chile North and Central-1.0; 2.0,Bolivia; Chile North and Central-310.0; 400.0
+2,4,3,18.0,2,78,314,161.39,Oman and Yemen; Israel,Oman and Yemen; Israel-1.0; 1.0,Oman and Yemen; Israel-490.0; 420.0
+2,4,3,14.0,2,78,314,161.39,Russland and Caucasus; Central Asia,Russland and Caucasus; Central Asia-1.0; 1.0,Russland and Caucasus; Central Asia-0.0; 350.0
+4,4,3,17.0,2,81,216,153.6,Eastern Europe; North Europe,Eastern Europe; North Europe-1.0; 1.0,Eastern Europe; North Europe-350.0; 0.0
+7,4,3,17.0,2,79,201,153.47,Canada; Canada Atlantic Provinces,Canada; Canada Atlantic Provinces-1.0; 1.0,Canada; Canada Atlantic Provinces-725.0; 0.0
+7,4,3,40.0,3,79,201,153.47,Southern Europe; Eastern Europe; North Europe,Southern Europe; Eastern Europe; North Europe-1.0; 1.0; 1.0,Southern Europe; Eastern Europe; North Europe-350.0; 350.0; 0.0
+9,4,3,18.0,2,76,263,151.51,Israel; Qatar and Bahrain,Israel; Qatar and Bahrain-1.0; 1.0,Israel; Qatar and Bahrain-420.0; 525.0
+9,4,3,37.0,3,76,263,151.51,Russland and Caucasus; Central Asia; South Asia,Russland and Caucasus; Central Asia; South Asia-1.0; 1.0; 1.0,Russland and Caucasus; Central Asia; South Asia-0.0; 350.0; 0.0
