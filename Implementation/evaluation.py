@@ -20,15 +20,17 @@ def run():
     inputs = config['input']
     tests = config['tests']
     header = ['Nrun','Variant','Input','Score','Nregions','EvaluatedRegions','EvaluatedCombinations','Totaltime','SuggestedRegions','SuggestedDuration','SuggestedBudget']
-    filename = f'logs/results/evaluation.csv'
-    with open(filename, 'w', newline='') as convert_file:
-            csv = writer(convert_file)
-            csv.writerow([h for h in header])
+    #filename = f'logs/results/evaluation.csv'
+    #with open(filename, 'w', newline='') as convert_file:
+    #        csv = writer(convert_file)
+    #        csv.writerow([h for h in header])
     for num,testConfig in  tests.items():
-        
+        if num=='test1' or num=='test2' or num=='test6' or num=='test4' or num=='test3':
+            continue
         parameters = testConfig['parameters']
         nruns = testConfig['nruns']
         for inputnum, input in inputs.items():
+           
             considered, othercategories, needed_months, months_weeks_dict, start_df  = get_dataset(input, rank=parameters['prerank'])
             user_input = input
             region_groups = get_region_groups(start_df)
@@ -46,7 +48,7 @@ def run():
             for run in range(nruns):
                 experiment_name = f'{num}-{inputnum}'
                 toolbox.experiment_name = experiment_name
-                population, stats, result = emo.main(toolbox, run=run, input=inputnum[-1], variant=num[-1])
+                population, stats, result = emo.main(toolbox, run=run+3, input=inputnum[-1], variant=num[-1])
                 if bestRun != None and result["Best_Score"] > bestRun["Best_Score"]:
                     bestRun = result
                 elif bestRun == None:

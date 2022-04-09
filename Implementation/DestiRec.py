@@ -228,10 +228,13 @@ class DestiRec:
             if norm > 0:
                 feasible = False
                 individual.violation_degree += norm**2
-                per_region_sum = scores.loc[((scores['category'].isin(categories)) & (scores['RId'].isin(selectedPos)))].groupby(['RId','category'])['cat_score'].sum()
+                per_region_sum = scores.loc[scores['category'].isin(categories)].groupby(['RId','category'])['cat_score'].sum()
+                
                 per_region_count = [per_region_sum.at[pos].values.tolist().count(0.0) for pos in individual.strategy]
                 div = np.divide(per_region_count, len(categories)) 
                 individual.distance = list(map(add, individual.distance, div))
+                    
+                    
             return  feasible
 
         def c5_feasible(individual, selectedPos):

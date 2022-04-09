@@ -63,6 +63,26 @@ tests:
       FeasibleOnly: False
       PenaltyBased: True
     nruns: 5 
+  test5:
+    parameters:
+      pop: 40
+      max: 120
+      objs: 4
+      refs: 12
+      prerank: False
+      FeasibleOnly: True
+      PenaltyBased: False
+    nruns: 5
+  test6:
+    parameters:
+      pop: 92
+      max: 120
+      objs: 4
+      refs: 12
+      prerank: False
+      FeasibleOnly: False
+      PenaltyBased: True
+    nruns: 5 
  
 
 
