@@ -1,0 +1,105 @@
+Timestamp,How often do you travel for vacation?,How good are you at planning vacations?,What are your preferred travel experiences?,"Do you tend to trust a person/thing, even though you have little knowledge of it",The recommended regions matched the input preferences,This recommender system gave me good suggestions for this scenario,The regions recommended are diverse,The recommended regions fit well together,The recommended regions matched the input preferences,This recommender system gave me good suggestions for this scenario,The regions recommended are diverse,The recommended regions fit well together,The recommended regions matched the input preferences,This recommender system gave me good suggestions for this scenario,The regions recommended are diverse,The recommended regions fit well together,The recommended regions matched the input preferences,This recommender system gave me good suggestions for this scenario,The regions recommended are diverse,The recommended regions fit well together,The recommended regions matched the input preferences,This recommender system gave me good suggestions for this scenario,The regions recommended are diverse,The recommended regions fit well together,The recommended regions matched the input preferences,This recommender system gave me good suggestions for this scenario,The regions recommended are diverse,The recommended regions fit well together,The recommended regions matched the input preferences,This recommender system gave me good suggestions for this scenario,The regions recommended are diverse,The recommended regions fit well together,The recommended regions matched the input preferences,This recommender system gave me good suggestions for this scenario,The regions recommended are diverse,The recommended regions fit well together,The recommended regions matched the input preferences,This recommender system gave me good suggestions for this scenario,The regions recommended are diverse,The recommended regions fit well together,The recommended region matches the input preferences,This recommender system gave me good suggestions for this scenario,The recommended regions matched the input preferences,This recommender system gave me good suggestions for this scenario,The regions recommended are diverse,The recommended regions fit well together,The recommended regions matched the input preferences,This recommender system gave me good suggestions for this scenario,The regions recommended are diverse,The recommended regions fit well together
+4/8/2022 17:35:43,4,4,"Culture, Watersports, Cities & Architecture, Nature & Wildlife, Entertainment, Beach",1,2,2,4,3,2,2,4,4,4,5,5,5,3,5,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,1,4,4,5,4,4,4,4,4,4,4,5,4,4
+4/8/2022 17:46:02,2,5,"Culture, Cities & Architecture, Nature & Wildlife",3,3,3,4,3,4,4,3,5,4,4,3,4,4,3,4,,3,3,4,3,4,4,3,3,3,3,4,3,3,4,4,3,4,4,,,,,3,3,3,3,2,3,3,2
+4/8/2022 17:49:39,2,2,Nature & Wildlife,4,3,4,3,4,4,4,4,4,2,3,4,3,4,4,4,4,5,5,4,5,4,4,4,4,4,4,4,4,4,4,4,4,2,2,2,3,3,2,3,2,2,2,2,3,3,2
+4/8/2022 18:20:36,2,3,"Culture, Culinary, Cities & Architecture, Nature & Wildlife, Beach",2,3,3,3,3,3,3,3,4,,4,5,4,4,,4,2,,5,5,5,1,1,1,1,3,4,3,3,5,5,5,5,2,2,2,2,1,1,5,5,5,5,4,4,4,4
+4/8/2022 18:23:57,3,2,"Culture, Culinary, Cities & Architecture, Entertainment, Beach",2,3,2,3,4,2,2,2,5,4,4,3,2,4,4,3,2,5,5,3,4,2,2,2,4,4,4,4,4,4,4,2,5,2,2,2,4,3,3,4,4,2,4,4,3,3,4
+4/8/2022 18:24:01,1,2,"Culture, Cities & Architecture, Nature & Wildlife",2,2,1,5,1,2,3,4,4,4,4,4,5,3,4,3,3,2,3,4,4,2,3,1,3,2,2,1,3,5,5,3,5,2,2,2,4,2,2,5,5,2,4,4,3,5,3
+4/8/2022 18:24:39,5,5,"Culture, Culinary, Cities & Architecture, Nature & Wildlife, Beach",3,2,2,2,2,3,4,4,4,3,3,3,1,4,4,2,3,5,5,5,5,4,4,3,5,5,5,5,5,5,5,5,5,4,5,5,5,4,4,4,4,1,2,4,3,5,5
+4/8/2022 18:38:31,5,4,"Culture, Culinary, Cities & Architecture, Nature & Wildlife, Entertainment, Beach",4,3,4,4,1,3,2,3,3,4,2,3,3,4,3,4,2,3,2,4,2,4,3,4,2,4,2,4,4,5,4,4,5,2,3,4,4,4,4,3,2,4,4,4,3,4,3
+4/8/2022 19:34:18,4,4,"Culture, Culinary, Cities & Architecture, Shopping, Nature & Wildlife, Entertainment, Beach",3,4,4,1,4,4,4,4,3,2,1,2,1,2,1,1,2,4,4,3,5,2,1,2,1,5,5,2,4,4,4,3,4,1,1,1,1,1,1,4,4,2,3,4,4,3,2
+4/8/2022 19:44:12,4,5,"Culture, Culinary, Watersports, Cities & Architecture, Nature & Wildlife, Beach",2,3,3,3,3,1,1,1,2,3,3,3,4,2,2,4,2,3,2,2,2,2,2,2,4,4,4,3,3,3,3,1,3,2,2,2,3,1,1,5,5,5,5,3,3,5,1
+4/8/2022 19:46:19,4,4,"Watersports, Cities & Architecture, Entertainment, Beach",4,3,2,2,3,4,3,4,4,5,5,3,5,4,4,2,3,2,2,3,3,4,3,1,2,5,5,5,5,5,5,5,5,3,3,4,3,4,4,5,5,5,5,4,4,4,5
+4/8/2022 19:53:24,1,1,"Cities & Architecture, Beach",1,3,2,2,3,2,2,3,2,4,4,4,4,2,3,4,3,2,3,1,4,2,1,2,2,4,4,4,3,2,3,4,3,1,2,1,3,1,2,1,2,3,2,2,3,2,3
+4/8/2022 20:00:57,1,4,"Culture, Culinary, Cities & Architecture, Nature & Wildlife, Entertainment",1,5,4,5,3,3,3,5,4,5,5,5,5,5,5,5,5,5,4,5,3,5,5,5,2,5,5,5,5,5,5,5,2,4,3,5,2,5,5,5,5,5,5,5,5,5,5
+4/8/2022 20:11:14,1,1,"Culture, Culinary, Shopping, Nature & Wildlife, Entertainment, Beach",1,1,1,1,4,1,1,2,4,1,1,1,4,5,5,1,5,5,5,1,5,1,1,1,1,5,5,3,4,5,5,5,5,2,2,2,3,5,5,5,5,1,5,4,5,5,5
+4/8/2022 20:17:10,1,2,"Culture, Culinary, Watersports, Cities & Architecture, Shopping, Nature & Wildlife, Entertainment, Beach",3,1,2,2,1,2,1,2,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,2,1,1,2,5
+4/8/2022 20:20:21,3,2,"Culture, Culinary, Cities & Architecture, Beach",3,2,3,2,4,5,3,4,3,4,4,4,4,2,3,3,3,3,3,5,2,2,3,2,2,4,4,4,4,4,3,4,4,3,2,3,3,1,1,5,4,4,4,4,3,4,4
+4/8/2022 20:26:40,4,4,"Culture, Watersports, Nature & Wildlife, Beach",3,2,2,4,4,2,2,4,4,4,4,5,4,3,3,4,3,5,5,5,4,3,3,3,4,3,3,4,4,5,5,5,5,1,1,4,4,1,1,5,5,5,5,4,4,4,4
+4/8/2022 21:01:51,1,1,"Culture, Culinary, Watersports, Nature & Wildlife",4,3,3,5,3,2,2,3,2,5,5,5,5,5,5,5,5,4,5,5,2,2,2,2,2,2,3,3,2,3,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4/8/2022 21:16:50,3,3,Beach,3,4,3,3,5,3,3,3,3,3,3,3,3,4,2,4,3,3,5,1,3,1,1,2,1,4,4,5,4,3,4,2,3,3,2,2,2,1,1,1,1,1,1,2,2,2,4
+4/8/2022 21:33:20,3,3,"Culture, Cities & Architecture, Shopping, Entertainment, Beach",3,3,3,4,4,3,3,3,3,3,3,4,4,3,4,3,3,3,3,3,3,3,3,3,3,3,3,4,3,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+4/8/2022 22:28:03,4,4,"Culture, Culinary, Watersports, Cities & Architecture, Entertainment, Beach",2,2,1,5,4,3,3,5,5,5,5,5,4,5,5,5,4,5,5,5,4,4,4,4,4,5,5,5,5,5,5,5,5,3,3,5,5,4,4,4,5,5,4,5,5,5,5
+4/8/2022 22:32:19,3,2,"Shopping, Entertainment",3,4,4,1,4,3,2,3,4,1,3,4,2,2,2,1,1,4,4,1,5,1,1,1,2,5,5,3,5,3,5,4,3,4,4,3,4,4,3,5,4,4,4,5,3,4,5
+4/8/2022 22:57:52,3,1,"Culture, Culinary, Cities & Architecture, Shopping, Nature & Wildlife, Entertainment",2,3,4,3,3,3,3,2,4,3,3,3,3,3,3,3,4,2,3,4,3,2,3,4,3,4,4,3,4,3,3,4,4,3,2,3,4,1,1,2,2,3,3,2,2,3,3
+4/8/2022 23:20:15,3,2,"Watersports, Nature & Wildlife, Beach",4,1,1,4,1,2,2,3,4,5,3,4,5,5,4,4,4,5,5,5,5,2,1,4,5,4,4,2,4,5,5,3,5,1,1,2,4,1,1,3,4,3,4,2,1,3,1
+4/9/2022 7:33:33,2,4,"Culture, Cities & Architecture, Shopping, Nature & Wildlife, Entertainment",2,4,3,3,5,3,3,5,2,4,4,3,4,,,,,5,5,5,4,,,,,3,4,4,2,,,,,2,3,4,3,,,4,3,4,5,,,,
+4/9/2022 8:40:01,2,2,"Cities & Architecture, Entertainment, Beach",1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+4/9/2022 9:36:20,4,4,"Culture, Cities & Architecture, Nature & Wildlife, Beach",4,2,2,3,3,3,3,4,4,4,4,3,4,2,3,3,4,3,4,3,4,2,4,3,4,3,4,4,4,4,4,4,4,2,3,4,4,4,2,4,3,4,3,4,4,3,3
+4/9/2022 11:00:19,3,2,"Culture, Culinary, Cities & Architecture, Nature & Wildlife, Entertainment, Beach",4,1,2,1,3,2,3,5,4,4,3,5,3,2,2,5,2,5,5,3,5,3,2,1,5,4,5,5,4,5,5,3,5,1,1,3,1,4,2,4,5,3,4,5,3,2,5
+4/9/2022 11:07:49,1,1,"Culture, Culinary, Watersports, Cities & Architecture, Nature & Wildlife, Entertainment, Beach",4,3,3,3,4,2,2,3,2,4,4,4,4,4,4,4,4,3,3,4,4,3,2,2,2,4,4,5,4,3,3,2,3,2,2,3,2,3,2,2,3,2,2,2,3,3,3
+4/9/2022 12:13:33,5,5,"Culture, Watersports, Cities & Architecture, Entertainment, Beach",3,4,4,5,4,3,3,4,5,5,5,5,5,4,4,4,3,4,4,5,4,5,4,4,4,4,4,4,5,5,4,3,4,,5,5,4,4,5,4,4,5,4,4,4,4,4
+4/9/2022 13:04:23,4,3,"Culture, Culinary, Entertainment, Beach",3,2,2,1,2,3,4,4,3,4,4,4,5,3,2,3,4,4,3,5,5,2,2,1,1,5,5,5,5,3,4,4,3,4,3,4,4,2,2,1,3,2,1,2,2,2,1
+4/9/2022 13:09:05,4,3,"Culture, Culinary, Cities & Architecture, Nature & Wildlife, Entertainment",1,2,1,3,4,4,4,4,3,2,3,4,4,2,2,3,3,3,2,3,3,1,2,2,2,5,4,4,5,2,2,2,3,2,2,2,2,2,1,4,4,4,4,2,2,3,3
+4/9/2022 13:33:52,3,3,"Culture, Culinary, Cities & Architecture, Nature & Wildlife, Beach",3,,4,,4,2,2,4,2,4,4,3,3,3,3,4,3,4,4,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,2,2,4,4,3,3,4,4,4,4
+4/9/2022 13:38:16,1,3,"Culture, Cities & Architecture, Nature & Wildlife, Entertainment",4,3,3,5,2,2,2,2,3,4,4,3,4,3,4,2,3,5,5,4,5,3,3,2,4,2,3,4,4,4,4,2,5,2,2,3,4,2,2,4,4,2,4,4,4,5,2
+4/9/2022 13:44:13,3,4,"Culinary, Cities & Architecture, Entertainment, Beach",5,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,,,5,5,5,5,5,5,5,5
+4/9/2022 14:28:03,3,3,"Cities & Architecture, Shopping, Nature & Wildlife, Entertainment, Beach",3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+4/9/2022 16:03:09,3,2,"Cities & Architecture, Shopping, Nature & Wildlife, Beach",2,4,3,2,3,4,4,4,4,3,3,3,3,4,3,4,3,2,3,2,3,1,2,1,1,3,3,3,3,3,4,3,3,4,4,4,4,3,4,4,4,3,,3,4,3,4
+4/9/2022 16:05:54,4,5,"Cities & Architecture, Shopping, Entertainment",3,3,3,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+4/9/2022 17:58:22,5,5,"Culinary, Beach",1,5,5,5,5,5,5,5,5,2,2,4,1,1,2,3,1,1,2,3,1,1,1,4,5,5,5,5,5,5,5,5,5,4,5,5,5,3,3,2,3,3,5,2,3,2,1
+4/9/2022 18:16:01,3,3,"Culture, Culinary, Watersports, Cities & Architecture, Nature & Wildlife, Entertainment, Beach",3,4,4,2,4,2,2,2,4,3,3,3,2,4,4,4,4,4,4,4,1,1,1,1,1,4,4,4,4,4,4,4,4,2,3,2,3,3,3,4,4,4,4,4,4,4,4
+4/9/2022 18:56:59,3,2,"Cities & Architecture, Shopping, Entertainment",2,4,3,2,4,4,3,4,2,4,4,3,5,3,4,4,5,4,4,5,4,2,2,2,1,4,3,3,3,1,2,2,3,3,3,2,3,2,1,5,4,5,4,3,1,3,3
+4/9/2022 22:49:23,4,4,"Culture, Shopping, Entertainment, Beach",4,4,3,3,3,2,2,3,3,3,3,3,3,3,2,2,3,3,3,4,3,3,3,4,3,4,3,4,3,3,3,4,3,3,4,3,4,3,3,3,4,3,3,3,3,3,4
+4/9/2022 23:17:14,5,4,"Culture, Culinary, Cities & Architecture, Nature & Wildlife, Entertainment, Beach",3,,,,,4,4,4,4,4,4,4,4,3,4,3,4,3,3,3,3,,,,,4,3,4,4,,,,,3,4,4,4,,,,,,,,,,
+4/10/2022 0:14:48,3,3,"Culture, Cities & Architecture, Shopping, Entertainment",3,2,3,3,3,2,3,2,3,3,2,3,3,3,3,3,3,3,3,3,3,,,,,,,,,,,,,,,,,,,,,,,,,,
+4/10/2022 3:08:54,4,4,"Culture, Culinary, Cities & Architecture, Shopping",2,5,3,4,4,2,2,4,5,5,5,3,5,4,3,5,4,5,5,5,5,5,3,2,3,5,3,5,5,4,3,3,3,2,1,5,4,2,2,4,3,3,5,2,2,1,5
+4/10/2022 10:15:26,3,4,"Culture, Beach",3,2,2,3,2,3,2,2,2,2,2,2,2,3,3,2,5,3,3,3,3,3,2,2,2,3,2,2,4,3,3,3,3,1,2,4,3,4,4,3,3,3,3,4,4,3,3
+4/10/2022 10:17:31,5,3,"Culture, Cities & Architecture, Nature & Wildlife",2,,,,,,,,,,,,,,,,,5,4,5,3,5,4,4,3,4,4,4,4,4,3,4,4,2,2,2,2,5,4,4,4,4,4,3,3,3,3
+4/10/2022 10:21:44,1,3,"Culture, Culinary, Shopping, Entertainment, Beach",2,3,2,1,3,2,3,2,3,4,5,5,5,4,4,5,2,2,2,4,2,4,3,4,2,4,4,5,3,4,4,5,5,2,2,2,3,4,3,4,4,5,5,4,3,5,4
+4/10/2022 10:29:19,3,4,"Culture, Culinary, Cities & Architecture, Nature & Wildlife, Entertainment, Beach",3,2,2,2,4,4,4,4,4,3,3,3,3,3,3,3,3,5,5,2,5,5,5,2,5,5,5,5,5,3,3,3,3,2,2,2,4,5,5,5,5,2,5,5,5,1,5
+4/10/2022 11:17:42,3,4,"Culture, Culinary, Cities & Architecture, Nature & Wildlife, Entertainment, Beach",2,2,2,2,2,3,3,3,3,4,4,3,3,3,3,3,3,4,4,4,4,2,2,2,2,4,4,4,4,4,4,4,4,2,2,2,2,2,2,3,3,3,3,3,3,3,3
+4/10/2022 14:01:39,5,5,"Culinary, Watersports, Cities & Architecture, Nature & Wildlife, Entertainment, Beach",4,3,3,3,3,3,3,3,3,3,3,3,4,3,3,3,4,3,3,4,5,5,4,5,4,4,5,5,4,4,4,4,4,,,,,4,4,4,4,4,4,3,5,4,5
+4/10/2022 14:10:35,3,3,"Culture, Culinary, Watersports, Cities & Architecture, Shopping, Entertainment, Beach",3,4,4,3,4,2,2,3,2,3,3,3,3,4,4,3,4,,2,3,2,3,2,2,5,3,3,4,4,4,4,4,4,3,3,3,3,3,2,5,4,5,4,5,3,3,4
+4/10/2022 14:38:21,1,1,"Entertainment, Beach",5,3,3,1,5,3,3,1,3,3,3,1,3,3,3,1,3,3,3,3,3,5,4,3,5,3,3,3,3,3,3,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+4/10/2022 17:25:53,2,4,"Culture, Cities & Architecture, Shopping, Nature & Wildlife, Entertainment",4,4,4,4,5,2,2,4,2,4,5,5,5,5,5,5,5,5,5,5,5,2,1,2,1,3,2,4,5,5,5,5,5,3,4,2,4,1,2,4,5,5,5,2,2,5,5
+4/10/2022 17:46:37,1,4,"Culture, Cities & Architecture, Entertainment, Beach",2,4,4,3,3,5,4,5,3,5,3,4,4,5,4,3,4,5,5,4,4,4,3,4,3,4,4,3,3,4,4,3,4,4,3,4,3,4,3,5,4,4,3,3,4,4,4
+4/10/2022 18:23:31,4,5,"Shopping, Entertainment, Beach",5,5,5,4,4,5,5,5,4,5,4,5,4,5,5,4,4,4,5,4,5,4,4,5,4,4,4,4,4,4,5,4,4,4,4,5,5,4,5,5,4,4,4,4,4,4,5
+4/10/2022 18:17:01,1,3,"Culture, Shopping, Entertainment",2,2,4,3,4,2,2,4,4,3,4,3,4,3,4,3,4,4,3,4,3,4,3,5,3,2,5,5,4,5,4,4,5,4,4,4,3,3,3,4,5,5,4,5,4,4,3
+4/10/2022 18:23:16,5,5,"Culture, Culinary, Shopping, Entertainment",5,5,5,5,5,4,5,5,4,5,5,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4,5,5,5,5,5
+4/10/2022 18:30:03,4,4,"Culture, Culinary, Watersports, Cities & Architecture, Nature & Wildlife, Entertainment, Beach",2,3,3,4,3,4,4,4,4,5,4,5,5,4,5,4,5,4,4,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4/10/2022 18:30:41,4,2,"Culture, Culinary, Cities & Architecture, Nature & Wildlife",2,4,1,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4,5,5,5,5,5,5,5,5,5,5,4,5,5,5,5,5,5
+4/10/2022 18:31:45,4,4,"Culture, Shopping, Entertainment",4,4,4,4,4,5,4,5,4,5,4,4,5,4,4,5,4,4,5,5,5,4,5,4,5,4,4,5,5,4,4,4,4,4,5,4,5,4,5,4,4,5,5,5,4,5,4
+4/10/2022 19:01:32,4,5,Cities & Architecture,3,4,4,4,5,4,5,4,4,4,5,4,4,4,4,5,4,4,5,5,4,4,4,4,5,4,5,4,4,4,5,4,4,4,4,5,4,4,5,4,4,4,4,4,4,5,4
+4/10/2022 19:30:11,4,3,"Culture, Culinary, Watersports, Cities & Architecture, Entertainment",2,3,2,2,3,,,,,,,,,,,,,5,4,4,4,,,,,,,,,,,,,4,5,3,4,,,,,,,,,,
+4/10/2022 19:44:30,3,3,"Culture, Culinary, Cities & Architecture, Nature & Wildlife, Beach",3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+4/10/2022 20:00:51,4,4,"Culinary, Nature & Wildlife, Beach",2,3,3,3,2,3,4,4,2,3,4,4,4,3,3,4,5,5,4,2,4,2,4,1,4,4,4,2,4,2,3,2,4,3,4,3,3,3,3,4,4,2,4,3,3,4,2
+4/10/2022 20:02:54,3,2,"Cities & Architecture, Nature & Wildlife",3,,,,,,,,,,,,,,,,,5,5,1,5,1,1,1,2,5,5,4,5,5,5,1,5,,,,,,,,,,,,,,
+4/11/2022 0:06:26,5,5,"Culture, Entertainment, Beach",4,5,4,5,5,4,5,4,4,4,4,4,4,5,4,4,4,5,4,4,4,5,5,4,5,4,4,4,5,4,4,4,5,5,5,4,4,4,4,4,5,5,4,4,4,5,4
+4/11/2022 9:31:45,2,5,"Cities & Architecture, Shopping, Entertainment",4,4,4,3,4,2,4,2,4,5,4,3,4,4,3,4,3,4,4,5,3,5,4,4,3,4,5,3,3,4,4,4,5,4,3,3,5,5,3,3,4,4,5,3,5,4,3
+4/11/2022 9:58:56,4,3,"Culture, Culinary, Watersports, Cities & Architecture, Nature & Wildlife, Entertainment, Beach",1,3,2,2,2,2,1,3,2,5,4,5,4,5,5,4,5,5,4,4,4,2,1,2,4,4,4,5,3,2,4,3,4,1,2,2,2,4,4,5,5,5,5,5,5,4,4
+4/11/2022 10:51:15,4,3,"Culture, Culinary, Watersports, Cities & Architecture, Shopping, Nature & Wildlife, Entertainment, Beach",3,4,3,4,2,2,1,5,2,5,3,5,3,5,4,3,3,5,4,5,2,4,4,3,4,3,4,5,3,5,5,3,5,5,4,4,4,5,5,5,5,3,5,4,4,3,3
+4/11/2022 11:12:05,2,3,"Culture, Cities & Architecture, Entertainment, Beach",2,3,2,2,4,4,2,2,3,3,3,4,3,2,3,3,4,4,4,3,4,2,2,2,4,5,5,5,5,5,5,5,5,3,3,3,4,2,2,4,4,4,4,4,4,4,4
+4/11/2022 13:24:42,2,2,"Culture, Culinary, Cities & Architecture, Beach",2,4,3,2,4,2,2,4,4,4,3,4,2,3,3,4,3,3,3,4,2,2,3,4,4,4,3,4,4,4,4,3,4,1,2,2,4,,,4,4,4,4,4,4,4,2
+4/11/2022 14:24:32,4,4,"Culture, Culinary, Watersports, Cities & Architecture, Entertainment, Beach",3,3,3,3,3,3,3,2,3,5,4,5,4,5,4,3,3,4,4,4,3,2,2,2,4,4,4,5,3,5,5,1,3,2,2,1,4,1,1,5,5,2,5,3,3,2,4
+4/11/2022 15:43:11,3,5,"Culture, Nature & Wildlife",2,2,2,4,2,3,3,3,2,1,1,5,1,1,2,5,1,3,3,3,3,1,3,3,4,3,4,5,1,2,2,4,3,,,,,,,,,,,,,,
+4/11/2022 20:16:25,5,4,"Culture, Culinary, Cities & Architecture, Nature & Wildlife, Entertainment, Beach",2,3,4,4,4,4,4,4,3,4,3,3,4,4,4,4,3,4,4,4,5,4,3,3,4,4,4,3,4,3,4,3,5,4,3,4,4,3,4,4,4,4,3,4,4,4,4
+4/11/2022 20:17:11,3,3,"Culture, Culinary, Cities & Architecture, Nature & Wildlife",3,2,2,4,4,2,2,4,3,3,2,4,3,3,2,4,3,4,4,2,4,2,2,4,4,4,4,2,4,4,4,2,4,2,2,4,4,4,4,4,4,2,4,4,4,2,4
+4/11/2022 21:42:52,3,3,"Culture, Culinary, Watersports, Cities & Architecture, Shopping, Entertainment, Beach",3,3,4,4,3,5,5,4,4,4,5,4,4,3,3,4,4,1,3,4,5,5,4,4,5,5,5,5,4,4,4,4,5,4,4,4,4,4,4,4,4,4,4,4,4,5,5
+4/11/2022 21:52:28,5,4,"Culture, Culinary, Entertainment, Beach",2,3,4,3,4,3,4,3,3,4,4,4,4,3,3,3,3,4,3,3,3,4,3,3,3,3,3,3,3,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,4,3,3
+4/12/2022 1:25:17,4,4,"Culture, Cities & Architecture, Nature & Wildlife, Entertainment",3,3,3,2,3,3,2,4,4,2,3,4,3,3,4,3,4,4,4,4,4,3,3,2,3,3,4,4,4,4,4,4,4,2,3,3,3,4,3,3,3,3,3,3,4,3,4
+4/12/2022 7:43:08,3,2,"Culture, Culinary, Entertainment, Beach",3,3,4,5,5,3,4,5,5,3,4,5,5,3,4,5,5,,,,,,,,,,,,,,,,,2,4,4,5,2,4,2,5,4,5,2,4,4,5
+4/12/2022 12:00:32,3,4,"Culture, Culinary, Cities & Architecture, Nature & Wildlife, Beach",2,3,4,3,4,3,3,4,3,5,4,3,4,5,5,3,5,4,4,4,5,,,,,5,4,4,5,,,,,5,5,5,5,,,5,5,5,5,,,,
+4/12/2022 12:00:39,3,4,"Culture, Culinary, Cities & Architecture, Nature & Wildlife, Beach",2,3,4,3,4,3,3,4,3,5,4,3,4,5,5,3,5,4,4,4,5,,,,,5,4,4,5,,,,,5,5,5,5,,,5,5,5,5,,,,
+4/12/2022 14:38:31,3,4,"Culture, Culinary, Watersports, Nature & Wildlife, Entertainment, Beach",1,4,5,5,5,5,5,5,5,5,5,4,2,3,3,5,4,4,3,3,3,3,2,5,5,2,5,2,5,4,3,5,5,4,5,5,5,5,4,5,5,5,4,5,5,5,5
+4/13/2022 7:21:06,2,4,"Nature & Wildlife, Entertainment, Beach",2,3,3,4,5,4,4,4,4,5,4,3,4,4,4,4,2,5,5,3,4,4,4,3,4,3,3,4,3,3,4,3,3,4,4,3,4,3,4,3,3,5,4,4,4,4,4
+4/13/2022 8:56:17,3,4,"Culinary, Cities & Architecture, Nature & Wildlife, Entertainment, Beach",4,4,4,5,5,2,2,4,3,5,5,5,4,5,4,4,4,4,4,4,4,3,5,4,5,3,5,4,3,5,4,2,4,4,3,3,3,3,3,2,3,4,3,2,3,3,4
+4/13/2022 9:52:35,1,2,"Culture, Culinary, Watersports, Cities & Architecture, Shopping, Nature & Wildlife, Entertainment, Beach",3,4,4,2,5,3,3,3,3,4,3,1,3,4,5,1,5,3,2,1,4,3,2,2,3,4,3,2,3,4,4,1,4,4,3,2,3,4,5,5,5,1,5,4,4,2,4
+4/13/2022 10:12:46,3,4,"Culture, Culinary, Cities & Architecture, Nature & Wildlife",4,2,2,2,3,2,2,3,3,3,3,4,3,3,2,2,2,5,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,2,2,3,3,1,1,4,4,4,4,2,2,2,3
+4/13/2022 10:15:00,2,4,"Culture, Cities & Architecture, Shopping, Entertainment, Beach",2,2,2,5,4,5,5,5,5,5,5,5,3,3,3,5,5,5,5,5,5,1,1,3,2,3,3,5,5,5,5,5,5,2,3,5,5,1,1,2,2,5,5,3,3,5,5
+4/13/2022 12:00:55,1,4,Entertainment,5,4,4,,2,3,3,3,4,2,2,4,2,1,2,1,5,1,2,5,4,2,2,3,4,5,4,3,2,2,2,1,2,5,5,4,4,3,2,2,2,4,3,1,2,2,1
+4/13/2022 12:07:27,1,1,Beach,3,4,4,4,4,2,3,3,3,4,4,3,3,3,3,2,3,4,4,3,4,4,3,4,3,3,3,3,3,3,3,3,3,,4,3,3,4,4,3,3,3,3,3,4,4,3
+4/13/2022 12:54:12,1,3,Nature & Wildlife,2,2,4,4,2,2,3,4,3,4,4,4,2,5,4,2,5,4,4,5,4,2,2,3,4,4,4,4,4,4,4,4,3,2,2,3,4,1,2,4,4,4,5,3,3,4,2
+4/13/2022 12:57:39,3,5,"Shopping, Nature & Wildlife, Entertainment, Beach",3,5,3,5,5,5,4,5,2,4,5,2,5,3,4,3,3,4,5,5,2,1,3,2,5,3,3,3,3,3,4,4,3,4,4,5,5,4,3,2,3,3,2,3,2,4,3
+4/13/2022 13:02:49,4,5,"Culture, Culinary, Cities & Architecture, Shopping, Entertainment, Beach",3,4,4,4,4,3,3,3,4,4,4,4,4,4,5,4,5,5,5,5,,2,2,3,4,4,4,3,3,4,4,4,4,3,4,4,4,3,3,4,4,4,3,3,3,4,3
+4/13/2022 13:33:37,2,3,"Culinary, Shopping, Entertainment, Beach",3,3,4,4,3,3,4,2,3,4,3,3,3,3,3,4,3,4,3,2,4,4,3,3,3,3,4,2,2,4,2,4,4,2,3,3,3,4,2,4,2,2,4,3,3,3,4
+4/13/2022 17:59:01,1,3,"Culinary, Shopping, Entertainment, Beach",2,3,3,3,3,2,2,4,4,5,5,4,5,3,3,4,4,4,4,4,4,2,3,3,3,4,3,4,3,2,3,3,2,4,4,4,4,3,3,4,4,2,3,2,3,4,5
+4/13/2022 20:21:03,5,3,"Nature & Wildlife, Beach",5,1,1,2,2,1,1,1,1,2,2,1,1,1,,,,2,1,1,1,1,1,1,1,1,2,1,1,1,2,2,3,1,1,1,2,1,1,1,1,2,2,1,2,2,1
+4/13/2022 21:20:42,3,3,"Culture, Culinary, Shopping, Entertainment, Beach",2,5,5,3,5,4,3,5,2,5,5,4,4,4,4,3,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+4/13/2022 21:46:33,1,5,Nature & Wildlife,3,1,1,5,5,1,1,1,1,1,1,5,1,1,5,1,1,5,5,5,5,1,1,1,1,5,5,5,5,2,2,2,2,1,1,1,1,5,5,1,1,,1,1,1,1,1
+4/13/2022 23:45:32,3,5,"Culture, Cities & Architecture, Entertainment, Beach",3,3,3,4,3,4,3,3,2,4,4,3,3,2,3,3,2,5,5,5,4,2,2,3,4,3,4,3,3,3,4,4,3,2,2,2,4,2,3,5,4,3,3,3,3,4,3
+4/14/2022 0:12:59,3,4,"Culture, Cities & Architecture, Shopping",2,3,3,4,4,1,1,2,4,3,3,4,2,4,4,4,4,3,4,3,4,2,1,1,4,1,1,4,2,4,4,2,4,1,1,2,4,3,2,4,4,3,4,2,2,4,2
+4/14/2022 13:48:45,3,3,"Culture, Culinary, Watersports, Cities & Architecture, Nature & Wildlife, Beach",4,5,5,2,4,1,2,5,1,5,5,1,5,4,5,1,5,4,3,3,3,5,5,2,5,5,5,1,5,5,5,1,5,1,1,5,4,1,1,1,1,5,1,3,2,3,3
+4/14/2022 14:49:09,3,5,"Culture, Nature & Wildlife, Beach",1,2,1,2,5,2,2,4,4,2,2,1,2,3,2,1,2,,3,4,2,1,1,1,5,5,4,5,3,5,5,4,5,1,3,3,2,1,2,3,3,3,5,2,2,4,2
+4/14/2022 18:15:48,2,4,"Culture, Culinary, Nature & Wildlife, Entertainment",4,3,3,3,3,3,3,3,3,3,3,3,,,,,,2,2,1,1,1,1,3,4,4,4,4,4,4,1,3,2,2,3,3,4,4,4,3,1,2,3,2,1,1,1
+4/14/2022 18:31:18,1,3,"Culture, Entertainment",3,2,2,4,2,2,3,5,2,4,3,4,2,4,4,3,4,5,5,5,5,2,3,3,4,3,2,5,3,5,5,5,5,1,1,4,3,1,2,5,5,5,5,3,2,4,2

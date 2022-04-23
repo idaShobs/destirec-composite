@@ -430,7 +430,8 @@ Nrun,Variant,Input,Score,Nregions,EvaluatedRegions,EvaluatedCombinations,Totalti
 7,3,3,10.0,1,5,25,390.08,Greenland,Greenland-1.0,Greenland-975.0
 7,3,3,10.0,1,5,25,390.08,Greenland,Greenland-1.0,Greenland-975.0
 7,3,3,10.0,1,5,25,390.08,Greenland,Greenland-1.0,Greenland-975.0
-7,3,3,10.0,1,5,25,390.08,Greenland,Greenland-1.0,Greenland-975.03,5,1,33.0,2,45,165,118.19,Indonesia; Bali and Lombok,Indonesia; Bali and Lombok-2.0; 1.0,Indonesia; Bali and Lombok-400.0; 0.0
+7,3,3,10.0,1,5,25,390.08,Greenland,Greenland-1.0,Greenland-975.0
+3,5,1,33.0,2,45,165,118.19,Indonesia; Bali and Lombok,Indonesia; Bali and Lombok-2.0; 1.0,Indonesia; Bali and Lombok-400.0; 0.0
 3,5,1,28.0,2,45,165,118.19,Slovenia and Croatia; Austria,Slovenia and Croatia; Austria-1.0; 1.0,Slovenia and Croatia; Austria-350.0; 500.0
 3,5,1,31.0,2,45,165,118.19,USA Mid-Atlantic; USA,USA Mid-Atlantic; USA-1.0; 1.0,USA Mid-Atlantic; USA-0.0; 600.0
 3,5,1,18.0,1,45,165,118.19,Qatar and Bahrain,Qatar and Bahrain-1.0,Qatar and Bahrain-525.0
@@ -531,3 +532,13 @@ Nrun,Variant,Input,Score,Nregions,EvaluatedRegions,EvaluatedCombinations,Totalti
 7,5,3,36.0,2,52,282,162.55,United Arab Emirates; Israel,United Arab Emirates; Israel-1.0; 1.0,United Arab Emirates; Israel-525.0; 420.0
 7,5,3,26.0,2,52,282,162.55,Mozambique and Zimbabwe; Namibia,Mozambique and Zimbabwe; Namibia-1.0; 1.0,Mozambique and Zimbabwe; Namibia-350.0; 385.0
 7,5,3,30.0,2,52,282,162.55,East Asia; Russland and Caucasus,East Asia; Russland and Caucasus-1.0; 1.0,East Asia; Russland and Caucasus-450.0; 0.0
+0,0,0,20.0,1,54,384,402.73,Lesser Antilles,Lesser Antilles-1.0,Lesser Antilles-575.0
+0,0,0,33.0,3,54,384,402.73,Canada Prairies; Canada; Canada North,Canada Prairies; Canada; Canada North-1.0; 1.0; 1.0,Canada Prairies; Canada; Canada North-0.0; 725.0; 0.0
+0,0,0,35.0,2,54,384,402.73,Vietnam and Cambodia; Thailand South,Vietnam and Cambodia; Thailand South-1.0; 1.0,Vietnam and Cambodia; Thailand South-375.0; 375.0
+0,0,0,36.0,3,54,384,402.73,USA Southwest; USA New England; USA Alaska,USA Southwest; USA New England; USA Alaska-1.0; 1.0; 1.0,USA Southwest; USA New England; USA Alaska-0.0; 0.0; 975.0
+0,0,0,28.0,2,54,384,402.73,Brazil South; Brazil,Brazil South; Brazil-1.0; 1.0,Brazil South; Brazil-0.0; 625.0
+0,0,0,25.0,2,54,384,402.73,Paraguay; Venezuela,Paraguay; Venezuela-1.0; 1.0,Paraguay; Venezuela-400.0; 390.0
+0,0,0,28.0,2,54,384,402.73,Colombia; Paraguay,Colombia; Paraguay-2.0; 1.0,Colombia; Paraguay-350.0; 400.0
+0,0,0,30.0,2,54,384,402.73,Slovenia and Croatia; Germany,Slovenia and Croatia; Germany-1.0; 1.0,Slovenia and Croatia; Germany-350.0; 420.0
+0,0,0,17.0,1,54,384,402.73,Micronesia,Micronesia-1.0,Micronesia-750.0
+0,0,0,30.0,2,54,384,402.73,Eastern Europe; Southern Europe,Eastern Europe; Southern Europe-1.0; 1.0,Eastern Europe; Southern Europe-350.0; 350.0
