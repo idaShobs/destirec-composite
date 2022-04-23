@@ -38,7 +38,7 @@ def get_dataset(input, min_start_rank = 0.7, rank=True):
     return considered, othercategories, needed_months, month_weeks_dict, filtered_df 
 
 def get_user_input():
-    user_input = get_config("config.yml")
+    user_input = get_config("data/config.yml")
     input = user_input['input']
     return input
 

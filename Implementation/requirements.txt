@@ -6,3 +6,4 @@ geopy
 seaborn
 pyyaml
 networkx
+version_information
