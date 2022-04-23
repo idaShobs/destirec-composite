@@ -2,7 +2,7 @@ input:
   input1:
     Duration: 3
     Budget: 3000
-    Exclude: [Afghanistan]
+    Exclude: []
     Preferences: [beach, watersports, entertainment, culinary, Jul, Aug]
     Year: 2023
     AdditionalPreferences: [Safety from crime]

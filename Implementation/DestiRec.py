@@ -7,7 +7,7 @@ import pandas as pd
 from operator import add, sub
 import random
 import PreEmo
-from deap import algorithms, base, benchmarks, tools, creator
+from deap import algorithms, base, tools, creator
 from collections import Sequence
 import json
 import os
@@ -29,9 +29,18 @@ class DestiRec:
 
     
 
-    def prepare_toolbox(self,experiment_name, POP_SIZE = 92, GEN=250, NOBJ=3, CROSSPB=0.3, P=4, prerank=True, feasibleOnly=False, penalizeInObj =False):
-        if feasibleOnly:
-            assert penalizeInObj == False, 'Parameter Mismatch, cannot penalize in objective when using only feasbile combinations'
+    def prepare_toolbox(self, POP_SIZE = 92, GEN=150, NOBJ=4, CROSSPB=0.3, P=12,  feasibleOnly=True, penalizeInObj =False):
+        '''
+        The prepare toolbox function encapsulates the configuration of the toolbox
+        Configuration info are as follows;
+        FitnessMoop: Fitness function
+        BooleanIndividuals: The actual individual which is a list of boolean values
+        Strategy: The index of each Region that are coded as boolean in Individual array
+        BudgetFeasibility: Dictionary of Budget Feasibility info of the region combination that is computed during evolutionary process
+        DurationFeasibility: Dictionary of Duration Feasibility info of the region combination that is computed during evolutionary process 
+        ViolationDegree: Integer value that represents the degree of violation of the individual
+        ''' 
+        # Get needed dataset 
         user_input = self.user_input
         considered = self.considered
         othercategories = self.othercategories
@@ -46,7 +55,9 @@ class DestiRec:
         NUM_REGIONS = len(region_index_info) 
         BUDGET = user_input['Budget']
         DURATION = user_input['Duration']
+        #Start toolbox preparation
         toolbox = base.Toolbox()
+        #Save data needed later during evolutionary process into the toolbox
         toolbox.df = start_df
         toolbox.region_groups = region_groups
         toolbox.region_indexInfo = region_index_info
@@ -57,32 +68,37 @@ class DestiRec:
         toolbox.ref_p = P
         toolbox.cross_prob = CROSSPB
         toolbox.num_obj = NOBJ
-        toolbox.experiment_name = experiment_name
         self.ref_points = tools.uniform_reference_points(NOBJ, p=P)
+        #We define the maximization objective function as follows in DEAP
         creator.create("FitnessMoop", base.Fitness, weights=(1.0, )*NOBJ)
-        creator.create("Individual", list)
+        #We specify the structure of an individual by calling creator.create, and passing the name and type of the individual
+        creator.create("BooleanIndividuals", list, fitness=creator.FitnessMoop)
         creator.create("Strategy", list)
         creator.create("BudgetFeasibility", set)
         creator.create("DurationFeasibility", set)
-        creator.create("BooleanIndividuals", list, fitness=creator.FitnessMoop)
         creator.create("ViolationDegree", int, typecode='i')
         creator.create("Feasible", int, typecode='i')
         creator.create("DistanceToFeasible", list)
+        #Register the mate, mutation and selection operators
         toolbox.register("mate", tools.cxESTwoPoint)
         toolbox.register("mutate", tools.mutFlipBit, indpb=MUTPB)
         toolbox.register("select", tools.selNSGA3WithMemory(self.ref_points))
         
         def evaluate(individual):
+            '''The evaluation function to evaluate an individual. This function sums up the score of each region for all categories
+            If penalty based constraint handling is used, the violation degree is substracted'''
             scores = start_df.loc[(start_df['RId'].isin(individual.strategy)) & (start_df['category'].isin(considered))].groupby('RId')['cat_score'].sum()
             result = [scores.at[pos]*individual[i] for (i, pos) in enumerate(individual.strategy)]
             if(penalizeInObj):
                 res = feasible(individual)
                 result = np.subtract(result, individual.violation_degree).tolist()
             return result
-
+        # Register the evaluation function
         toolbox.register("evaluate", evaluate)
 
         def checkduplicates():
+            '''The Flipbit muatation operator sometimes creates duplicate regions in one individual. 
+            Here we check for and remove duplicates'''
             def decorator(func):
                 def wrapper(*args, **kargs):
                     offspring = func(*args, **kargs)
@@ -99,7 +115,8 @@ class DestiRec:
                 return wrapper
             return decorator
 
-
+        #Deap allows us to decorate functions. Hence we decorate the mate and mutate functions with the check duplicates
+        #The decorator is called after each operator is called
         toolbox.decorate("mate", checkduplicates())
         toolbox.decorate("mutate", checkduplicates())
 
@@ -126,14 +143,16 @@ class DestiRec:
         def generateFeasible(bcls, scls, dcls, bdcls, vcls, fcls, fdcls):
             feasibleGenerated = False
             ind = None
+            print("Finding next feasible individual..", end='\r')
             while(feasibleGenerated == False):
+                
                 ind = generateES(bcls, scls, dcls, bdcls, vcls, fcls, fdcls)
                 feasibleGenerated = feasible(ind)
             return ind
 
         def distance(individual):
             return individual.distance
-
+        #We need to register the individual and other parameters belonging to it
         if (feasibleOnly):
             toolbox.register("booleanIndividuals", generateFeasible, creator.BooleanIndividuals, 
                                                     creator.Strategy, 
@@ -155,14 +174,20 @@ class DestiRec:
 
             
         def c1_feasible(individual):
-                feasible = True
-                if individual.count(1) == 0:
-                    feasible = False
-                    individual.violation_degree += np.infty
-                    individual.distance = list(map(add, individual.distance, [np.infty]*NOBJ))
-                return feasible 
+            '''Constraint 1: Atleast one bit must be true, that is one region is part of the region combination 
+            '''
+            feasible = True
+            if individual.count(1) == 0:
+                feasible = False
+                individual.violation_degree += np.infty
+                individual.distance = list(map(add, individual.distance, [np.infty]*NOBJ))
+            return feasible 
 
         def c2_feasible(individual, scores, selectedPos):
+            '''
+            Constraint 2: The input duration must be feasbile with the current region combination
+            Here we check that the duration for 75% or atleast 25% percent utility in the region does not exceed given duration
+            '''
             feasible = True
             info_region_duration = dict()
             weeks_to_upper = scores.loc[scores['category'] =='Weeks to Upper Quantile']
@@ -195,6 +220,9 @@ class DestiRec:
             return feasible
 
         def c3_feasible(individual, scores, selectedPos):
+            '''
+            Constraint 3: Total budget needed for the whole trip with the current individual, must not exceed input budget
+            '''
             feasible = True
             average_cost_pair = scores.loc[scores['category'] =='average weekly cost']
             weeklycost = average_cost_pair.loc[average_cost_pair['RId'].isin(selectedPos)].groupby('category')['cat_score'].sum().values[0]
@@ -222,6 +250,10 @@ class DestiRec:
 
 
         def c4_feasible(individual, scores, selectedPos):
+            '''
+            Constraint 4: All input preference must be fufilled. 
+            Here, for each input preference, we check to ensure that atleast one region has score greater than zero 
+            '''
             feasible = True
             scores_per_cat = scores.loc[((scores['category'].isin(categories)) & (scores['RId'].isin(selectedPos)))].groupby('category')['cat_score'].sum().values.tolist()
             norm = scores_per_cat.count(0.0)
@@ -238,6 +270,9 @@ class DestiRec:
             return  feasible
 
         def c5_feasible(individual, selectedPos):
+            '''
+            Constraint 5: Here we ensure that the regions belong to same region group
+            '''
             feasible = True
             region_combo_string = [region_index_info[pos] for _, pos in enumerate(selectedPos)]
             unfulfilledCat = []
@@ -251,6 +286,10 @@ class DestiRec:
             return feasible
 
         def feasible(individual):
+            '''
+            Putting it all together, this function is called by the evalution function decorator, and is called before evaluation
+            It returns false if one or more of the constraints are violated
+            '''
             feasible = False
             individual.violation_degree = 0
             individual.distance = [0.0]*NOBJ
@@ -273,28 +312,12 @@ class DestiRec:
             toolbox.decorate("evaluate", tools.DeltaPenalty(feasible, (np.zeros(NOBJ)).tolist(), distance))
         return toolbox
 
-    def main2(self, toolbox, stats=True, seed=None, verbose=False):
-        population = toolbox.population(n=toolbox.pop_size)
-        if stats:
-            stats = tools.Statistics()
-            #stats = tools.Statistics(key=lambda ind: ind.fitness.values)
-            stats.register('population', copy.deepcopy)
-            stats.register("avg", np.mean, axis=0)
-            stats.register("std", np.std, axis=0)
-            stats.register("min", np.min, axis=0)
-            stats.register("max", np.max, axis=0)
-        return algorithms.eaMuPlusLambda(population, toolbox,
-                                mu=toolbox.pop_size, 
-                                lambda_=toolbox.pop_size, 
-                                cxpb=toolbox.cross_prob, 
-                                mutpb=toolbox.mut_prob,
-                                ngen=toolbox.max_gen,
-                                stats=stats,
-                                verbose=verbose)
-        
-        
-
+    
     def main(self, toolbox, algopt=1, seed=None, run=0, input=0, variant=0):
+        '''
+        This is the main routine of the evolutionary algorithm
+        The routine follows the algorithm of the nsga-iii
+        '''
         random.seed(seed)
         stats = tools.Statistics()
         #stats.register('population', copy.deepcopy)
@@ -306,7 +329,7 @@ class DestiRec:
         logbook.header = "gen", "evals", "std", "min", "avg", "max"
         start = time.time()
         population = toolbox.population(n=toolbox.pop_size)
-        # Evaluate the individuals with an invalid fitness
+        # Evaluate the individuals with an invalid fitness; Invalid fitnesses only means that the fitness value of the individual hasnt been evaluated
         invalid_ind = [ind for ind in population if not ind.fitness.valid]
         fitnesses = toolbox.map(toolbox.evaluate, invalid_ind)
         for ind, fit in zip(invalid_ind, fitnesses):
@@ -341,6 +364,8 @@ class DestiRec:
             logbook.record(gen=gen, evals=len(invalid_ind), **record)
             print(logbook.stream,end='\r')
         end = time.time()
+        first_front = tools.emo.sortLogNondominated(population, len(population), first_front_only=True)
+
         result = dict()
         result["EvaluatedRegions"] = len(evaluated_regions)
         result["EvaluatedCombinations"] = len(evaluated_combinations)
@@ -348,25 +373,24 @@ class DestiRec:
         result["Input"] = input
         result["Variant"] = variant
         result["Nrun"] = run
-        result = self.save_results(result, population, toolbox)
+        result = self.save_results(result, toolbox, first_front)
         result["Process"] = gen_fitnesses
-        
-        return population, logbook, result
 
-    def save_results(self, result, population, toolbox):
-        first_front = tools.emo.sortLogNondominated(population, len(population), first_front_only=True)
+        return population, logbook, result, first_front
+
+    def save_results(self, result, toolbox, first_front):
         handled = list()
         region_index_info = toolbox.region_indexInfo
         header = ['Nrun','Variant','Input','Score','Nregions','EvaluatedRegions','EvaluatedCombinations','Totaltime','SuggestedRegions','SuggestedDuration','SuggestedBudget']
-        filename = f'logs/results/evaluation.csv'
+        filename = f'logs/results/result.csv'
 
         temp_result = result.copy()
+        tmp = dict()
         result['Best_Score'] = 0
-        result["Experiment"] = toolbox.experiment_name
         for indx, ind in enumerate(first_front):
-            if (ind not in handled and ind.feasible):
-                handled.append(ind)
-                selectedPos = list(set([pos for i, pos in enumerate(ind.strategy) if ind[i]==1]))
+            selectedPos = list(set([pos for i, pos in enumerate(ind.strategy) if ind[i]==1]))
+            if (selectedPos not in handled and ind.feasible):
+                handled.append(selectedPos)
                 recommend_regions = [region_index_info[pos] for pos in selectedPos if pos in ind.feasibleDuration.keys()]
                 recommended_duration = {region_index_info[pos]: ind.feasibleDuration[pos] for pos in selectedPos if pos in ind.feasibleDuration.keys()}
                 recommended_weekly_budget = {region_index_info[pos]: ind.feasibleBudget[pos] for pos in selectedPos if pos in ind.feasibleBudget.keys()}
@@ -376,15 +400,15 @@ class DestiRec:
                 temp_result['SuggestedRegions'] = '; '.join(recommend_regions)
                 temp_result['SuggestedDuration'] = '; '.join(recommended_duration.keys())+'-'+'; '.join([str(x) for x in recommended_duration.values()])
                 temp_result['SuggestedBudget'] = '; '.join(recommended_weekly_budget.keys())+'-'+'; '.join([str(x) for x in recommended_weekly_budget.values()])
-                with open(filename, 'a+', newline='') as convert_file:
+                with open(filename, 'w+', newline='') as convert_file:
                     dictwriter_object = DictWriter(convert_file, delimiter=',', fieldnames=header)
                     dictwriter_object.writerow(temp_result)
-                if indx not in result.keys():
-                    result[indx] = list()
-                result[indx].append(temp_result)
+                if indx not in tmp.keys():
+                    tmp[indx] = list()
+                tmp[indx].append(temp_result)
                 if temp_result['Score'] > result['Best_Score']:
                     result['Best_Score'] = temp_result['Score']
-        
+        result['results'] = tmp
         return result
 
 
