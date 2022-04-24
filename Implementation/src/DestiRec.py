@@ -382,7 +382,7 @@ class DestiRec:
         handled = list()
         region_index_info = toolbox.region_indexInfo
         header = ['Nrun','Variant','Input','Score','Nregions','EvaluatedRegions','EvaluatedCombinations','Totaltime','SuggestedRegions','SuggestedDuration','SuggestedBudget']
-        filename = f'logs/results/result.csv'
+        filename = f'../logs/results/result.csv'
 
         temp_result = result.copy()
         tmp = dict()

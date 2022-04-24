@@ -10,7 +10,7 @@ import calendar
 df = pd.DataFrame()
 filtered_df = pd.DataFrame()
 
-def get_dataset(input, min_start_rank = 0.7, rank=True):
+def get_dataset(input, min_start_rank = 0.7, rank=True, from_csv=False):
     '''
     Return: considered, othercategories, needed_months, months_weeks_dict, filtered_df
     '''
@@ -37,8 +37,32 @@ def get_dataset(input, min_start_rank = 0.7, rank=True):
     othercategories = other_categories(filtered_df, considered)
     return considered, othercategories, needed_months, month_weeks_dict, filtered_df 
 
+def get_dataset_from_csv(input, min_start_rank = 0.7, rank=True):
+    '''
+    Return: considered, othercategories, needed_months, months_weeks_dict, filtered_df
+    '''
+    
+    global filtered_df
+    global df
+    df = pd.read_csv("../data/Pre_Emo_data.csv", header=0, index_col=False)
+    considered = get_considered(input)
+    all_months = weeks_in_month(input['Year'])
+    needed_months = [pref for pref in considered if pref in calendar.month_abbr]
+    month_weeks_dict = {pref: all_months[pref] for pref in needed_months}
+    pref_weight_dict = get_category_dict(df, considered)
+    
+    if rank:
+        ranking = get_region_rankings(df.copy(), considered, pref_weight_dict)
+        new_df = get_ranked_df(df.copy(), input['Preferences'], ranking, min_start_rank)
+    else:
+        new_df = df.copy()
+    
+    othercategories = other_categories(new_df, considered)
+    return considered, othercategories, needed_months, month_weeks_dict, new_df 
+
+
 def get_user_input():
-    user_input = get_config("data/config.yml")
+    user_input = get_config("../data/config.yml")
     input = user_input['input']
     return input
 
@@ -66,7 +90,7 @@ def get_config(path):
 
 def get_df(query):
     df = None
-    config = get_config("special_files/dbconfig.yml")
+    config = get_config("../special_files/dbconfig.yml")
     try:  
         db_connection = connection.connect(host=config['host'], database=config['database'], user=config['user'], passwd=config['passwd'],use_pure=True)
         df = pd.read_sql(sql=query, con=db_connection)
@@ -239,7 +263,7 @@ def generate_childRegions(df):
     return df
 
 def update_descendants():
-    config = get_config("special_files/dbconfig.yml")
+    config = get_config("../special_files/dbconfig.yml")
     query = 'Select Id, p.parentRegion, r.Region, childRegions from ParentRegions p INNER JOIN Regions r ON p.parentRegion = r.parentRegion'
     try:  
         db_connection = connection.connect(host=config['host'], database=config['database'], user=config['user'], passwd=config['passwd'],use_pure=True)

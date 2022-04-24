@@ -20,7 +20,7 @@ def run():
     inputs = config['input']
     tests = config['tests']
     header = ['Nrun','Variant','Input','Score','Nregions','EvaluatedRegions','EvaluatedCombinations','Totaltime','SuggestedRegions','SuggestedDuration','SuggestedBudget']
-    filename = f'logs/results/evaluation.csv'
+    filename = f'../logs/results/evaluation.csv'
     with open(filename, 'w', newline='') as convert_file:
         csv = writer(convert_file)
         csv.writerow([h for h in header])
@@ -53,13 +53,13 @@ def run():
                 
             del toolbox
             del emo
-            with open(f'logs/results/Test_{experiment_name}.pickle', 'wb') as f:
+            with open(f'../logs/results/Test_{experiment_name}.pickle', 'wb') as f:
                 pickle.dump(bestRun, f, protocol=pickle.HIGHEST_PROTOCOL)
             
 
 
 if __name__ == "__main__":
-    init_logging('logs/evaluation.log', append=True)
+    init_logging('../logs/evaluation.log', append=True)
     run()
 
             
