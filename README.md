@@ -27,12 +27,13 @@ Run `pip install -r requirements.txt` to install requirements
 │   └── Pre_Emo_data.csv
 ├── logs
 │   ├── input*
-│   └── results*       
-└── DestiRec.py: Main class for destination recommendation algorithm
-└── evaluation.py: Class used for evaluating the different variants
-└── main.ipnyb: Notebook for example run of algorithm using feasibility based initialization
-└── PreEmo.py: Data extraction, transformation and load routine
-└── requirements.txt: used to install require modules
-└── variants_evaluation.ipynb: Notebook used for running evaluations
+│   └── results: Different csv files and pickle file of results obtained  
+├── src      
+│    └── DestiRec.py: Main class for destination recommendation algorithm
+│    └── evaluation.py: Class used for evaluating the different variants
+│    └── main.ipnyb: Notebook for example run of algorithm using feasibility based initialization
+│    └── PreEmo.py: Data extraction, transformation and load routine
+│    └── variants_evaluation.ipynb: Notebook used for running evaluations
+├── requirements.txt: used to install require modules
 ```
 
