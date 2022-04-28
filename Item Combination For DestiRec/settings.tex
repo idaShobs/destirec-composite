@@ -1,4 +1,4 @@
-\PassOptionsToPackage{table,svgnames,dvipsnames}{xcolor}
+\PassOptionsToPackage{table,svgnames,dvipsnames,xcdraw}{xcolor}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -32,14 +32,16 @@
 \usepackage{siunitx} % for physical accurate units and other numerical presentations
 \usepackage{multirow} % makes it possible to have bigger cells over multiple rows in a table
 \usepackage{array} % different options for table cell orientation
+
+\usepackage{longtable}
 \usepackage{makecell} % allows nice manual configuration of cells with linebreaks in \thead and \makecell with alignments
 \usepackage{pdfpages} % for including multiple pages of pdfs
 \usepackage{adjustbox} % can center content wider than the \textwidth
 \usepackage{tablefootnote} % for footnotes in tables as \tablefootnote
 \usepackage{threeparttable} % another way to add footnotes as \tablenotes with \item [x] <your footnote> after setting \tnote{x}
-\usepackage [ruled]{algorithm2e}
+\usepackage [ruled,linesnumbered]{algorithm2e}
 \SetKwComment{Comment}{/* }{ */}
-
+%\DeclareUnicodeCharacter{0301}{*************************************}
 
 % https://tex.stackexchange.com/questions/42619/x-mark-to-match-checkmark
 \usepackage{amssymb}% http://ctan.org/pkg/amssymb
@@ -47,7 +49,7 @@
 \newcommand{\cmark}{\ding{51}}%
 \newcommand{\xmark}{\ding{55}}%
 
-
+\usepackage{enumitem}
 \usepackage[acronym,xindy,toc]{glossaries} % TODO: include "acronym" if glossary and acronym should be separated
 \makeglossaries
 \loadglsentries{Item Combination For DestiRec/pages/glossary.tex} % important update for glossaries, before document
